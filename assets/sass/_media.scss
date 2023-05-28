@@ -542,6 +542,16 @@
             }
         }
     }
+    .offer {
+        .content-search {
+            .search-input {
+                width: 65%;
+            }
+            .search-btn {
+                width:35%;
+            }
+        }
+    }
 }
 
 @media (max-width: 374px) {
