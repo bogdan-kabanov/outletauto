@@ -1,0 +1,57 @@
+header {
+  padding-top: 15px;
+  .header-row-2,
+  .header-row-1 {
+    @include flex(flex, space-between, center);
+  }
+
+  .header-logotype {
+    width: 15%;
+    height: 50px;
+    @include flex(flex, start, center);
+    .logotype {
+      width: 75%;
+    }
+  }
+
+  .header-search {
+    width: 50%;
+    margin-left: 80px;
+    .search-input {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .header-contact {
+    width: 35%;
+
+    @include flex(flex, end, center);
+    li {
+      &:last-child {
+        margin-left: 35px;
+      }
+      font-size: 18px;
+    }
+  }
+
+  .header-row-2 {
+    margin-top: 5px;
+    .burger-wrapper {
+      width: 10%;
+    }
+  }
+
+  .header-nav {
+    width: 65%;
+    @include flex(flex, start, center);
+    li {
+      margin-left: 35px;
+    }
+  }
+
+  .header-account {
+    width: 25%;
+    @include flex(flex, end, center);
+  }
+}
