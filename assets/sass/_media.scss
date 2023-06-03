@@ -42,10 +42,6 @@
         }
     }
 
-    .greeting {
-        font-size: 36px;
-    }
-
     .offer {
         .title {
             font-size: 36px;
@@ -88,6 +84,9 @@
     }
 
     .catalog {
+        .greeting {
+            font-size: 36px;
+        }
         .catalog-search {
             justify-content: space-between;
 
@@ -270,11 +269,6 @@
         }
     }
 
-    .greeting {
-        font-size: 30px;
-    }
-
-
     .offer {
         .title {
             font-size: 30px;
@@ -363,6 +357,9 @@
     }
 
     .catalog {
+        .greeting {
+            font-size: 30px;
+        }
         .catalog-grid {
             grid-template-columns: 1fr;
         }
@@ -433,10 +430,6 @@
         max-width: 100%;
     }
 
-    .greeting {
-        font-size: 24px;
-    }
-
     .offer {
         .title {
             font-size: 24px;
@@ -471,6 +464,9 @@
 
     .catalog {
 
+        .greeting {
+            font-size: 24px;
+        }
         .catalog-search {
             .search-btn {
                 padding: 10px 20px;
