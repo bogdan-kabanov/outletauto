@@ -8,9 +8,9 @@ window.addEventListener("resize", function () {
 window.dispatchEvent(new Event("resize"));
 
 // Анимация стрелочки на лицевом блоке сайта
-const fixedArrow = document.querySelectorAll('.arrow-fixed .arrow');
-setInterval(()=>{
-  fixedArrow.forEach(e=>{
-    e.classList.toggle('arrow-animate');
-  })
-}, 800*5)
+const fixedArrow = document.querySelectorAll(".arrow-fixed .arrow");
+setInterval(() => {
+  fixedArrow.forEach((e) => {
+    e.classList.toggle("arrow-animate");
+  });
+}, 800 * 4);

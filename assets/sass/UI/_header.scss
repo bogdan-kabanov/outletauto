@@ -40,6 +40,20 @@ header {
     .burger-wrapper {
       width: 10%;
     }
+
+    a {
+      position: relative;
+      &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: #fafafa88;
+          bottom: -5px;
+          left: 0;
+      }
+  }
   }
 
   .header-nav {

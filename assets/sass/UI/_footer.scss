@@ -1,0 +1,38 @@
+.footer {
+    background-color: #504f4f;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .nav {
+            li {
+                a {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #fafafa88;
+                        bottom: -5px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            li:not(:last-child) {
+                margin-right: 35px;
+            }
+            li {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

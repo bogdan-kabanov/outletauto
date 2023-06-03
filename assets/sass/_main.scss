@@ -91,7 +91,7 @@ a {
             position: absolute;
             width: 10px;
             height: 2px;
-            background-color: #FAFAFA;
+            background-color: #fafafa;
             border-radius: 50%;
 
             &:last-child {
@@ -187,7 +187,6 @@ a {
 
 // Main page
 
-
 @keyframes arrow-1 {
     0% {
         top: 0px;
@@ -207,23 +206,33 @@ a {
 
 .offer {
     width: 100%;
-    height: 100vh;
     min-height: 100vh;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 3%, rgba(0, 0, 0, 0) 96%), url("../imgs/offer.jpg");
+    background: linear-gradient(to top, rgba(2, 2, 2, 1) 3%, rgba(0, 0, 0, 0) 96%), url("../imgs/offer.png");
     background-position: center center;
     background-size: cover;
     position: relative;
 
+    .arrow-fixed-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 25px;
+    }
+
     .arrow-fixed {
         left: calc(50% - 15px);
-        bottom: calc(5% - 20px);
+        bottom: calc(6.5% - 20px);
         width: 30px;
         height: 40px;
-        position: absolute;
-
+        // position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.3s;
         .arrow-animate {
-
-            animation-duration: .8s;
+            animation-duration: 0.8s;
             animation-name: arrow-1;
             animation-iteration-count: infinite;
 
@@ -231,9 +240,12 @@ a {
         }
 
         .arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
             top: 0;
-            transition: .6s;
+            transition: 0.6s;
 
             span {
                 display: block;
@@ -242,16 +254,16 @@ a {
                 border-radius: 50px;
                 background-color: #818080;
                 position: relative;
-                margin-top: 1px;
+                margin-top: 4px;
 
                 &:nth-child(2) {
                     transform: rotate(-40deg);
-                    left: 9.5px;
-                    top: -4px;
+                    left: -2.5px;
                 }
 
                 &:nth-child(1) {
                     transform: rotate(40deg);
+                    left: 2.5px;
                 }
             }
         }
@@ -279,9 +291,11 @@ a {
         text-align: center;
         font-weight: bold;
         font-size: 48px;
+        margin-bottom: 35px;
     }
 
     .offer-content {
+        transition: .6s;
         width: 100%;
         min-height: 600px;
         height: calc(100vh - 110px);
@@ -302,8 +316,14 @@ a {
         .content-column {
             width: 100%;
             display: grid;
-            grid-template-columns: 1.3fr .7fr;
+            grid-template-columns: 1.3fr 0.7fr;
             gap: 40px;
+
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
 
             .circle-btn-wrapper {
                 &:last-child {
@@ -314,8 +334,11 @@ a {
             .example {
                 width: 75%;
                 margin-top: 5px;
-                font-size: 14px;
-                padding-right: 20px
+                font-size: 13px;
+                // padding-right: 20px
+                span:last-child {
+                    margin-left: 20px;
+                }
             }
         }
     }
@@ -328,15 +351,16 @@ a {
 // Main catalog
 
 .catalog {
-    background-image: url('../imgs/main-catalogjpg.jpg');
+    background-image: url("../imgs/main-catalogjpg.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 120%;
     background-color: #020202;
 
     .greeting {
+        font-weight: bold;
         padding-top: 84px;
-        font-size: 52px;
+        font-size: 48px;
         text-align: center;
     }
 
@@ -387,7 +411,7 @@ a {
             border-radius: 10px;
             padding: 20px;
             height: 150px;
-            transition: .6s;
+            transition: 0.6s;
             cursor: pointer;
             background-color: black;
 
@@ -396,35 +420,43 @@ a {
             }
 
             &:nth-child(1) {
-                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, .1)), url('../imgs/catalog-card/1.png');
+                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url("../imgs/catalog-card/1.png");
             }
 
             &:nth-child(2) {
-                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, .1)), url('../imgs/catalog-card/2.png');
+                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url("../imgs/catalog-card/2.png");
             }
 
             &:nth-child(3) {
-                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, .1)), url('../imgs/catalog-card/3.png');
+                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url("../imgs/catalog-card/3.png");
             }
 
             &:nth-child(4) {
-                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, .1)), url('../imgs/catalog-card/4.png');
+                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url("../imgs/catalog-card/4.png");
             }
 
             &:nth-child(5) {
-                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, .1)), url('../imgs/catalog-card/5.png');
+                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url("../imgs/catalog-card/5.png");
             }
 
             &:nth-child(6) {
-                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, .1)), url('../imgs/catalog-card/6.png');
+                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url("../imgs/catalog-card/6.png");
             }
 
             &:nth-child(7) {
-                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, .1)), url('../imgs/catalog-card/7.png');
+                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url("../imgs/catalog-card/7.png");
             }
 
             &:nth-child(8) {
-                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, .1)), url('../imgs/catalog-card/8.png');
+                background: linear-gradient(to right, rgba(0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url("../imgs/catalog-card/8.png");
             }
 
             .catalog-greeting {
@@ -438,4 +470,8 @@ a {
             }
         }
     }
+}
+
+.w-100 {
+    width: 100%;
 }
