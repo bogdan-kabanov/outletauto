@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 </head>
 <!-- oncontextmenu="return false;" -->
 
@@ -132,6 +134,24 @@
                                     </a>
                                 </div>
                             </div>
+
+                            <div class="right-content">
+                                <div class="content-search-wrapper news" >
+                                    <div id="news-slider" >
+                                        {% for new in news %}
+                                            <a href="{{new.link}}">
+                                                <div style="background-image: url('{{new.image}}'); background-size: cover; background-repeat: no-repeat;  padding: 20px;">
+                                                    <h6 style="font-size:12px;">{{new.title}}</h6>
+
+                                                    <p style="font-size:8px;">{{new.description}}</p>
+                                                </div>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="empty-content">
+                            </div>
                             <div class="transparent-wrapper transparent-wrapper-mobile">
                                 <button class="transparent-btn">
                                     <div class="arrow">
@@ -150,7 +170,7 @@
                             </div>
                         </div>
                         <div class="arrow-fixed-wrapper">
-                            <a href="#">
+                            <a href="#greeting">
                                 <div class="arrow-fixed">
                                     <div class="arrow arrow-animate">
                                         <span></span>
@@ -174,7 +194,7 @@
     </div>
     <div class="catalog">
         <div class="container">
-            <h2 class="greeting">Универсальный каталог</h2>
+            <h2 id="greeting" class="greeting">Универсальный каталог</h2>
             <form class="catalog-search search" action="#">
                 <span class="parameters">Подбор по параметрам</span>
                 <input type="text" class="search-input" placeholder="Поиск по каталогу">
@@ -238,5 +258,18 @@
     </div>
     <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
 </body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script type="text/javascript">
+    // Отображаем список новостей в виде слайдера Slick.
+      $('#news-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+  });
+
+  </script>
 
 </html>
