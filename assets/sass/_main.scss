@@ -77,7 +77,8 @@ a {
             top: calc(100% + 10px);
             width: 260px;
             height: 0px;
-            background: #393838;
+            background: rgba(114, 114, 114, 0.534);
+            backdrop-filter: blur(10px);
             box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25), inset 4px 4px 12px rgba(255, 255, 255, 0.21);
             border-radius: 10px;
             padding-left: 20px;
@@ -238,7 +239,7 @@ a {
     min-height: 100vh;
     background-color: black; //
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, .3) 10%, rgba(0, 0, 0, .0) 50%, rgba(0, 0, 0, .4) 90%, #020202 99%, #020202 100%), url("../imgs/car_bg.png");
     background-position: center center;
     background-size: cover;
