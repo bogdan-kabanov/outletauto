@@ -1,1217 +1,313 @@
-*, *:before, *:after {
-    box-sizing: border-box;
-
-}
-
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    text-size-adjust: none;
-    scroll-behavior: smooth;
-}
-
-footer, header, nav, section, main {
-    display: block
-}
-
-body {
-    line-height: 1
-}
-
-ol, ul {
-    list-style: none
-}
-
-blockquote, q {
-    quotes: none
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: "";
-    content: none
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
-input {
-    -webkit-appearance: none;
-    border-radius: 0
-}
-
-header {
-    padding-top: 15px
-}
-
-header .header-row-2, header .header-row-1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-}
-
-header .header-logotype {
-    width: 15%;
-    height: 50px;
-    display: flex;
-    justify-content: start;
-    align-items: center
-}
-
-header .header-logotype .logotype {
-    width: 75%
-}
-
-header .header-search {
-    width: 50%;
-    margin-left: 80px
-}
-
-header .header-search .search-input {
-    width: 100%;
-    max-width: 300px
-}
-
-header .header-contact {
-    width: 35%;
-    display: flex;
-    justify-content: end;
-    align-items: center
-}
-
-header .header-contact li {
-    font-size: 18px
-}
-
-header .header-contact li:last-child {
-    margin-left: 35px
-}
-
-header .header-row-2 {
-    margin-top: 5px
-}
-
-header .header-row-2 .burger-wrapper {
-    width: 10%
-}
-
-header .header-row-2 a {
-    position: relative
-}
-
-header .header-row-2 a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(250, 250, 250, .5333333333);
-    bottom: -5px;
-    left: 0
-}
-
-header .header-nav {
-    width: 65%;
-    display: flex;
-    justify-content: start;
-    align-items: center
-}
-
-header .header-nav li {
-    margin-left: 35px
-}
-
-header .header-account {
-    width: 25%;
-    display: flex;
-    justify-content: end;
-    align-items: center
-}
-
-.footer {
-    background-color: #504f4f;
-    padding-top: 50px;
-    padding-bottom: 100px
-}
-
-.footer .container {
-    display: flex;
-    justify-content: space-between
-}
-
-.footer .container .nav li a {
-    position: relative
-}
-
-.footer .container .nav li a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(250, 250, 250, .5333333333);
-    bottom: -5px;
-    left: 0
-}
-
-.footer .container ul {
-    display: flex
-}
-
-.footer .container ul li:not(:last-child) {
-    margin-right: 35px
-}
-
-.footer .container ul li {
-    display: flex;
-    align-items: center
-}
-
-@font-face {
-    font-family: "Lato";
-    src: url("../../fonts/Lato/Lato-Regular.ttf");
-    font-weight: 400
-}
-
-@font-face {
-    font-family: "Lato";
-    src: url("../../fonts/Lato/Lato-Bold.ttf");
-    font-weight: 700
-}
-
-span, a, h1, h2, h3, h4, h5, h6, input, button, * {
-    color: #fafafa;
-    font-family: "Lato", sans-serif;
-    font-weight: 400
-}
-
-input {
-    outline: none;
-    border: none;
-    color: #434343
-}
-
-button, a {
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    background: rgba(0, 0, 0, 0)
-}
-
-button:hover, a:hover {
-    color: #434343
-}
-
-.search {
-    display: flex
-}
-
-.search .search-input {
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 14px;
-    height: 40px;
-    text-overflow: ellipsis
-}
-
-.search .search-btn {
-    margin-left: 5px;
-    height: 40px;
-    font-size: 16px
-}
-
-.red-btn {
-    background-color: #e92020;
-    padding: 10px 20px;
-    border-radius: 10px
-}
-
-.red-btn:hover {
-    background-color: rgba(225, 0, 0, .9);
-    color: #fafafa
-}
-
-.transparent-wrapper {
-    margin-top: 35px
-}
-
-.transparent-wrapper .transparent-btn:last-child {
-    margin-left: 40px
-}
-
-.transparent-btn {
-    border: 1px solid #d8d5d5;
-    font-size: 18px;
-    padding: 12px 40px 12px 50px;
-    border-radius: 10px;
-    font-weight: 400;
-    position: relative
-}
-
-.transparent-btn .arrow {
-    position: absolute;
-    left: 20px;
-    top: 20px
-}
-
-.transparent-btn .arrow span {
-    display: block;
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    background-color: #fafafa;
-    border-radius: 50%
-}
-
-.transparent-btn .arrow span:last-child {
-    top: 6px;
-    transform: rotate(-45deg)
-}
-
-.transparent-btn .arrow span:first-child {
-    transform: rotate(45deg)
-}
-
-.transparent-wrapper-mobile {
-    display: none;
-    margin-top: 0px
-}
-
-.circle-btn-wrapper {
-    padding: 12.5px 55px
-}
-
-.circle-btn {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: relative;
-    background: rgba(213, 212, 212, .15);
-    box-shadow: 4px 4px 14px rgba(0, 0, 0, .25), inset 4px 4px 12px rgba(255, 255, 255, .21);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    height: 65px;
-    width: 100%;
-    max-width: 205px;
-    padding: 20px 15px 20px 45px
-}
-
-.circle-btn .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: -55px;
-    top: -12.5px;
-    width: 90px;
-    height: 90px;
-    background: rgba(80, 79, 79, .877);
-    box-shadow: 4px 4px 14px rgba(0, 0, 0, .25), inset 4px 4px 12px rgba(255, 255, 255, .21);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 50%
-}
-
-.circle-btn .circle .cirle-content {
-    width: 75px;
-    height: 75px;
-    background-color: #e92020;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.burger-nav {
-    width: 40px;
-    height: 40px;
-    position: relative
-}
-
-.burger-nav span {
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background-color: #e92020;
-    left: 5px;
-    top: 18.5px
-}
-
-.burger-nav span:last-child {
-    top: 10.5px
-}
-
-.burger-nav span:first-child {
-    top: 26.5px
-}
-
-.mobile-header {
-    display: none
-}
-
-.container {
-    margin: 0 auto;
-    padding: 0px 8px;
-    max-width: 1400px
-}
-
-@keyframes arrow-1 {
-    0% {
-        top: 0px
-    }
-
-    50% {
-        top: -4px
-    }
-
-    100% {
-        top: 0px
-    }
-}
-
-.offer {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(to top, rgb(2, 2, 2) 3%, rgba(0, 0, 0, 0) 96%), url("../imgs/offer.png");
-    background-position: center center;
-    background-size: cover;
-    position: relative
-}
-
-.offer .arrow-fixed-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 25px
-}
-
-.offer .arrow-fixed {
-    left: calc(50% - 15px);
-    bottom: calc(6.5% - 20px);
-    width: 30px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: .3s
-}
-
-.offer .arrow-fixed .arrow-animate {
-    animation-duration: .8s;
-    animation-name: arrow-1;
-    animation-iteration-count: infinite
-}
-
-.offer .arrow-fixed .arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 0;
-    transition: .6s
-}
-
-.offer .arrow-fixed .arrow span {
-    display: block;
-    width: 15px;
-    height: 3px;
-    border-radius: 50px;
-    background-color: #818080;
-    position: relative;
-    margin-top: 4px
-}
-
-.offer .arrow-fixed .arrow span:nth-child(2) {
-    transform: rotate(-40deg);
-    left: -2.5px
-}
-
-.offer .arrow-fixed .arrow span:nth-child(1) {
-    transform: rotate(40deg);
-    left: 2.5px
-}
-
-.offer .content-search-wrapper {
-    background: rgba(213, 212, 212, .15);
-    box-shadow: 4px 4px 14px rgba(0, 0, 0, .25), inset 4px 4px 12px rgba(255, 255, 255, .21);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 20px
-}
-
-.offer .content-search-wrapper .search-input {
-    width: 75%
-}
-
-.offer .content-search-wrapper .search-btn {
-    width: 25%;
-    margin-left: 20px
-}
-
-.offer .title {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 48px;
-    margin-bottom: 35px
-}
-
-.offer .offer-content {
-    transition: .6s;
-    width: 100%;
-    min-height: 600px;
-    height: calc(100vh - 110px);
-    padding-top: 10%;
-    padding-bottom: 10%;
-    display: flex;
-    justify-content: start;
-    align-items: end
-}
-
-.offer .offer-content .content-wrapper {
-    padding: 0px 100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    height: 100%
-}
-#news-slider {
-width: 27vw;
-height: 15vh;
-margin: 0 auto;
-color:black;
-}
-.offer .content-wrapper .content-column {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1.3fr .7fr;
-    gap: 20px;
-}
-
-
-
-.offer .content-wrapper .content-column .left-content .right-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between
-}
-
-.offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
-    margin-top: 20px
-}
-
-.offer .content-wrapper .content-column .example {
-    width: 75%;
-    margin-top: 5px;
-    font-size: 13px
-}
-
-.offer .content-wrapper .content-column .example span:last-child {
-    margin-left: 20px
-}
-
-.offer .circle-btn-wrapper {
-    display: flex;
-    justify-content: end;
-    align-items: center
-}
-
-.catalog {
-    background-image: url("../imgs/main-catalogjpg.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 120%;
-    background-color: #020202
-}
-
-.catalog .greeting {
-    font-weight: bold;
-    padding-top: 84px;
-    font-size: 48px;
-    text-align: center
-}
-
-.catalog .catalog-search {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.catalog .catalog-search .search-input, .catalog .catalog-search .search-btn, .catalog .catalog-search .parameters {
-    font-size: 20px
-}
-
-.catalog .catalog-search .search-input {
-    width: 100%;
-    max-width: 690px;
-    margin-right: 20px;
-    margin-left: 20px
-}
-
-.catalog .catalog-search .search-btn {
-    margin-left: 0px;
-    padding: 10px 70px
-}
-
-.catalog .catalog-search .search-btn, .catalog .catalog-search .search-input {
-    height: 60px
-}
-
-.catalog .catalog-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
-    padding-bottom: 40px
-}
-
-.catalog .catalog-grid .catalog-card {
-    border: 1px solid silver;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 20px;
-    height: 150px;
-    transition: .6s;
-    cursor: pointer;
-    background-color: #000
-}
-
-.catalog .catalog-grid .catalog-card:hover {
-    transform: scale(1.03)
-}
-
-.catalog .catalog-grid .catalog-card:nth-child(1) {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/1.png")
-}
-
-.catalog .catalog-grid .catalog-card:nth-child(2) {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/2.png")
-}
-
-.catalog .catalog-grid .catalog-card:nth-child(3) {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/8.png")
-}
-
-.catalog .catalog-grid .catalog-card:nth-child(4) {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/3.png")
-}
-
-.catalog .catalog-grid .catalog-card:nth-child(5) {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/7.png")
-}
-
-.catalog .catalog-grid .catalog-card:nth-child(6) {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/4.png")
-}
-
-.catalog .catalog-grid .catalog-card:nth-child(7) {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/6.png")
-}
-
-.catalog .catalog-grid .catalog-card:nth-child(8) {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/5.png")
-}
-
-.catalog .catalog-grid .catalog-card .catalog-greeting {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px
-}
-
-.catalog .catalog-grid .catalog-card .catalog-desc {
-    font-size: 18px
-}
-
-.w-100 {
-    width: 100%
-}
-
-@media(min-width: 1400px) {
-    .container {
-        max-width: 1160px
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .container {
-        max-width: 1140px
-    }
-
-    .catalog .catalog-search .search-input, .catalog .catalog-search .search-btn, .catalog .catalog-search .parameters {
-        font-size: 18px
-    }
-}
-
-@media(max-width: 1200px) {
-    .container {
-        max-width: 960px
-    }
-
-    header .header-contact a {
-        font-size: 16px
-    }
-
-    header .header-search {
-        width: 42%;
-        margin-left: 0px
-    }
-
-    header .header-contact {
-        width: 40%
-    }
-
-    .offer .title {
-        font-size: 36px
-    }
-
-    .offer .content-column .circle-btn-wrapper {
-        padding: 12.5px 0px 12.5px 55px
-    }
-
-    .offer .transparent-wrapper .transparent-btn:last-child {
-        margin-left: 25px
-    }
-
-    .offer .content-wrapper .content-column {
-        gap: 20px
-    }
-
-    .offer .content-wrapper .content-column .example {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 0;
-        margin-top: 10px;
-        width: 100%;
-        font-size: 12px
-    }
-
-    .offer .content-wrapper .content-column .example span:last-child {
-        margin-left: 30px
-    }
-
-    .catalog .greeting {
-        font-size: 36px
-    }
-
-    .catalog .catalog-search {
-        justify-content: space-between
-    }
-
-    .catalog .catalog-search .search-input, .catalog .catalog-search .search-btn, .catalog .catalog-search .parameters {
-        font-size: 18px
-    }
-
-    .catalog .catalog-search .search-input {
-        width: 55%
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .container {
-        max-width: 720px
-    }
-
-    header .logotype-wrapper .logotype {
-        width: 100%
-    }
-
-    header .header-row-2 .header-contact a::after {
-        display: none
-    }
-
-    header .header-contact {
-        width: 20%;
-        flex-direction: column
-    }
-
-    header .header-contact li:last-child {
-        margin-left: 0px;
-        margin-top: 5px
-    }
-
-    header .header-search {
-        width: 60%;
-        margin-left: 25px
-    }
-
-    .offer .offer-content {
-        padding-top: 5%;
-        padding-bottom: 5%;
-        min-height: 560px
-    }
-
-    .offer .offer-content .content-wrapper {
-        padding: 0
-    }
-
-    .offer .transparent-wrapper {
-        justify-content: space-between
-    }
-
-    .offer .transparent-wrapper .transparent-btn:last-child {
-        margin-left: 10px
-    }
-
-    .catalog .catalog-search {
-        justify-content: space-between
-    }
-
-    .catalog .catalog-search .search-input, .catalog .catalog-search .search-btn, .catalog .catalog-search .parameters {
-        font-size: 14px
-    }
-
-    .catalog .catalog-search .search-input {
-        width: 53%;
-        height: 40px
-    }
-
-    .catalog .catalog-search .search-btn {
-        height: 40px;
-        padding: 10px 50px
-    }
-
-    .catalog .catalog-grid .catalog-card {
-        padding: 15px
-    }
-
-    .catalog .catalog-grid .catalog-card .catalog-greeting {
-        font-size: 18px
-    }
-
-    .catalog .catalog-grid .catalog-card .catalog-desc {
-        font-size: 14px
-    }
-
-    .circle-btn-wrapper {
-        padding: 12.5px 0px 12.5px 41px !important
-    }
-
-    .circle-btn-wrapper .circle-btn {
-        padding: 20px 9px 20px 40px
-    }
-
-    .circle-btn-wrapper .circle-btn .circle {
-        top: -2.5px;
-        left: -40px;
-        width: 70px;
-        height: 70px
-    }
-
-    .circle-btn-wrapper .circle-btn .circle .cirle-content {
-        width: 60px !important;
-        height: 60px !important
-    }
-
-    .circle-btn-wrapper .circle-btn .circle .cirle-content img {
-        width: 100%;
-        padding: 10px
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .footer ul li:not(:last-child) {
-        margin-right: 25px !important
-    }
-
-    .container {
-        max-width: 540px
-    }
-
-    .pc-header {
-        display: none
-    }
-
-    .mobile-header {
-        display: block
-    }
-
-    header {
-        padding-top: 25px
-    }
-
-    header .header-row-2 {
-        margin-top: 20px;
-        align-items: start
-    }
-
-    header .header-search {
-        width: 85%;
-        justify-content: end
-    }
-
-    header .header-account {
-        width: 50%;
-        justify-content: start
-    }
-
-    header .header-contact {
-        width: 50%;
-        align-items: end
-    }
-
-    .offer .title {
-        font-size: 30px
-    }
-
-    .offer .offer-content {
-        height: calc(100vh - 126px)
-    }
-
-    .offer .content-wrapper {
-        margin-bottom: 0% !important
-    }
-
-    .offer .content-wrapper .title {
-        margin-bottom: 25px !important
-    }
-
-    .offer .content-wrapper .content-column .offer-btn-wrapper {
-        display: flex;
-        justify-content: space-between
-    }
-
-    .offer .content-wrapper .content-column .circle-btn-wrapper {
-        margin-left: 10px
-    }
-
-    .offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
-        margin-top: 0
-    }
-
-    .offer .transparent-wrapper-pc {
-        display: none
-    }
-
-    .offer .transparent-wrapper-mobile {
-        display: flex
-    }
-
-    .offer .transparent-wrapper-mobile .transparent-btn {
-        width: 50%;
-        max-height: 50px
-    }
-
-    .offer .transparent-wrapper-mobile .transparent-btn:first-child {
-        width: 49%;
-        margin-right: 10px
-    }
-
-    .offer .transparent-wrapper-mobile .transparent-btn:last-child {
-        min-width: 260px;
-        margin-left: 0px
-    }
-
-    .offer .content-wrapper {
-        justify-content: center !important;
-        margin-bottom: 10%
-    }
-
-    .offer .content-wrapper .title {
-        margin-bottom: 60px
-    }
-
-    .offer .content-wrapper .content-column {
-        grid-template-columns: 1fr
-    }
-
-    .offer .content-wrapper .content-column .example {
-        width: 75%;
-        font-size: 10px;
-        padding-right: 20px
-    }
-
-    .offer .content-wrapper .content-column .example span:last-child {
-        margin-left: 0
-    }
-
-    .offer-content .circle-btn-wrapper:first-child {
-        margin-left: 0 !important
-    }
-
-    .catalog .greeting {
-        font-size: 30px
-    }
-
-    .catalog .catalog-grid {
-        grid-template-columns: 1fr
-    }
-
-    .catalog .catalog-search .search-input {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 5px;
-        text-overflow: ellipsis
-    }
-
-    .catalog .parameters {
-        display: none
-    }
-
-    .circle-btn-wrapper {
-        width: 50%
-    }
-
-    .circle-btn-wrapper .circle-btn {
-        padding: 20px 20px 20px 40px;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px
-    }
-
-    .circle-btn-wrapper .circle-btn .circle {
-        top: -2.5px;
-        left: -40px;
-        width: 70px;
-        height: 70px
-    }
-
-    .circle-btn-wrapper .circle-btn .circle .cirle-content {
-        width: 55px !important;
-        height: 55px !important
-    }
-
-    .circle-btn-wrapper .circle-btn .circle .cirle-content img {
-        width: 100%;
-        padding: 10px
-    }
-}
-
-@media(max-width: 576px) {
-    .example {
-        flex-direction: column
-    }
-
-    .example span {
-        font-size: 12px
-    }
-
-    .example span:last-child {
-        margin-top: 5px
-    }
-
-    .footer ul li {
-        font-size: 15px
-    }
-
-    .footer ul li:not(:last-child) {
-        margin-right: 15px !important
-    }
-
-    .container {
-        padding: 0px 20px;
-        max-width: 100%
-    }
-
-    .offer .title {
-        font-size: 24px
-    }
-
-    .content-column {
-        display: flex !important;
-        flex-direction: column
-    }
-
-    .transparent-btn {
-        font-size: 12px;
-        padding: 12px 25px 12px 25px
-    }
-
-    .transparent-btn .arrow {
-        left: 10%;
-        top: 15px
-    }
-
-    .transparent-wrapper-mobile .transparent-btn {
-        width: 50% !important
-    }
-
-    .transparent-wrapper-mobile .transparent-btn:last-child {
-        min-width: 100px !important
-    }
-
-    .catalog .greeting {
-        font-size: 24px
-    }
-
-    .catalog .catalog-search .search-btn {
-        padding: 10px 20px
-    }
-}
-
-@media(max-width: 493px) {
-    .circle-btn-wrapper {
-        padding: 0 !important;
-        width: 100% !important
-    }
-
-    .circle-btn-wrapper .circle-btn {
-        max-width: 100% !important;
-        width: calc(100% - 25px) !important;
-        font-size: 14px;
-        height: 58px
-    }
-
-    .circle-btn-wrapper .circle-btn .circle {
-        left: -25px;
-        top: 0px;
-        width: 60px;
-        height: 60px
-    }
-
-    .circle-btn-wrapper .circle-btn .circle .cirle-content {
-        width: 50px !important;
-        height: 50px !important
-    }
-
-    .circle-btn-wrapper .circle-btn .circle .cirle-content img {
-        width: 100%;
-        padding: 10px
-    }
-
-    .transparent-btn {
-        height: 58px;
-        padding: 12px 12px 12px 30px;
-        text-align: center
-    }
-
-    .transparent-btn .arrow {
-        top: 20px
-    }
-}
-
-@media(max-width: 470px) {
-    .footer .container {
-        flex-direction: column;
-        text-align: center;
-        align-items: center
-    }
-
-    .footer ul:last-child {
-        margin-top: 30px
-    }
-
-    .footer ul li:not(:last-child) {
-        margin-right: 15px !important
-    }
-}
-
-@media(max-width: 461px) {
-    .circle-btn-wrapper {
-        padding: 0 !important;
-        width: 100% !important
-    }
-
-    .circle-btn-wrapper .circle-btn {
-        padding: 20px 10px 20px 20px;
-        max-width: 100% !important;
-        width: calc(100% - 25px) !important;
-        font-size: 12px;
-        height: 50px
-    }
-
-    .circle-btn-wrapper .circle-btn .circle {
-        left: -30px;
-        top: 0px;
-        width: 50px;
-        height: 50px
-    }
-
-    .circle-btn-wrapper .circle-btn .circle .cirle-content {
-        width: 40px !important;
-        height: 40px !important
-    }
-
-    .circle-btn-wrapper .circle-btn .circle .cirle-content img {
-        width: 100%;
-        padding: 10px
-    }
-}
-
-@media(max-width: 424px) {
-    .circle-btn-wrapper {
-        padding: 0px
-    }
-
-    .circle-btn-wrapper:last-child {
-        margin-left: 10px !important
-    }
-
-    .circle-btn-wrapper .circle {
-        display: none
-    }
-
-    .circle-btn-wrapper .circle-btn {
-        width: 100% !important;
-        padding: 0px;
-        text-align: center
-    }
-}
-
-@media(max-width: 404px) {
-    .example {
-        width: 100% !important
-    }
-
-    .example span {
-        font-size: 11px
-    }
-
-    .offer .content-search .search-input {
-        width: 65%
-    }
-
-    .offer .content-search .search-btn {
-        width: 35%
-    }
-}
-
-@media(max-width: 374px) {
-    .transparent-wrapper .transparent-btn {
-        padding: 7px !important
-    }
-
-    .transparent-wrapper .transparent-btn .arrow {
-        display: none
-    }
-}
-
-@media(max-width: 332px) {
-    .transparent-wrapper .transparent-btn {
-        font-size: 12px;
-        width: 50% !important
-    }
-
-    .transparent-wrapper .transparent-btn:first-child {
-        margin-right: 10px !important
-    }
-
-    .transparent-wrapper .transparent-btn:last-child {
-        width: 50% !important
-    }
-}
-
-@media(max-aspect-ratio: 4/3) {
-    .offer .offer-content .content-wrapper {
-        justify-content: space-around
-    }
-}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+</head>
+<!-- oncontextmenu="return false;" -->
+
+<body>
+    <div class="offer">
+        <header>
+            <div class="container">
+                <div class="pc-header">
+                    <div class="header-row-1">
+                        <div class="logotype-wrapper header-logotype">
+                            <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype" class="logotype">
+                        </div>
+                        <form class="header-search search" action="#">
+                            <input type="text" class="search-input" placeholder="Поиск по артикулу или VIN коду">
+                            <button class="search-btn red-btn">Найти</button>
+                        </form>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-row-2">
+                        <div class="burger-wrapper">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="header-nav">
+                            <li><a href="#">Оплатить заказ</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Новости</a></li>
+                        </ul>
+                        <ul class="header-account">
+                            <li><a href="#">Личный кабинет</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile-header">
+                    <div class="header-row-1">
+                        <div class="burger-wrapper">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <form class="header-search search" action="#">
+                            <input id="header-search" type="text" class="search-input"
+                                placeholder="Поиск по артикулу или VIN коду">
+                            <button class="search-btn red-btn">Найти</button>
+                        </form>
+                    </div>
+                    <div class="header-row-2">
+                        <ul class="header-account">
+                            <li><a href="#">Личный кабинет</a></li>
+                        </ul>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="offer-content">
+                <div class="content-wrapper">
+                    <h1 class="title">Запчасти в интернет-магазине <br> OutletAuto</h1>
+
+                    <div class="w-100">
+                        <div class="content-column">
+                            <div class="left-content">
+                                <div class="content-search-wrapper">
+                                    <form class="content-search search" action="#">
+                                        <input id="header-search" type="text" class="search-input"
+                                            placeholder="Поиск по артикулу или VIN коду">
+                                        <button class="search-btn red-btn">Найти</button>
+                                    </form>
+                                    <div class="example">
+                                        <span>Например: WUBH54B11N111054 </span>
+                                        <span>Что такое VIN-код и FRAME?</span>
+                                    </div>
+                                </div>
+                                <div class="transparent-wrapper transparent-wrapper-pc">
+                                    <button class="transparent-btn">
+                                        <div class="arrow">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        Каталоги
+                                        <ul class="dropped" data-height="333">
+                                            <span>Каталоги</span>
+                                            <li><a href="#">Оригинальные запчасти</a></li>
+                                            <li><a href="#">Запчасти для ТО</a></li>
+                                            <li><a href="#">Каталоги TecDoc</a></li>
+                                            <li><a href="#">Шины и диски</a></li>
+                                            <li><a href="#">Масла и тех. жидкости</a></li>
+                                            <li><a href="#">Доб. оборудование</a></li>
+                                            <li><a href="#">Инструмент</a></li>
+                                            <li><a href="#">Автохимия и косметика</a></li>
+                                            <li><a href="#">Щетки, лампы, аксессуары</a></li>
+                                        </ul>
+                                    </button>
+                                    <button class="transparent-btn">
+                                        <div class="arrow">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        Популярные детали
+                                        <ul class="dropped" data-height="363">
+                                            <span>Каталоги</span>
+                                            <li><a href="#">Популярные детали</a></li>
+                                            <li><a href="#">Свет и электрика</a></li>
+                                            <li><a href="#">Электроинструменты</a></li>
+                                            <li><a href="#">Садовая техника</a></li>
+                                            <li><a href="#">Ручные инструменты</a></li>
+                                            <li><a href="#">Бытовая химия</a></li>
+                                            <li><a href="#">Канцтовары</a></li>
+                                            <li><a href="#">Детские товары</a></li>
+                                            <li><a href="#">Велосипеды</a></li>
+                                            <li><a href="#">Туризм, рыбалка</a></li>
+                                        </ul>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="offer-btn-wrapper">
+                                <div class="circle-btn-wrapper">
+                                    <a href="#" class="circle-btn">
+                                        <div class="circle">
+                                            <div class="cirle-content">
+                                                <img src="{% static 'outletauto/assets/imgs/icon/bi_people.svg' %}" alt="present">
+                                            </div>
+                                        </div>
+                                        <span>Вступить в клуб</span>
+                                    </a>
+                                </div>
+                                <div class="circle-btn-wrapper">
+                                    <a href="#" class="circle-btn">
+                                        <div class="circle">
+                                            <div class="cirle-content">
+                                                <img src="{% static 'outletauto/assets/imgs/icon/present.svg' %}" alt="present">
+                                            </div>
+                                        </div>
+                                        <span>Получить подарок</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="right-content">
+                                <div class="content-search-wrapper news" >
+                                    <div id="news-slider" >
+                                        {% for new in news %}
+                                            <a href="{{new.link}}">
+                                                <div style="background-image: url('{{new.image}}'); background-size: cover; background-repeat: no-repeat;  padding: 20px;">
+                                                    <h6 style="font-size:12px;">{{new.title}}</h6>
+
+                                                    <p style="font-size:8px;">{{new.description}}</p>
+                                                </div>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="empty-content">
+                            </div>
+                            <div class="transparent-wrapper transparent-wrapper-mobile">
+                                <button class="transparent-btn">
+                                    <div class="arrow">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    Каталоги
+                                    <ul class="dropped" data-height="333">
+                                        <span>Каталоги</span>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                        <li><a href="#">Оригинальные запчасти</a></li>
+                                    </ul>
+                                </button>
+                                <button class="transparent-btn">
+                                    <div class="arrow">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    Популярные детали
+                                </button>
+                            </div>
+                        </div>
+                        <div class="arrow-fixed-wrapper">
+                            <a href="#greeting">
+                                <div class="arrow-fixed">
+                                    <div class="arrow arrow-animate">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="arrow arrow-animate">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="arrow arrow-animate">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="catalog">
+        <div class="container">
+            <h2 id="greeting" class="greeting">Универсальный каталог</h2>
+            <form class="catalog-search search" action="#">
+                <span class="parameters">Подбор по параметрам</span>
+                <input type="text" class="search-input" placeholder="Поиск по каталогу">
+                <button class="search-btn red-btn">Найти</button>
+            </form>
+            <div class="catalog-grid">
+                <div class="catalog-card">
+                    <span class="catalog-greeting">Масла и технические жидкости</span>
+                    <span class="catalog-desc">Поиск технических жидкостей по параметрам</span>
+                </div>
+                <div class="catalog-card">
+                    <span class="catalog-greeting">Шины и диски</span>
+                    <span class="catalog-desc">Поиск шин и дисков по параметрам</span>
+                </div>
+                <div class="catalog-card">
+                    <span class="catalog-greeting">Автохимия и косметика</span>
+                    <span class="catalog-desc">Поиск продукции за уходом автомобиля</span>
+                </div>
+                <div class="catalog-card">
+                    <span class="catalog-greeting">Автопринадлежности</span>
+                    <span class="catalog-desc">Поиск аксессуаров для автомобиля</span>
+                </div>
+                <div class="catalog-card">
+                    <span class="catalog-greeting">Товары для дома</span>
+                    <span class="catalog-desc">Поиск аксессуаров и бытовой техники</span>
+                </div>
+                <div class="catalog-card">
+                    <span class="catalog-greeting">Инструменты</span>
+                    <span class="catalog-desc">Поиск оборудования для автомобиля и дома</span>
+                </div>
+                <div class="catalog-card">
+                    <span class="catalog-greeting">Сувенирная продукция</span>
+                    <span class="catalog-desc">Поиск аксессуаров с фирменной символикой</span>
+                </div>
+                <div class="catalog-card">
+                    <span class="catalog-greeting">Автозапчасти</span>
+                    <span class="catalog-desc">Поиск автозапчастей</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <ul class="nav">
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Клиентам</a></li>
+                <li><a href="#">Поставщикам</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">
+                        <img src="{% static 'outletauto/assets/imgs/icon/vk.svg' %}" alt="vk">
+                    </a></li>
+                <li><a href="#">
+                        <img src="{% static 'outletauto/assets/imgs/icon/вацап.svg' %}" alt="whatsapp">
+                    </a></li>
+                <li><a href="#">
+                        <img src="{% static 'outletauto/assets/imgs/icon/telegram.svg' %}" alt="telegram">
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script type="text/javascript">
+    // Отображаем список новостей в виде слайдера Slick.
+      $('#news-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+  });
+
+  </script>
+
+</html>
