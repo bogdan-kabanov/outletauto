@@ -1,6 +1,5 @@
 *, *:before, *:after {
     box-sizing: border-box;
-
 }
 
 html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
@@ -142,7 +141,7 @@ header .header-account {
 .footer {
     background-color: #504f4f;
     padding-top: 50px;
-    padding-bottom: 100px
+    padding-bottom: 50px
 }
 
 .footer .container {
@@ -248,6 +247,38 @@ button:hover, a:hover {
 
 .transparent-wrapper .transparent-btn:last-child {
     margin-left: 40px
+}
+
+.transparent-wrapper .transparent-btn .dropped {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+    width: 260px;
+    height: 0px;
+    background: #393838;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, .25), inset 4px 4px 12px rgba(255, 255, 255, .21);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: .6s;
+    z-index: 999;
+    overflow: hidden
+}
+
+.transparent-wrapper .transparent-btn .dropped li {
+    text-align: start;
+    font-size: 18px;
+    line-height: 20px
+}
+
+.transparent-wrapper .transparent-btn .dropped li:not(:first-child) {
+    margin-top: 10px
+}
+
+.transparent-wrapper .transparent-btn .dropped-active {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: var(--main-height-dropped)
 }
 
 .transparent-btn {
@@ -385,17 +416,21 @@ button:hover, a:hover {
 .offer {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to top, rgb(2, 2, 2) 3%, rgba(0, 0, 0, 0) 96%), url("../imgs/offer.png");
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 90%, #020202 99%, #020202 100%), url("../imgs/car_bg.png");
     background-position: center center;
-    background-size: cover;
-    position: relative
+    background-size: cover
 }
 
 .offer .arrow-fixed-wrapper {
+    position: absolute;
+    left: calc(50% - 15px);
+    bottom: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     margin-top: 25px
 }
 
@@ -469,10 +504,12 @@ button:hover, a:hover {
     text-align: center;
     font-weight: bold;
     font-size: 48px;
-    margin-bottom: 35px
+    margin-bottom: 250px
 }
 
 .offer .offer-content {
+    position: relative;
+    z-index: 2;
     transition: .6s;
     width: 100%;
     min-height: 600px;
@@ -488,7 +525,7 @@ button:hover, a:hover {
     padding: 0px 100px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: start;
     flex-direction: column;
     height: 100%
@@ -503,15 +540,13 @@ color:black;
     width: 100%;
     display: grid;
     grid-template-columns: 1.3fr .7fr;
-    gap: 20px;
+    gap: 40px
 }
-
-
 
 .offer .content-wrapper .content-column .left-content .right-content{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between
+    flex-direction: column
+    /*justify-content: space-between*/
 }
 
 .offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
@@ -655,9 +690,9 @@ color:black;
 }
 
 @media screen and (max-width: 1400px) {
-    .container {
+    /*.container {
         max-width: 1140px
-    }
+    }*/
 
     .catalog .catalog-search .search-input, .catalog .catalog-search .search-btn, .catalog .catalog-search .parameters {
         font-size: 18px
@@ -682,8 +717,44 @@ color:black;
         width: 40%
     }
 
+    .offer {
+        background: rgba(0, 0, 0, 0)
+    }
+
+    .offer::after {
+        transition: .6s;
+        bottom: 0vh;
+        left: -9%;
+        z-index: -1;
+        content: "";
+        width: 120%;
+        height: 100%;
+        min-height: 600px;
+        display: block;
+        position: absolute;
+        background-image: url("../imgs/car-transformed.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+
+    .offer::before {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        background-color: #000;
+        background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 90%, #020202 99%, #020202 100%), url("../imgs/bg-car.jpeg");
+        background-size: cover
+    }
+
     .offer .title {
-        font-size: 36px
+        font-size: 36px;
+        margin-bottom: 250px
     }
 
     .offer .content-column .circle-btn-wrapper {
@@ -701,10 +772,9 @@ color:black;
     .offer .content-wrapper .content-column .example {
         display: flex;
         justify-content: space-between;
-        padding-right: 0;
         margin-top: 10px;
-        width: 100%;
-        font-size: 12px
+        padding-right: 15px;
+        font-size: 9px
     }
 
     .offer .content-wrapper .content-column .example span:last-child {
@@ -756,6 +826,14 @@ color:black;
         margin-left: 25px
     }
 
+    .offer::after {
+        bottom: 2vh
+    }
+
+    .offer .offer-btn-wrapper .circle-btn-wrapper:first-child {
+        justify-content: start !important
+    }
+
     .offer .offer-content {
         padding-top: 5%;
         padding-bottom: 5%;
@@ -766,6 +844,9 @@ color:black;
         padding: 0
     }
 
+    .offer .title {
+        margin-bottom: 70px
+    }
     .offer .transparent-wrapper {
         justify-content: space-between
     }
@@ -871,8 +952,23 @@ color:black;
         align-items: end
     }
 
+    .offer::after {
+        width: 150%;
+        bottom: 3vh;
+        left: -20%
+    }
+
+    .offer::before {
+        top: 0vh;
+        left: 0px;
+        background-size: cover;
+        width: 100%;
+        height: 100%
+    }
+
     .offer .title {
-        font-size: 30px
+        font-size: 30px;
+        margin-bottom: 250px
     }
 
     .offer .offer-content {
@@ -883,20 +979,21 @@ color:black;
         margin-bottom: 0% !important
     }
 
-    .offer .content-wrapper .title {
+    /*.offer .content-wrapper .title {
         margin-bottom: 25px !important
-    }
+    }*/
 
     .offer .content-wrapper .content-column .offer-btn-wrapper {
         display: flex;
         justify-content: space-between
     }
 
-    .offer .content-wrapper .content-column .circle-btn-wrapper {
+    /*.offer .content-wrapper .content-column .circle-btn-wrapper {
         margin-left: 10px
-    }
+    }*/
 
     .offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
+        padding: 0 !important;
         margin-top: 0
     }
 
@@ -928,9 +1025,9 @@ color:black;
         margin-bottom: 10%
     }
 
-    .offer .content-wrapper .title {
+    /*.offer .content-wrapper .title {
         margin-bottom: 60px
-    }
+    }*/
 
     .offer .content-wrapper .content-column {
         grid-template-columns: 1fr
@@ -998,6 +1095,77 @@ color:black;
     }
 }
 
+@media(max-width: 665px) {
+    .offer::after {
+        bottom: 6vh;
+        left: -15%;
+        bottom: 4vh
+    }
+}
+
+@media(max-width: 616px) {
+    .offer::after {
+        left: -10%
+    }
+}
+
+@media(max-width: 577px) {
+    .offer::after {
+        left: -20%;
+        transform: scale(0.8)
+    }
+}
+
+@media(max-width: 529px) {
+    .offer::after {
+        left: -15%;
+        transform: scale(0.8)
+    }
+}
+
+@media(max-width: 491px) {
+    .offer::after {
+        width: 200%;
+        left: -35%;
+        bottom: 2vh;
+        transform: scale(0.8)
+    }
+}
+
+@media(max-width: 452px) {
+    .offer::after {
+        width: 150%;
+        height: 500px;
+        left: -30%;
+        bottom: 17vh
+    }
+
+    .offer .title {
+        margin-bottom: 190px
+    }
+}
+
+@media(max-width: 445px) {
+    .offer::after {
+        left: -25%;
+        bottom: 17.5vh
+    }
+
+    .offer .title {
+        margin-bottom: 190px
+    }
+}
+
+@media(max-width: 403px) {
+    .offer::after {
+        left: -22%;
+        bottom: 16.5vh
+    }
+
+    .offer .title {
+        margin-bottom: 184px
+    }
+}
 @media(max-width: 576px) {
     .example {
         flex-direction: column
@@ -1028,6 +1196,10 @@ color:black;
         font-size: 24px
     }
 
+    .offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
+        padding-left: 40px !important;
+        margin-left: 10px !important
+    }
     .content-column {
         display: flex !important;
         flex-direction: column
@@ -1061,8 +1233,21 @@ color:black;
 }
 
 @media(max-width: 493px) {
+    .offer .title {
+        font-size: 24px
+    }
+
+    .offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
+        padding-left: 26px !important;
+        margin-left: 8px !important
+    }
+
+    .offer .content-wrapper .content-column .circle-btn-wrapper .circle-btn {
+        width: 100% !important
+    }
+
     .circle-btn-wrapper {
-        padding: 0 !important;
+        padding: 0px 0px 0px 26px !important;
         width: 100% !important
     }
 
@@ -1119,7 +1304,7 @@ color:black;
 
 @media(max-width: 461px) {
     .circle-btn-wrapper {
-        padding: 0 !important;
+        padding: 0px 0px 0px 25px !important;
         width: 100% !important
     }
 
@@ -1132,7 +1317,7 @@ color:black;
     }
 
     .circle-btn-wrapper .circle-btn .circle {
-        left: -30px;
+        left: -25px;
         top: 0px;
         width: 50px;
         height: 50px
@@ -1150,25 +1335,30 @@ color:black;
 }
 
 @media(max-width: 424px) {
-    .circle-btn-wrapper {
+    /*.circle-btn-wrapper {
         padding: 0px
-    }
+    }*/
 
     .circle-btn-wrapper:last-child {
         margin-left: 10px !important
     }
 
-    .circle-btn-wrapper .circle {
+    /*.circle-btn-wrapper .circle {
         display: none
-    }
+    }*/
 
     .circle-btn-wrapper .circle-btn {
         width: 100% !important;
-        padding: 0px;
+        /*padding: 0px;*/
         text-align: center
     }
 }
 
+@media(max-width: 412px) {
+    .circle-btn-wrapper .circle-btn {
+        font-size: 10px
+    }
+}
 @media(max-width: 404px) {
     .example {
         width: 100% !important
@@ -1184,6 +1374,35 @@ color:black;
 
     .offer .content-search .search-btn {
         width: 35%
+    }
+}
+
+@media(max-width: 392px) {
+    .offer::after {
+        left: -16%
+    }
+
+    .offer .title {
+        margin-bottom: 170px
+    }
+}
+
+@media(max-width: 348px) {
+    .offer::after {
+        width: 170%;
+        left: -21%;
+        top: 13vh
+    }
+
+    .offer .title {
+        margin-bottom: 150px
+    }
+}
+
+@media(max-width: 385px) {
+    .circle-btn-wrapper .circle-btn {
+        padding: 20px 10px 20px 30px !important;
+        font-size: 9px
     }
 }
 
@@ -1217,3 +1436,147 @@ color:black;
         justify-content: space-around
     }
 }
+
+@media(min-width: 1400px)and (max-height: 750px) {
+    .offer .arrow-fixed-wrapper {
+        position: relative;
+        left: 0;
+        bottom: 0
+    }
+
+    .offer .title {
+        margin-top: 25px
+    }
+}
+
+@media(max-width: 1400px)and (max-height: 750px) {
+    .offer {
+        min-height: 734px
+    }
+
+    .offer .arrow-fixed-wrapper {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-top: 0
+    }
+
+    .offer .title {
+        margin-top: 25px
+    }
+}
+
+@media(max-width: 1200px)and (max-height: 750px) {
+    .offer {
+        min-height: 734px
+    }
+}
+
+@media(max-width: 992px)and (max-height: 635px) {
+    .offer {
+        min-height: 630px
+    }
+}
+
+@media(max-width: 768px)and (max-height: 839px) {
+    .offer {
+        min-height: 860px
+    }
+
+    .offer .offer-content {
+        height: 100%
+    }
+
+    .offer::after {
+        bottom: 6vh;
+        left: -22%
+    }
+
+    .offer .title {
+        margin-bottom: 270px;
+        margin-top: 25px
+    }
+
+    .offer .arrow-fixed-wrapper {
+        margin-top: 20px;
+        position: relative;
+        left: 0
+    }
+}
+
+@media(max-width: 700px)and (max-height: 839px) {
+    .offer::after {
+        bottom: 6vh;
+        left: -17%
+    }
+}
+
+@media(max-width: 630px)and (max-height: 839px) {
+    .offer::after {
+        bottom: 7vh;
+        left: -13%
+    }
+}
+
+@media(max-width: 557px)and (max-height: 839px) {
+    .offer::after {
+        transform: scale(0.8);
+        top: -127px;
+        bottom: auto;
+        left: -18%
+    }
+
+    .offer .title {
+        margin-bottom: 180px
+    }
+}
+
+@media(max-width: 508px)and (max-height: 839px) {
+    .offer::after {
+        transform: scale(0.8);
+        top: -127px;
+        left: -15%
+    }
+}
+
+@media(max-width: 491px)and (max-height: 839px) {
+    .offer::after {
+        transform: scale(0.8);
+        top: -127px;
+        left: -37%
+    }
+}
+
+@media(max-width: 452px)and (max-height: 839px) {
+    .offer::after {
+        transform: scale(0.8);
+        top: 32px;
+        left: -27%
+    }
+}
+
+@media(max-width: 416px)and (max-height: 839px) {
+    .offer::after {
+        transform: scale(0.8);
+        top: 32px;
+        left: -23%
+    }
+}
+
+@media(max-width: 388px)and (max-height: 839px) {
+    .offer::after {
+        transform: scale(0.8);
+        top: 32px;
+        left: -19%
+    }
+}
+
+@media(max-width: 362px)and (max-height: 839px) {
+    .offer::after {
+        transform: scale(0.8);
+        top: 32px;
+        left: -16%
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
