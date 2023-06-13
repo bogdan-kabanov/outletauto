@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 </head>
 <!-- oncontextmenu="return false;" -->
 
@@ -159,23 +160,23 @@
                                     </a>
                                 </div>
                             </div>
-
+                            <div class="empty-content"></div>
                             <div class="right-content">
                                 <div class="content-search-wrapper news" >
-                                    <div id="news-slider" >
-                                        {% for new in news %}
-                                            <a href="{{new.link}}">
-                                                <div style="background-image: url('{{new.image}}'); background-size: cover; background-repeat: no-repeat;  padding: 20px;">
-                                                    <h6 style="font-size:12px;">{{new.title}}</h6>
+                                    <div class="main-news">
+                                        <div class="title">Новости</div>
+                                        <div id="news-slider" style="width:240px; height: 200px;">
+                                            {% for new in news %}
+                                                <a href="{{new.link}}" style="width:240px; height: 240px;">
+                                                    <div class="news" style="width:240px; height: 150px;background-image: url('{{new.image}}'); background-size: cover; background-repeat: no-repeat;  ">
 
-                                                    <p style="font-size:8px;">{{new.description}}</p>
-                                                </div>
-                                            </a>
-                                        {% endfor %}
+                                                    </div>
+                                                    <h6 style="font-size:12px;">{{new.title}}</h6>
+                                                </a>
+                                            {% endfor %}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="empty-content">
                             </div>
                             <div class="transparent-wrapper transparent-wrapper-mobile">
                                 <button class="transparent-btn">
@@ -297,16 +298,23 @@
     <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
 </body>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript">
     // Отображаем список новостей в виде слайдера Slick.
       $('#news-slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-  });
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+          prevArrow: '',
+          nextArrow: ''
+      });
 
   </script>
 
