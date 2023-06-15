@@ -29,9 +29,14 @@ a {
     border: none;
     background: transparent;
 
-    &:hover {
-        color: $lite-scolor2;
-    }
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.wrapper {
+    overflow: hidden;
 }
 
 .search {
@@ -74,7 +79,7 @@ a {
         .dropped {
             position: absolute;
             left: 0;
-            top: calc(100% + 10px);
+            bottom: calc(100% + 10px);
             width: 260px;
             height: 0px;
             background: rgba(114, 114, 114, 0.534);

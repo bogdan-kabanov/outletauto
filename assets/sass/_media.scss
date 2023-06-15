@@ -5,14 +5,12 @@
 }
 
 @media screen and (max-width: 1400px) {
-
     .container {
         max-width: 1160px;
     }
 
     .catalog {
         .catalog-search {
-
             .search-input,
             .search-btn,
             .parameters {
@@ -48,22 +46,22 @@
         // background-size: 100%;
         background: transparent;
 
-        // &::after {
-        //     transition: .6s;
-        //     bottom: 0vh;
-        //     left: -9%;
-        //     z-index: -1;
-        //     content: "";
-        //     width: 120%;
-        //     height: 100%;
-        //     min-height: 600px;
-        //     display: block;
-        //     position: absolute;
-        //     background-image: url("../imgs/car-transformed.png");
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        //     background-size: cover;
-        // }
+        &::after {
+            transition: 0.6s;
+            bottom: 0vh;
+            left: -9%;
+            z-index: -1;
+            content: "";
+            width: 120%;
+            height: 100%;
+            min-height: 600px;
+            display: block;
+            position: absolute;
+            background-image: url("../imgs/car-transformed.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
         &::before {
             top: 0;
@@ -75,7 +73,16 @@
             display: block;
             position: absolute;
             background-color: black;
-            background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, .8) 10%, rgba(0, 0, 0, .8) 50%, rgba(0, 0, 0, .8) 90%, #020202 99%, #020202 100%), url("../imgs/bg-car.jpeg");
+            background: linear-gradient(
+                    #020202 0%,
+                    #020202 0%,
+                    rgba(0, 0, 0, 0.8) 10%,
+                    rgba(0, 0, 0, 0.8) 50%,
+                    rgba(0, 0, 0, 0.8) 90%,
+                    #020202 99%,
+                    #020202 100%
+                ),
+                url("../imgs/bg-car.jpeg");
             background-size: cover;
         }
 
@@ -181,7 +188,6 @@
     }
 
     .offer {
-
         &::after {
             bottom: 2vh;
         }
@@ -327,7 +333,6 @@
     }
 
     .offer {
-
         &::after {
             width: 150%;
             bottom: 3vh;
@@ -361,10 +366,14 @@
                 }
 
                 .circle-btn-wrapper {
-                    // margin-left: 10px;
+                    .circle-btn {
+                        max-width: 100%;
+                    }
+                    &:first-child {
+                        margin-right: 10px;
+                    }
 
                     &:last-child {
-                        padding: 0 !important;
                         margin-top: 0;
                     }
                 }
@@ -498,7 +507,7 @@
     .offer {
         &::after {
             left: -20%;
-            transform: scale(.8);
+            transform: scale(0.8);
         }
     }
 }
@@ -507,7 +516,7 @@
     .offer {
         &::after {
             left: -15%;
-            transform: scale(.8);
+            transform: scale(0.8);
         }
     }
 }
@@ -518,7 +527,7 @@
             width: 200%;
             left: -35%;
             bottom: 2vh;
-            transform: scale(.8);
+            transform: scale(0.8);
         }
     }
 }
@@ -564,7 +573,6 @@
     }
 }
 
-
 @media (max-width: 576px) {
     .example {
         flex-direction: column;
@@ -605,7 +613,6 @@
                 .circle-btn-wrapper {
                     &:last-child {
                         padding-left: 40px !important;
-                        margin-left: 10px !important;
                     }
                 }
             }
@@ -670,6 +677,9 @@
         .content-wrapper {
             .content-column {
                 .circle-btn-wrapper {
+                    &:first-child {
+                        margin-right: 0px;
+                    }
                     &:last-child {
                         padding-left: 26px !important;
                         margin-left: 8px !important;
@@ -781,7 +791,6 @@
 
 @media (max-width: 424px) {
     .circle-btn-wrapper {
-
         // padding: 0px;
         &:last-child {
             margin-left: 10px !important;
@@ -851,8 +860,6 @@
     }
 }
 
-
-
 @media (max-width: 385px) {
     .circle-btn-wrapper {
         .circle-btn {
@@ -902,170 +909,5 @@
     }
 }
 
-
-@media (min-width: 1400px) and (max-height: 750px) {
-    .offer {
-        .arrow-fixed-wrapper {
-            position: relative;
-            left: 0;
-            bottom: 0;
-        }
-
-        .title {
-            margin-top: 25px;
-        }
-    }
-}
-
-@media (max-width: 1400px) and (max-height: 750px) {
-    .offer {
-        min-height: 734px;
-
-        .arrow-fixed-wrapper {
-            position: relative;
-            left: 0;
-            bottom: 0;
-            margin-top: 0;
-        }
-
-        .title {
-            margin-top: 25px;
-        }
-    }
-}
-
-@media (max-width: 1200px) and (max-height: 750px) {
-    .offer {
-        min-height: 734px;
-    }
-}
-
-@media (max-width: 992px) and (max-height: 635px) {
-    .offer {
-        min-height: 630px;
-    }
-}
-
-@media (max-width: 768px) and (max-height: 839px) {
-    .offer {
-        min-height: 860px;
-
-        .offer-content {
-            height: 100%;
-        }
-
-        &::after {
-            bottom: 6vh;
-            left: -22%;
-        }
-
-        .title {
-            margin-bottom: 270px;
-            margin-top: 25px;
-        }
-
-        .arrow-fixed-wrapper {
-            margin-top: 20px;
-            position: relative;
-            left: 0;
-        }
-    }
-}
-
-@media (max-width: 700px) and (max-height: 839px) {
-    .offer {
-
-        &::after {
-            bottom: 6vh;
-            left: -17%;
-        }
-    }
-}
-
-@media (max-width: 630px) and (max-height: 839px) {
-    .offer {
-        &::after {
-            bottom: 7vh;
-            left: -13%;
-        }
-    }
-}
-
-@media (max-width: 557px) and (max-height: 839px) {
-    .offer {
-        &::after {
-            transform: scale(0.8);
-            top: -127px;
-            bottom: auto;
-            left: -18%;
-        }
-
-        .title {
-            margin-bottom: 180px;
-        }
-    }
-}
-
-
-@media (max-width: 508px) and (max-height: 839px) {
-    .offer {
-        &::after {
-            transform: scale(0.8);
-            top: -127px;
-            left: -15%;
-        }
-    }
-}
-
-@media (max-width: 491px) and (max-height: 839px) {
-    .offer {
-        &::after {
-            transform: scale(0.8);
-            top: -127px;
-            left: -37%;
-        }
-    }
-}
-
-@media (max-width: 452px) and (max-height: 839px) {
-    .offer {
-        &::after {
-            transform: scale(0.8);
-            top: 32px;
-            left: -27%;
-        }
-    }
-}
-
-@media (max-width: 416px) and (max-height: 839px) {
-    .offer {
-        &::after {
-            transform: scale(0.8);
-            top: 32px;
-            left: -23%;
-        }
-    }
-}
-
-@media (max-width: 388px) and (max-height: 839px) {
-    .offer {
-        &::after {
-            transform: scale(0.8);
-            top: 32px;
-
-            left: -19%;
-
-        }
-    }
-}
-
-
-@media (max-width: 362px) and (max-height: 839px) {
-    .offer {
-        &::after {
-            transform: scale(0.8);
-            top: 32px;
-            left: -16%;
-        }
-    }
+@media (min-width: 1400px) and (max-height: 725px) {
 }
