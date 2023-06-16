@@ -11,6 +11,7 @@
 
     .catalog {
         .catalog-search {
+
             .search-input,
             .search-btn,
             .parameters {
@@ -43,49 +44,6 @@
     }
 
     .offer {
-        // background-size: 100%;
-        background: transparent;
-
-        &::after {
-            transition: 0.6s;
-            bottom: 0vh;
-            left: -9%;
-            z-index: -1;
-            content: "";
-            width: 120%;
-            height: 100%;
-            min-height: 600px;
-            display: block;
-            position: absolute;
-            background-image: url("../imgs/car-transformed.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        &::before {
-            top: 0;
-            left: 0;
-            z-index: -1;
-            content: "";
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            background-color: black;
-            background: linear-gradient(
-                    #020202 0%,
-                    #020202 0%,
-                    rgba(0, 0, 0, 0.8) 10%,
-                    rgba(0, 0, 0, 0.8) 50%,
-                    rgba(0, 0, 0, 0.8) 90%,
-                    #020202 99%,
-                    #020202 100%
-                ),
-                url("../imgs/bg-car.jpeg");
-            background-size: cover;
-        }
-
         .title {
             font-size: 36px;
             margin-bottom: 250px;
@@ -188,9 +146,8 @@
     }
 
     .offer {
-        &::after {
-            bottom: 2vh;
-        }
+        min-height: auto;
+        height: auto;
 
         .offer-btn-wrapper {
             .circle-btn-wrapper:first-child {
@@ -199,9 +156,10 @@
         }
 
         .offer-content {
-            padding-top: 5%;
-            padding-bottom: 5%;
-            min-height: 560px;
+            // padding-top: 5%;
+            // padding-bottom: 5%;
+            height: auto;
+            min-height: auto !important;
 
             .content-wrapper {
                 padding: 0;
@@ -209,7 +167,7 @@
         }
 
         .title {
-            margin-bottom: 70px;
+            margin-bottom: 180px;
         }
 
         .transparent-wrapper {
@@ -285,7 +243,20 @@
     }
 }
 
+@media (max-width: 797px) {
+    .offer {
+        .offer-content {
+            padding-bottom: 0%;
+        }
+
+        .arrow-fixed-wrapper {
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
+
     .footer {
         ul {
             li {
@@ -333,27 +304,24 @@
     }
 
     .offer {
-        &::after {
-            width: 150%;
-            bottom: 3vh;
-            left: -20%;
-        }
+        height: auto;
+        min-height: auto;
+        background-size: 160%;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-color: #020202;
 
-        &::before {
-            top: -0vh;
-            left: -0px;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
+        .arrow-fixed-wrapper {
+            display: none;
         }
 
         .title {
             font-size: 30px;
-            margin-bottom: 250px;
+            margin-bottom: 90px;
         }
 
         .offer-content {
-            height: calc(100vh - 126px);
+            height: auto;
         }
 
         .content-wrapper {
@@ -369,6 +337,7 @@
                     .circle-btn {
                         max-width: 100%;
                     }
+
                     &:first-child {
                         margin-right: 10px;
                     }
@@ -549,31 +518,25 @@
 
 @media (max-width: 445px) {
     .offer {
-        &::after {
-            left: -25%;
-            bottom: 17.5vh;
-        }
-
         .title {
-            margin-bottom: 190px;
+            margin-bottom: 89px;
         }
     }
 }
 
 @media (max-width: 403px) {
     .offer {
-        &::after {
-            left: -22%;
-            bottom: 16.5vh;
-        }
-
         .title {
-            margin-bottom: 184px;
+            // margin-bottom: 184px;
         }
     }
 }
 
 @media (max-width: 576px) {
+    .offer {
+        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .0)), url("../imgs/Главная.png");
+    }
+
     .example {
         flex-direction: column;
 
@@ -680,6 +643,7 @@
                     &:first-child {
                         margin-right: 0px;
                     }
+
                     &:last-child {
                         padding-left: 26px !important;
                         margin-left: 8px !important;
@@ -791,6 +755,7 @@
 
 @media (max-width: 424px) {
     .circle-btn-wrapper {
+
         // padding: 0px;
         &:last-child {
             margin-left: 10px !important;
@@ -836,26 +801,17 @@
 
 @media (max-width: 392px) {
     .offer {
-        &::after {
-            left: -16%;
-        }
-
         .title {
-            margin-bottom: 170px;
+            // margin-bottom: 170px;
         }
     }
 }
 
 @media (max-width: 348px) {
     .offer {
-        &::after {
-            width: 170%;
-            left: -21%;
-            top: 13vh;
-        }
 
         .title {
-            margin-bottom: 150px;
+            margin-bottom: 80px;
         }
     }
 }
@@ -909,5 +865,4 @@
     }
 }
 
-@media (min-width: 1400px) and (max-height: 725px) {
-}
+@media (min-width: 1400px) and (max-height: 725px) {}

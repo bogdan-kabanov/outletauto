@@ -35,6 +35,19 @@ a {
     text-decoration: underline;
 }
 
+.show-animation {
+    // margin: 2rem 0;
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
 .wrapper {
     overflow: hidden;
 }
@@ -245,7 +258,7 @@ a {
     background-color: black; //
     position: relative;
     // overflow: hidden;
-    background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, .3) 10%, rgba(0, 0, 0, .0) 50%, rgba(0, 0, 0, .4) 90%, #020202 99%, #020202 100%), url("../imgs/car_bg.png");
+    background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, .3) 10%, rgba(0, 0, 0, .0) 50%, rgba(0, 0, 0, .4) 90%, #020202 99%, #020202 100%), url("../imgs/Главная.png");
     background-position: center center;
     background-size: cover;
 
@@ -401,12 +414,13 @@ a {
     .greeting {
         font-weight: bold;
         padding-top: 84px;
+        padding-bottom: 20px;
         font-size: 48px;
         text-align: center;
     }
 
     .catalog-search {
-        margin-top: 50px;
+        margin-top: 30px;
         width: 100%;
         display: flex;
         justify-content: center;
