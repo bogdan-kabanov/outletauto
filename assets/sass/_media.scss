@@ -49,6 +49,18 @@
             margin-bottom: 250px;
         }
 
+        .offer-btn-wrapper {
+            .circle {
+                width: 80px;
+                height: 80px;
+                top:  -6.5px;
+                .cirle-content {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+
         .content-column {
             .circle-btn-wrapper {
                 padding: 12.5px 0px 12.5px 55px;
@@ -148,6 +160,24 @@
     .offer {
         min-height: auto;
         height: auto;
+        background:
+            linear-gradient(#020202 0%,
+                #020202 0%,
+                rgba(0, 0, 0, .0) 10%,
+                rgba(0, 0, 0, .0) 48%,
+                rgba(0, 0, 0, .0) 40%,
+                #020202 75%,
+                #020202 100%), url("../imgs/Главная.png");
+        background-color: #020202;
+        background-size: 1120px;
+        background-position-y: 66px;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0px calc(-6vh - 2px) 0px #020202;
+
+        .arrow-fixed-wrapper {
+            display: none;
+        }
 
         .offer-btn-wrapper {
             .circle-btn-wrapper:first-child {
@@ -156,8 +186,6 @@
         }
 
         .offer-content {
-            // padding-top: 5%;
-            // padding-bottom: 5%;
             height: auto;
             min-height: auto !important;
 
@@ -248,10 +276,6 @@
         .offer-content {
             padding-bottom: 0%;
         }
-
-        .arrow-fixed-wrapper {
-            display: none;
-        }
     }
 }
 
@@ -306,10 +330,13 @@
     .offer {
         height: auto;
         min-height: auto;
-        background-size: 160%;
-        background-position: top center;
-        background-repeat: no-repeat;
+        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 69%, rgba(0, 0, 0, 0) 3%, #020202 84%, #020202 100%), url(../imgs/Главная.png);
         background-color: #020202;
+        background-size: 1120px;
+        background-position-y: 24px;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0px calc(-6vh - 2px) 0px #020202;
 
         .arrow-fixed-wrapper {
             display: none;
@@ -317,7 +344,7 @@
 
         .title {
             font-size: 30px;
-            margin-bottom: 90px;
+            margin-bottom: 160px;
         }
 
         .offer-content {
@@ -454,39 +481,36 @@
     }
 }
 
+@media screen and (max-width: 750px) {
+    .offer {
+        .offer-content {
+            padding-top: 3%;
+        }
+
+        // .title {
+        //     margin-bottom: 90px;
+        // }
+    }
+}
+
 @media (max-width: 665px) {
     .offer {
-        &::after {
-            bottom: 6vh;
-            left: -15%;
-            bottom: 4vh;
+        background-size: 800px;
+
+        .title {
+            margin-bottom: 90px;
         }
     }
 }
 
-@media (max-width: 616px) {
+@media (max-width: 492px) {
     .offer {
-        &::after {
-            left: -10%;
-        }
-    }
-}
-
-@media (max-width: 577px) {
-    .offer {
-        &::after {
-            left: -20%;
-            transform: scale(0.8);
-        }
-    }
-}
-
-@media (max-width: 529px) {
-    .offer {
-        &::after {
-            left: -15%;
-            transform: scale(0.8);
-        }
+        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, .2) 16%, rgba(0, 0, 0, .2) 76%, rgba(0, 0, 0, .2) 34%, #020202 91%, #020202 100%), url(../imgs/Главная.png);
+        background-color: #020202;
+        background-repeat: no-repeat;
+        background-position-y: 35px;
+        background-position-x: center;
+        background-size: 760px;
     }
 }
 
@@ -501,22 +525,18 @@
     }
 }
 
-@media (max-width: 452px) {
+@media (max-width: 456px) {
     .offer {
-        &::after {
-            width: 150%;
-            height: 500px;
-            left: -30%;
-            bottom: 17vh;
-        }
-
-        .title {
-            margin-bottom: 190px;
-        }
+        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, 0.2) 16%, rgba(0, 0, 0, 0.2) 76%, rgba(0, 0, 0, 0.2) 34%, #020202 91%, #020202 100%), url(../imgs/Главная.png);
+        background-color: #020202;
+        background-repeat: no-repeat;
+        background-position-y: 35px;
+        background-position-x: center;
+        background-size: 550px;
     }
 }
 
-@media (max-width: 445px) {
+@media (max-width: 446px) {
     .offer {
         .title {
             margin-bottom: 89px;
@@ -524,19 +544,7 @@
     }
 }
 
-@media (max-width: 403px) {
-    .offer {
-        .title {
-            // margin-bottom: 184px;
-        }
-    }
-}
-
 @media (max-width: 576px) {
-    .offer {
-        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .0)), url("../imgs/Главная.png");
-    }
-
     .example {
         flex-direction: column;
 
