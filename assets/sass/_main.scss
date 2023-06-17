@@ -29,9 +29,27 @@ a {
     border: none;
     background: transparent;
 
-    &:hover {
-        color: $lite-scolor2;
-    }
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.show-animation {
+    // margin: 2rem 0;
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
+.wrapper {
+    overflow: hidden;
 }
 
 .search {
@@ -74,10 +92,11 @@ a {
         .dropped {
             position: absolute;
             left: 0;
-            top: calc(100% + 10px);
+            bottom: calc(100% + 10px);
             width: 260px;
             height: 0px;
-            background: #393838;
+            background: rgba(114, 114, 114, 0.534);
+            backdrop-filter: blur(10px);
             box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25), inset 4px 4px 12px rgba(255, 255, 255, 0.21);
             border-radius: 10px;
             padding-left: 20px;
@@ -183,6 +202,98 @@ a {
     }
 }
 
+.burger-nav-wrapper {
+    padding-bottom: 100px;
+    width: 100%;
+    height: 100% !important;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(92, 7, 7, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    .container {
+        position: relative;
+    }
+
+    .logotype {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .burger-btns {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .closed-nav {
+        position: relative;
+        background-color: #FAFAFA;
+        width: 30px;
+        height: 3px;
+        right: -0px;
+        top: -0px;
+        span {
+            width: 30px;
+            height: 3px;
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            background-color: #FAFAFA;
+            transform: rotate(90deg);
+        }
+        transform: rotate(45deg);
+    }
+
+    .nav-content {
+        display: flex;
+        justify-content: center;
+
+        .col:not(:last-child) {
+            margin-right: 140px;
+        }
+
+        .col {
+            .col-greeting {
+                font-weight: bold;
+                font-size: 24px;
+                display: block;
+                padding-bottom: 20px;
+            }
+
+            li {
+                font-size: 18px;
+                font-weight: 400;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+.burger-nav-wrapper_active {
+    display: flex;
+}
+
+
 .burger-nav {
     width: 40px;
     height: 40px;
@@ -238,8 +349,8 @@ a {
     min-height: 100vh;
     background-color: black; //
     position: relative;
-    overflow: hidden;
-    background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, .3) 10%, rgba(0, 0, 0, .0) 50%, rgba(0, 0, 0, .4) 90%, #020202 99%, #020202 100%), url("../imgs/car_bg.png");
+    // overflow: hidden;
+    background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, .3) 10%, rgba(0, 0, 0, .0) 50%, rgba(0, 0, 0, .4) 90%, #020202 99%, #020202 100%), url("../imgs/Главная.png");
     background-position: center center;
     background-size: cover;
 
@@ -323,7 +434,7 @@ a {
         text-align: center;
         font-weight: bold;
         font-size: 48px;
-        margin-bottom: 250px;
+        margin-bottom: 290px;
     }
 
     .offer-content {
@@ -395,12 +506,13 @@ a {
     .greeting {
         font-weight: bold;
         padding-top: 84px;
+        padding-bottom: 20px;
         font-size: 48px;
         text-align: center;
     }
 
     .catalog-search {
-        margin-top: 50px;
+        margin-top: 30px;
         width: 100%;
         display: flex;
         justify-content: center;
