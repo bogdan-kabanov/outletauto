@@ -208,8 +208,24 @@ button, a {
     background: rgba(0, 0, 0, 0)
 }
 
-button:hover, a:hover {
-    color: #434343
+.underline {
+    text-decoration: underline
+}
+
+.show-animation {
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(100%)
+}
+
+.show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%)
+}
+
+.wrapper {
+    overflow: hidden
 }
 
 .search {
@@ -252,10 +268,12 @@ button:hover, a:hover {
 .transparent-wrapper .transparent-btn .dropped {
     position: absolute;
     left: 0;
-    top: calc(100% + 10px);
+    bottom: calc(100% + 10px);
     width: 260px;
     height: 0px;
-    background: #393838;
+    background: rgba(114, 114, 114, .534);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     box-shadow: 4px 4px 14px rgba(0, 0, 0, .25), inset 4px 4px 12px rgba(255, 255, 255, .21);
     border-radius: 10px;
     padding-left: 20px;
@@ -365,6 +383,98 @@ button:hover, a:hover {
     align-items: center
 }
 
+.burger-nav-wrapper {
+    padding-bottom: 100px;
+    width: 100%;
+    height: 100% !important;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(92, 7, 7, .85);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll
+}
+
+.burger-nav-wrapper .container {
+    position: relative
+}
+
+.burger-nav-wrapper .logotype {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px
+}
+
+.burger-nav-wrapper .burger-btns {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.burger-nav-wrapper .closed-nav {
+    position: relative;
+    background-color: #fafafa;
+    width: 30px;
+    height: 3px;
+    right: 0px;
+    top: 0px;
+    transform: rotate(45deg)
+}
+
+.burger-nav-wrapper .closed-nav span {
+    width: 30px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #fafafa;
+    transform: rotate(90deg)
+}
+
+.burger-nav-wrapper .nav-content {
+    display: flex;
+    justify-content: center
+}
+
+.burger-nav-wrapper .nav-content .col:not(:last-child) {
+    margin-right: 140px
+}
+
+.burger-nav-wrapper .nav-content .col .col-greeting {
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    padding-bottom: 20px
+}
+
+.burger-nav-wrapper .nav-content .col li {
+    font-size: 18px;
+    font-weight: 400
+}
+
+.burger-nav-wrapper .nav-content .col li:not(:last-child) {
+    margin-bottom: 15px
+}
+
+.burger-nav-wrapper_active {
+    display: flex
+}
+
 .burger-nav {
     width: 40px;
     height: 40px;
@@ -419,7 +529,7 @@ button:hover, a:hover {
     background-color: #000;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 90%, #020202 99%, #020202 100%), url("../imgs/car_bg.png");
+    background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 90%, #020202 99%, #020202 100%), url("../imgs/Главная.png");
     background-position: center center;
     background-size: cover
 }
@@ -504,7 +614,7 @@ button:hover, a:hover {
     text-align: center;
     font-weight: bold;
     font-size: 48px;
-    margin-bottom: 250px
+    margin-bottom: 290px
 }
 
 .offer .offer-content {
@@ -712,12 +822,13 @@ button:hover, a:hover {
 .catalog .greeting {
     font-weight: bold;
     padding-top: 84px;
+    padding-bottom: 20px;
     font-size: 48px;
     text-align: center
 }
 
 .catalog .catalog-search {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -821,13 +932,41 @@ button:hover, a:hover {
     }
 }
 
+@media(min-width: 1400px)and (max-height: 785px) {
+    .offer .title {
+        margin-bottom: 190px
+    }
+
+    .offer .arrow-fixed-wrapper {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0
+    }
+}
+
 @media screen and (max-width: 1400px) {
-    /*.container {
-        max-width: 1140px
-    }*/
+    .container {
+        max-width: 1160px
+    }
 
     .catalog .catalog-search .search-input, .catalog .catalog-search .search-btn, .catalog .catalog-search .parameters {
         font-size: 18px
+    }
+}
+
+@media(max-width: 1400px)and (max-height: 785px) {
+    .offer .title {
+        margin-bottom: 190px
+    }
+
+    .offer .arrow-fixed-wrapper {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0
     }
 }
 
@@ -849,45 +988,46 @@ button:hover, a:hover {
         width: 40%
     }
 
-    .offer {
-        background: rgba(0, 0, 0, 0)
-    }
-
-    .offer::after {
-        transition: .6s;
-        bottom: 0vh;
-        left: -9%;
-        z-index: -1;
-        content: "";
-        width: 120%;
-        height: 100%;
-        min-height: 600px;
-        display: block;
-        position: absolute;
-        background-image: url("../imgs/car-transformed.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover
-    }
-
-    .offer::before {
-        top: 0;
-        left: 0;
-        z-index: -1;
-        content: "";
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        background-color: #000;
-        background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 90%, #020202 99%, #020202 100%), url("../imgs/bg-car.jpeg");
-        background-size: cover
-    }
-
     .offer .title {
         font-size: 36px;
         margin-bottom: 250px
     }
+
+    .offer .offer-btn-wrapper .circle {
+
+
+
+
+
+        width: 80px;
+        height: 80px;
+        top: -6.5px
+
+
+
+
+
+
+    }
+
+    .offer .offer-btn-wrapper .circle .cirle-content {
+
+
+
+
+        width: 65px;
+        height: 65px
+
+
+
+
+
+    }
+
+
+
+
+
 
     .offer .content-column .circle-btn-wrapper {
         padding: 12.5px 0px 12.5px 55px
@@ -930,6 +1070,20 @@ button:hover, a:hover {
     }
 }
 
+@media(max-width: 1200px)and (max-height: 785px) {
+    .offer .title {
+        margin-bottom: 190px
+    }
+
+    .offer .arrow-fixed-wrapper {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0
+    }
+}
+
 @media screen and (max-width: 992px) {
     .container {
         max-width: 720px
@@ -958,8 +1112,20 @@ button:hover, a:hover {
         margin-left: 25px
     }
 
-    .offer::after {
-        bottom: 2vh
+    .offer {
+        min-height: auto;
+        height: auto;
+        background: linear-gradient(#020202 0%, #020202 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0) 40%, #020202 75%, #020202 100%), url("../imgs/Главная.png");
+        background-color: #020202;
+        background-size: 1120px;
+        background-position-y: 66px;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0px calc(-6vh - 2px) 0px #020202
+    }
+
+    .offer .arrow-fixed-wrapper {
+        display: none
     }
 
     .offer .offer-btn-wrapper .circle-btn-wrapper:first-child {
@@ -967,9 +1133,9 @@ button:hover, a:hover {
     }
 
     .offer .offer-content {
-        padding-top: 5%;
-        padding-bottom: 5%;
-        min-height: 560px
+        height: auto;
+
+        min-height: auto !important
     }
 
     .offer .offer-content .content-wrapper {
@@ -977,8 +1143,9 @@ button:hover, a:hover {
     }
 
     .offer .title {
-        margin-bottom: 70px
+        margin-bottom: 180px
     }
+
     .offer .transparent-wrapper {
         justify-content: space-between
     }
@@ -1043,7 +1210,54 @@ button:hover, a:hover {
     }
 }
 
+@media(max-width: 797px) {
+    .offer .offer-content {
+        padding-bottom: 0%
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .burger-nav-wrapper {
+        padding-top: 150px
+    }
+
+    .burger-nav-wrapper .logotype {
+        margin-bottom: 20px
+    }
+
+    .burger-nav-wrapper .container {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column
+    }
+
+    .burger-nav-wrapper .nav-content {
+        justify-content: center;
+        align-items: start;
+        flex-direction: column
+    }
+
+    .burger-nav-wrapper .nav-content .col {
+        margin-top: 20px
+    }
+
+    .burger-nav-wrapper .nav-content .col:not(:last-child) {
+        margin-right: 0
+    }
+
+    .burger-nav-wrapper .nav-content .col .col-greeting {
+        font-size: 16px
+    }
+
+    .burger-nav-wrapper .nav-content .col li {
+        font-size: 14px
+    }
+
+    .burger-nav-wrapper .nav-content .col li:not(:last-child) {
+        margin-bottom: 10px
+    }
+
     .footer ul li:not(:last-child) {
         margin-right: 25px !important
     }
@@ -1084,48 +1298,58 @@ button:hover, a:hover {
         align-items: end
     }
 
-    .offer::after {
-        width: 150%;
-        bottom: 3vh;
-        left: -20%
+    .offer {
+        height: auto;
+        min-height: auto;
+        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 69%, rgba(0, 0, 0, 0) 3%, #020202 84%, #020202 100%), url(../imgs/Главная.png);
+        background-color: #020202;
+        background-size: 1120px;
+        background-position-y: 24px;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0px calc(-6vh - 2px) 0px #020202
     }
 
-    .offer::before {
-        top: 0vh;
-        left: 0px;
-        background-size: cover;
-        width: 100%;
-        height: 100%
+    .offer .arrow-fixed-wrapper {
+        display: none
+
+
+
+
     }
 
     .offer .title {
         font-size: 30px;
-        margin-bottom: 250px
+        margin-bottom: 160px
     }
 
     .offer .offer-content {
-        height: calc(100vh - 126px)
+        height: auto
     }
 
     .offer .content-wrapper {
         margin-bottom: 0% !important
     }
 
-    /*.offer .content-wrapper .title {
-        margin-bottom: 25px !important
-    }*/
+
+
+
 
     .offer .content-wrapper .content-column .offer-btn-wrapper {
         display: flex;
         justify-content: space-between
     }
 
-    /*.offer .content-wrapper .content-column .circle-btn-wrapper {
-        margin-left: 10px
-    }*/
+    .offer .content-wrapper .content-column .circle-btn-wrapper .circle-btn {
+        max-width: 100%
+    }
+
+    .offer .content-wrapper .content-column .circle-btn-wrapper:first-child {
+        margin-right: 10px
+    }
 
     .offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
-        padding: 0 !important;
+
         margin-top: 0
     }
 
@@ -1227,31 +1451,35 @@ button:hover, a:hover {
     }
 }
 
+@media screen and (max-width: 750px) {
+    .offer .offer-content {
+        padding-top: 3%
+
+
+    }
+}
+
 @media(max-width: 665px) {
-    .offer::after {
-        bottom: 6vh;
-        left: -15%;
-        bottom: 4vh
+    .offer {
+        background-size: 800px
+    }
+
+
+
+    .offer .title {
+        margin-bottom: 90px
+
     }
 }
 
-@media(max-width: 616px) {
-    .offer::after {
-        left: -10%
-    }
-}
-
-@media(max-width: 577px) {
-    .offer::after {
-        left: -20%;
-        transform: scale(0.8)
-    }
-}
-
-@media(max-width: 529px) {
-    .offer::after {
-        left: -15%;
-        transform: scale(0.8)
+@media(max-width: 492px) {
+    .offer {
+        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, 0.2) 16%, rgba(0, 0, 0, 0.2) 76%, rgba(0, 0, 0, 0.2) 34%, #020202 91%, #020202 100%), url(../imgs/Главная.png);
+        background-color: #020202;
+        background-repeat: no-repeat;
+        background-position-y: 35px;
+        background-position-x: center;
+        background-size: 760px
     }
 }
 
@@ -1264,40 +1492,40 @@ button:hover, a:hover {
     }
 }
 
-@media(max-width: 452px) {
-    .offer::after {
-        width: 150%;
-        height: 500px;
-        left: -30%;
-        bottom: 17vh
-    }
+@media(max-width: 456px) {
+    .offer {
+        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, 0.2) 16%, rgba(0, 0, 0, 0.2) 76%, rgba(0, 0, 0, 0.2) 34%, #020202 91%, #020202 100%), url(../imgs/Главная.png);
+        background-color: #020202;
+        background-repeat: no-repeat;
+        background-position-y: 35px;
+        background-position-x: center;
+        background-size: 550px
 
-    .offer .title {
-        margin-bottom: 190px
+
     }
 }
 
-@media(max-width: 445px) {
-    .offer::after {
-        left: -25%;
-        bottom: 17.5vh
-    }
+@media(max-width: 446px) {
+
+
+
+
 
     .offer .title {
-        margin-bottom: 190px
+        margin-bottom: 89px
     }
 }
 
-@media(max-width: 403px) {
-    .offer::after {
-        left: -22%;
-        bottom: 16.5vh
-    }
 
-    .offer .title {
-        margin-bottom: 184px
-    }
-}
+
+
+
+
+
+
+
+
+
 @media(max-width: 576px) {
     .example {
         flex-direction: column
@@ -1329,9 +1557,9 @@ button:hover, a:hover {
     }
 
     .offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
-        padding-left: 40px !important;
-        margin-left: 10px !important
+        padding-left: 40px !important
     }
+
     .content-column {
         display: flex !important;
         flex-direction: column
@@ -1367,6 +1595,10 @@ button:hover, a:hover {
 @media(max-width: 493px) {
     .offer .title {
         font-size: 24px
+    }
+
+    .offer .content-wrapper .content-column .circle-btn-wrapper:first-child {
+        margin-right: 0px
     }
 
     .offer .content-wrapper .content-column .circle-btn-wrapper:last-child {
@@ -1491,6 +1723,7 @@ button:hover, a:hover {
         font-size: 10px
     }
 }
+
 @media(max-width: 404px) {
     .example {
         width: 100% !important
@@ -1509,25 +1742,9 @@ button:hover, a:hover {
     }
 }
 
-@media(max-width: 392px) {
-    .offer::after {
-        left: -16%
-    }
 
     .offer .title {
-        margin-bottom: 170px
-    }
-}
-
-@media(max-width: 348px) {
-    .offer::after {
-        width: 170%;
-        left: -21%;
-        top: 13vh
-    }
-
-    .offer .title {
-        margin-bottom: 150px
+        margin-bottom: 80px
     }
 }
 
@@ -1569,146 +1786,5 @@ button:hover, a:hover {
     }
 }
 
-@media(min-width: 1400px)and (max-height: 750px) {
-    .offer .arrow-fixed-wrapper {
-        position: relative;
-        left: 0;
-        bottom: 0
-    }
-
-    .offer .title {
-        margin-top: 25px
-    }
-}
-
-@media(max-width: 1400px)and (max-height: 750px) {
-    .offer {
-        min-height: 734px
-    }
-
-    .offer .arrow-fixed-wrapper {
-        position: relative;
-        left: 0;
-        bottom: 0;
-        margin-top: 0
-    }
-
-    .offer .title {
-        margin-top: 25px
-    }
-}
-
-@media(max-width: 1200px)and (max-height: 750px) {
-    .offer {
-        min-height: 734px
-    }
-}
-
-@media(max-width: 992px)and (max-height: 635px) {
-    .offer {
-        min-height: 630px
-    }
-}
-
-@media(max-width: 768px)and (max-height: 839px) {
-    .offer {
-        min-height: 860px
-    }
-
-    .offer .offer-content {
-        height: 100%
-    }
-
-    .offer::after {
-        bottom: 6vh;
-        left: -22%
-    }
-
-    .offer .title {
-        margin-bottom: 270px;
-        margin-top: 25px
-    }
-
-    .offer .arrow-fixed-wrapper {
-        margin-top: 20px;
-        position: relative;
-        left: 0
-    }
-}
-
-@media(max-width: 700px)and (max-height: 839px) {
-    .offer::after {
-        bottom: 6vh;
-        left: -17%
-    }
-}
-
-@media(max-width: 630px)and (max-height: 839px) {
-    .offer::after {
-        bottom: 7vh;
-        left: -13%
-    }
-}
-
-@media(max-width: 557px)and (max-height: 839px) {
-    .offer::after {
-        transform: scale(0.8);
-        top: -127px;
-        bottom: auto;
-        left: -18%
-    }
-
-    .offer .title {
-        margin-bottom: 180px
-    }
-}
-
-@media(max-width: 508px)and (max-height: 839px) {
-    .offer::after {
-        transform: scale(0.8);
-        top: -127px;
-        left: -15%
-    }
-}
-
-@media(max-width: 491px)and (max-height: 839px) {
-    .offer::after {
-        transform: scale(0.8);
-        top: -127px;
-        left: -37%
-    }
-}
-
-@media(max-width: 452px)and (max-height: 839px) {
-    .offer::after {
-        transform: scale(0.8);
-        top: 32px;
-        left: -27%
-    }
-}
-
-@media(max-width: 416px)and (max-height: 839px) {
-    .offer::after {
-        transform: scale(0.8);
-        top: 32px;
-        left: -23%
-    }
-}
-
-@media(max-width: 388px)and (max-height: 839px) {
-    .offer::after {
-        transform: scale(0.8);
-        top: 32px;
-        left: -19%
-    }
-}
-
-@media(max-width: 362px)and (max-height: 839px) {
-    .offer::after {
-        transform: scale(0.8);
-        top: 32px;
-        left: -16%
-    }
-}
 
 /*# sourceMappingURL=style.css.map */

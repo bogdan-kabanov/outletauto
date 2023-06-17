@@ -14,3 +14,16 @@ setInterval(() => {
     e.classList.toggle("arrow-animate");
   });
 }, 800 * 4);
+
+const burgerBtns = document.querySelectorAll('.burger-btns');
+const burgerNav = document.querySelector(".burger-nav-wrapper");
+burgerBtns.forEach(e => {
+  e.addEventListener('click', () => {
+    if(burgerNav.classList.contains('burger-nav-wrapper_active') == true){
+      document.body.style.overflow = "auto"
+    } else {
+      document.body.style.overflow = "hidden"
+    }
+    burgerNav.classList.toggle('burger-nav-wrapper_active');
+  })
+})
