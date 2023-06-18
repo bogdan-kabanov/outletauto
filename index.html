@@ -164,7 +164,7 @@
                             <div class="right-content">
                                 <div class="content-search-wrapper news" >
                                     <div class="main-news">
-                                        <div class="title">Новости</div>
+                                        <div class="title-news">Новости</div>
                                         <div id="news-slider" style="width:240px; height: 200px;">
                                             {% for new in news %}
                                                 <a href="{{new.link}}" style="width:240px; height: 240px;">
@@ -208,7 +208,7 @@
                             </div>
                         </div>
                         <div class="arrow-fixed-wrapper">
-                                <a href="#">
+                                <a href="#greeting">
                                     <div class="arrow-fixed">
                                         <div class="arrow arrow-animate">
                                             <span></span>
@@ -232,7 +232,7 @@
         </div>
         <div class="catalog">
             <div class="container">
-                <h2 class="greeting show-animation">Универсальный каталог</h2>
+                <h2 id="greeting" class="greeting show-animation">Универсальный каталог</h2>
                 <form class="catalog-search search show-animation" action="#">
                     <span class="parameters">Подбор по параметрам</span>
                     <input type="text" class="search-input" placeholder="Поиск по каталогу">
