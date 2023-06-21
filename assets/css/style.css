@@ -422,7 +422,8 @@ button, a {
     top: 10px;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    cursor: pointer;
 }
 
 .burger-nav-wrapper .closed-nav {
@@ -478,7 +479,8 @@ button, a {
 .burger-nav {
     width: 40px;
     height: 40px;
-    position: relative
+    position: relative;
+    cursor: pointer;
 }
 
 .burger-nav span {

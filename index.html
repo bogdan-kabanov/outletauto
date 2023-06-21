@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'outletauto/assets/css/modal.css' %}">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
@@ -46,7 +47,10 @@
                             <li><a href="#">Новости</a></li>
                         </ul>
                         <ul class="header-account">
-                            <li><a href="#">Личный кабинет</a></li>
+                            <li>
+                                <div id="myBtn" style="cursor: pointer;">Личный кабинет</div>
+                                <a href="#" hidden="1">Личный кабинет</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -67,7 +71,10 @@
                     </div>
                     <div class="header-row-2">
                         <ul class="header-account">
-                            <li><a href="#">Личный кабинет</a></li>
+                            <li>
+<!--                                <div id="myBtn">Личный кабинет</div>-->
+                                <a href="#">Личный кабинет</a>
+                            </li>
                         </ul>
                         <ul class="header-contact">
                             <li><a href="#">Адреса магазинов</a></li>
@@ -295,6 +302,29 @@
             </ul>
         </div>
     </div>
+    <!-- HTML-код модального окна -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Регистрация / Авторизация</h2>
+        <div id="registration-form">
+          <h3>Регистрация</h3>
+          <form method="post" action="{% url 'account_signup' %}">
+            {% csrf_token %}
+            {{ signup_form.as_p }}
+            <button type="submit">Зарегистрироваться</button>
+          </form>
+        </div>
+        <div id="login-form">
+          <h3>Авторизация</h3>
+          <form method="post" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            {{ login_form.as_p }}
+            <button type="submit">Войти</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="burger-nav-wrapper">
         <div class="container">
             <div class="logotype">
@@ -346,27 +376,13 @@
     <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/elem-shiow.js' %}"></script>
-    <script src="{% static 'outletauto/assets/js/show-arrow.js' %}"></script>
+<!--    <script src="{% static 'outletauto/assets/js/show-arrow.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/news-slider.js' %}"></script>-->
+    <script src="{% static 'outletauto/assets/js/registration.js' %}"></script>
 </body>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script type="text/javascript">
-    // Отображаем список новостей в виде слайдера Slick.
-      $('#news-slider').slick({
-          dots: true,
-          infinite: true,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          speed: 300,
-          slidesToShow: 1,
-          centerMode: true,
-          variableWidth: true,
-          prevArrow: '',
-          nextArrow: ''
-      });
-
-  </script>
 
 </html>
