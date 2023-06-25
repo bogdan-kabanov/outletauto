@@ -1,0 +1,70 @@
+/* Стили модального окна */
+.modal {
+  display: none; /* Скрываем модальное окно по умолчанию */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #e92020; /* Красная граница */
+  width: 20%;
+  border-radius: 10px; /* Округление углов */
+  color: black; /* черный цвет текста */
+}
+
+.modal-content label {
+color: black; /* черный цвет текста */
+
+}
+
+.close {
+  color: #e92020; /* Красный цвет для кнопки закрытия */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black; /* Черный цвет для кнопки закрытия при наведении или фокусе */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.modal-content input[type="text"],
+.modal-content input[type="password"],
+.modal-content input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e92020; /* Красная граница для полей */
+  border-radius: 5px; /* Округление углов полей */
+  color: black; /* черный цвет текста */
+  text-align: center;
+}
+
+
+.modal-content button[type="submit"] {
+  background-color: #e92020; /* Красный цвет для кнопки отправки */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: black; /* Черный цвет для кнопки отправки при наведении */
+}
