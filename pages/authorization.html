@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации - OutletAuto</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper authorization">
+        <div class="header">
+            <div class="container">
+                <div class="logotype">
+                    <img src="../assets/imgs/logotype.svg" alt="logotype">
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title">Авторизация</h1>
+                    <input type="text" class="input-silver" placeholder="Логин или Telagram">
+                    <div class="password-wrapper">
+                        <input type="password" class="input-silver passwordInput" placeholder="Пароль">
+                        <div class="seePasswordToggle"></div>
+                    </div>
+                    <button class="red-btn">Найти</button>
+                    <div class="check-with-label-wrapper">
+                        <input type="checkbox" class="check-with-label" id="remember" />
+                        <label class="label-for-check" for="remember">Запомнить</label>
+                    </div>
+                    <div class="auth-links">
+                        <a href="#">Регистрация</a>
+                        <a href="#">Восстановить пароль</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const seePasswordToggle = document.querySelector('.seePasswordToggle');
+        const passwordInput = document.querySelector('.passwordInput');
+        let passwordTrigger = 1
+        seePasswordToggle.addEventListener('click', () => {
+            if (passwordTrigger) {
+                passwordTrigger = !passwordTrigger
+                passwordInput.setAttribute("type", "text")
+            } else {
+                passwordTrigger = !passwordTrigger
+                passwordInput.setAttribute("type", "password")
+            }
+        }) 
+    </script>
+</body>
+
+</html>
