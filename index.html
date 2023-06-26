@@ -44,8 +44,14 @@
                         </ul>
                         <ul class="header-account">
                             <li>
-                                <div id="myBtn" style="cursor: pointer;">Личный кабинет</div>
-                                <a href="#" hidden="1">Личный кабинет</a>
+
+                                {% if user.is_authenticated %}
+<!--                                    <div id="myBtn" style="cursor: pointer;">Личный кабинет</div>-->
+                                    <a href="{% url 'account_dashboard' %}">Личный кабинет</a>/
+                                    <a href="{% url 'account_logout' %}" class="logout-link">Выйти из аккаунта</a>
+                                {% else %}
+                                    <a href="{% url 'account_login' %}">Войти</a>
+                                {% endif %}
                             </li>
                         </ul>
                     </div>
@@ -69,7 +75,13 @@
                         <ul class="header-account">
                             <li>
 <!--                                <div id="myBtn">Личный кабинет</div>-->
-                                <a href="#">Личный кабинет</a>
+                                {% if user.is_authenticated %}
+                                    <a href="{% url 'account_dashboard' %}">Личный кабинет</a>/
+                                    <a href="{% url 'account_logout' %}" class="logout-link">Выйти из аккаунта</a>
+                                {% else %}
+                                    <a href="{% url 'account_login' %}">Войти</a>
+                                {% endif %}
+
                             </li>
                         </ul>
                         <ul class="header-contact">
