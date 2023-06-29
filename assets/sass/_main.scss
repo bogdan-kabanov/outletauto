@@ -1,4 +1,43 @@
-// All
+// all
+.auth-on {
+    li {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 25px !important;
+        font-size: 14px;
+    }
+
+    .burger-wrapper {
+        width: 5% !important;
+    }
+
+    .header-nav {
+        width: 72% !important;
+    }
+    .header-account {
+        width: 23% !important;
+        .red-btn {
+            padding: 5px 20px;
+        }
+    }
+}
+
+.header-nav {
+    .authorization-on {
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px !important;
+        img {
+            margin-right: 10px;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
 
 .check-with-label-wrapper {
     display: flex;
@@ -34,6 +73,108 @@
     }
 }
 
+.silver-bg {
+    background-color: #1b1919;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.profile,
+.authorization {
+    header {
+        .logotype {
+            img {
+                height: 48px !important;
+            }
+        }
+    }
+}
+
+.profile {
+
+    .content-wrapper {
+        margin-top: 32px;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    footer {
+        margin-top: 60px;
+    }
+
+    .workspace-list {
+        form {
+            width: 100%;
+        }
+        .form-row {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+
+            .input-silver {
+                margin-top: 10px;
+                width: 100%;
+                max-width: 360px;
+                height: 40px;
+                &::placeholder {
+                    color: rgba(217, 217, 217, 1);
+                }
+            }
+
+            label,
+            .input-silver,
+            .red-btn {
+                font-weight: 400;
+                font-size: 16px;
+            }
+            .transparent-btn,
+            .red-btn {
+                margin-top: 10px;
+                padding: 10px 00px;
+                max-width: 160px;
+            }
+        }
+    }
+
+    .profile-workspace {
+        margin-top: 20px;
+        .workspace {
+            display: none;
+        }
+
+        .workspace-active {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .profile-nav-wrapper {
+        .profile-links {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            li:not(:first-child) {
+                padding-left: 30px;
+            }
+
+            .profile-link {
+                display: block;
+                font-size: 20px;
+            }
+
+            .profile-link-active {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
 .authorization {
     width: 100%;
     min-height: 100vh;
@@ -41,14 +182,7 @@
 
     .title {
         text-align: center;
-        margin-top: 40px;
         margin-bottom: 20px;
-        font-size: 24px;
-        font-weight: 600;
-    }
-
-    .header {
-        margin-top: 30px;
     }
 
     .content-wrapper {
@@ -89,7 +223,6 @@
 
             .input-silver {
                 margin-top: 20px;
-                color: #fafafa;
             }
 
             .check-with-label-wrapper {
@@ -158,6 +291,10 @@ a {
     background: transparent;
 }
 
+.input-silver  {
+    color: #FAFAFA !important;
+}
+
 .underline {
     text-decoration: underline;
 }
@@ -201,10 +338,11 @@ a {
     background-color: $red;
     padding: 10px 20px;
     border-radius: 10px;
+    color: $lite-color !important;
+    cursor: pointer;
 
     &:hover {
         background-color: rgba(225, 0, 0, 0.9);
-        color: $lite-color;
     }
 }
 
@@ -252,12 +390,15 @@ a {
 }
 
 .transparent-btn {
-    border: 1px solid $lite-scolor;
+    border: 1px solid $lite-scolor  !important;
     font-size: 18px;
     padding: 12px 40px 12px 50px;
     border-radius: 10px;
     font-weight: 400;
+    cursor: pointer;
     position: relative;
+    background-color: transparent;
+    color: #FAFAFA !important;
 
     .arrow {
         position: absolute;

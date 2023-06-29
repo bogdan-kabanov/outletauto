@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации - OutletAuto</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper profile silver-bg">
+        <header>
+            <div class="container">
+                <div class="pc-header">
+                    <div class="header-row-1">
+                        <div class="logotype-wrapper header-logotype">
+                            <a href="../index.html">
+                                <img src="../assets/imgs/logotype.svg" alt="logotype" class="logotype">
+                            </a>
+                        </div>
+                        <form class="header-search search" action="#">
+                            <input type="text" class="search-input" placeholder="Поиск по артикулу или VIN коду">
+                            <button class="search-btn red-btn">Найти</button>
+                        </form>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-row-2 auth-on">
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="header-nav">
+                            <!-- Видны при авторизованном аккаунте-->
+                            <li><a href="#">Заказы</a></li>
+                            <li><a href="#">Гараж</a></li>
+                            <li><a href="#">Баланс</a></li>
+                            <li><a href="#">Избранное</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Запросы по VIN</a></li>
+                            <li><img src="./assets/imgs/icon/basket__shop.svg" alt=""><a href="#">Корзина</a></li>
+                        </ul>
+                        <ul class="header-account">
+                            <li><a href="./pages/profile.html">RDN-12454</a></li>
+                            <li><input type="button" class="red-btn" value="Акция"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile-header">
+                    <div class="header-row-1">
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <form class="header-search search" action="#">
+                            <input id="header-search" type="text" class="search-input"
+                                placeholder="Поиск по артикулу или VIN коду">
+                            <button class="search-btn red-btn">Найти</button>
+                        </form>
+                    </div>
+                    <div class="header-row-2 auth-on">
+                        <ul class="header-account">
+                            <li><a href="./pages/profile.html">RDN-12454</a></li>
+                        </ul>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title">Личный кабинет</h1>
+                    <div class="profile-nav-wrapper">
+                        <ul class="profile-links">
+                            <li><a href="#" class="profile-link profile-link-active" data-workspace=1>Персональные
+                                    данные</a></li>
+                            <li><a href="#" class="profile-link" data-workspace=2>Заказы</a></li>
+                            <li><a href="#" class="profile-link" data-workspace=3>Уведомления</a></li>
+                        </ul>
+                    </div>
+                    <div class="profile-workspace">
+                        <div class="workspace-list">
+                            <div data-workspace=1 class="workspace workspace-active">
+                                <form action="#">
+                                    <div class="contact-data form-row">
+                                        <label for="contact">Контактные данные</label>
+                                        <input class="input-silver" type="text" placeholder="Иван Иван Ивановыч"
+                                            name="user" id="contact">
+                                    </div>
+                                </form>
+                                <form action="#">
+                                    <div class="birth-wrapper form-row">
+                                        <label for="birth">Дата рождения</label>
+                                        <input class="input-silver" type="button" placeholder="" name="birth"
+                                            id="birth">
+                                        <input type="button" value="Сохранить" class="red-btn">
+                                    </div>
+                                </form>
+                                <form action="#">
+                                    <div class="email-wrapper form-row">
+                                        <label for="email">Email</label>
+                                        <input class="input-silver" type="text" placeholder="youremail@gmail.com"
+                                            name="email" id="email">
+                                        <input type="button" value="Изменить" class="red-btn">
+                                    </div>
+                                </form>
+                                <form action="#">
+                                    <div class="number-wrapper form-row">
+                                        <label for="number">Номер телефона</label>
+                                        <input class="input-silver" type="text" placeholder="+7 (900) 000 00 00"
+                                            name="number" id="number">
+                                        <input type="button" value="Изменить" class="red-btn">
+                                    </div>
+                                </form>
+                                <form action="#">
+                                    <div class="password-wrapper form-row">
+                                        <label for="password">Действующий пароль</label>
+                                        <input class="input-silver" type="password" placeholder="*********"
+                                            name="password" id="password">
+                                        <input type="button" value="Изменить" class="red-btn">
+                                    </div>
+                                </form>
+                                <form action="#">
+                                    <div class="password-wrapper form-row">
+                                        <label for="password">Действующий пароль</label>
+                                        <input class="input-silver" type="password" placeholder="*********"
+                                            name="password" id="password">
+                                        <input type="button" value="Изменить" class="red-btn">
+                                    </div>
+                                </form>
+                                <form action="#">
+                                    <div class="password-wrapper form-row">
+                                        <input type="button" value="Удалить аккаунт" class="transparent-btn">
+                                    </div>
+                                </form>
+                            </div>
+                            <div data-workspace=2 class="workspace">
+                                2
+                            </div>
+                            <div data-workspace=3 class="workspace">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <ul class="nav">
+                    <li><a href="#">Компания</a></li>
+                    <li><a href="#">Клиентам</a></li>
+                    <li><a href="#">Поставщикам</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/vk.svg" alt="vk">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/вацап.svg" alt="whatsapp">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/telegram.svg" alt="telegram">
+                        </a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+    <script src="../assets/js/profile-workspace.js"></script>
+    <script src="../assets/js/--authorization.js"></script>
+</body>
+
+</html>
