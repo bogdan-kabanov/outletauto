@@ -96,8 +96,18 @@
 
 .profile {
 
+    .workspace {
+        .check-with-label-wrapper {
+            .check-with-label {
+                margin-right: 10px;
+            }
+            margin-top: 20px;
+        }
+    }
+
     .content-wrapper {
         margin-top: 32px;
+        min-height: calc(100vh - 349px);
     }
 
     .title {
@@ -257,6 +267,7 @@
 
 label,
 span,
+p,
 a,
 h1,
 h2,
