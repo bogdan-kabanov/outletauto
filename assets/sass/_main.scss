@@ -83,6 +83,57 @@
     font-weight: 700;
 }
 
+.news {
+    .content {
+        .news-card {
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+            padding: 16px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(67, 67, 67, 1);
+            background: linear-gradient(to bottom, rgba(58, 58, 58, 1), rgba(29, 28, 28, 1));
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            .card-img {
+                max-width: 245px;
+                margin-right: 40px;
+                img {
+                    border-radius: 10px;
+                    width: 100%;
+                }
+            }
+
+            .card-content {
+                width: 100%;
+                span {
+                    display: block;
+                }
+
+                .card-title {
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+
+                .card-description  {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap; 
+                    font-size: 18px;
+                    margin-top: 10px;
+                    width: 63%;
+                }
+
+                .card-data {
+                    font-size: 16px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
 .profile,
 .authorization {
     header {
@@ -94,8 +145,19 @@
     }
 }
 
+.news,
 .profile {
+    .content-wrapper {
+        padding-top: 32px;
+        min-height: calc(100vh - 317px);
+    }
 
+    footer {
+        margin-top: 60px;
+    }
+}
+
+.profile {
     .workspace {
         .check-with-label-wrapper {
             .check-with-label {
@@ -105,19 +167,9 @@
         }
     }
 
-    .content-wrapper {
-        margin-top: 32px;
-        min-height: calc(100vh - 349px);
-    }
-
     .title {
         margin-bottom: 30px;
     }
-
-    footer {
-        margin-top: 60px;
-    }
-
     .workspace-list {
         form {
             width: 100%;
@@ -302,8 +354,8 @@ a {
     background: transparent;
 }
 
-.input-silver  {
-    color: #FAFAFA !important;
+.input-silver {
+    color: #fafafa !important;
 }
 
 .underline {
@@ -401,7 +453,7 @@ a {
 }
 
 .transparent-btn {
-    border: 1px solid $lite-scolor  !important;
+    border: 1px solid $lite-scolor !important;
     font-size: 18px;
     padding: 12px 40px 12px 50px;
     border-radius: 10px;
@@ -409,7 +461,7 @@ a {
     cursor: pointer;
     position: relative;
     background-color: transparent;
-    color: #FAFAFA !important;
+    color: #fafafa !important;
 
     .arrow {
         position: absolute;
