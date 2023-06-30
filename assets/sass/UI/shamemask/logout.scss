@@ -1,0 +1,8 @@
+.logout-link {
+  color: red;
+  text-decoration: none;
+  &:hover {
+      color: darkred;
+      text-decoration: underline;
+   }
+}
