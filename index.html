@@ -46,10 +46,12 @@
                             <li>
                             {% load socialaccount %}
                                 {% if user.is_authenticated %}
+                                {% csrf_token %}
 <!--                                    <div id="myBtn" style="cursor: pointer;">Личный кабинет</div>-->
                                     <a href="{% url 'account_profile' %}">Личный кабинет</a>/
                                     <a href="{% url 'account_logout' %}" class="logout-link">Выйти из аккаунта</a>
                                 {% else %}
+                                {% csrf_token %}
                                     <a href="{% url 'account_login' %}">Войти</a>/
                                     <a href="{% provider_login_url 'google' %}">Login with Google</a>
                                 {% endif %}
