@@ -55,7 +55,10 @@
                                     {% load socialaccount %}
                                     {% csrf_token %}
                                     <a href="{% url 'account_login' %}">Войти</a>/
-                                    <a href="{% provider_login_url 'google' %}?next=/">Login with Google</a>
+                                    <form method="post" action="{% provider_login_url 'google' %}">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-primary">Войти с помощью Google</button>
+                                    </form>
                                 {% endif %}
                             </li>
                         </ul>
