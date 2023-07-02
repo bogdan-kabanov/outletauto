@@ -1,5 +1,110 @@
 // all
 
+.registration {
+    .dropped-wrapper {
+        .arrow {
+            left: auto;
+            right: 25px;
+        }
+    }
+
+    .check-center {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        .check-with-label-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .red-btn {
+            max-width: 300px;
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+
+    .warning {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .description {
+        margin-top: 20px;
+        line-height: normal;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .content {
+        border-radius: 10px;
+        border: 1px solid #504f4f;
+        background: #323030;
+        padding: 20px 60px 30px 60px;
+        max-width: 760px;
+        margin: 0 auto;
+
+        .row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+
+            .red-btn,
+            .transparent-btn {
+                width: 100%;
+                height: 50px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            .input-silver {
+                text-align: start;
+            }
+
+            button,
+            input {
+                font-size: 14px;
+                margin-top: 20px;
+            }
+
+            .row-2 {
+                column-gap: 10px;
+            }
+        }
+    }
+
+    .tab-wrapper {
+        .btn-active {
+            border: none !important;
+            background-color: #e92020;
+        }
+
+        .tab-btn {
+            &:not(.btn-active):hover {
+                background-color: #e920207a;
+            }
+        }
+    }
+}
+
+.tab-wrapper {
+    .tab {
+        display: none !important;
+    }
+
+    .tab-active {
+        display: grid !important;
+    }
+}
+
 .auth-on {
     li {
         display: flex;
@@ -31,6 +136,7 @@
     left: 0;
     width: 100%;
     height: 56px;
+    border: 1px solid #504F4F;
     border-radius: 10px 10px 0px 0px;
     background: #323030;
     .container {
@@ -88,6 +194,7 @@
 }
 
 .check-with-label {
+    min-width: 20px;
     width: 20px;
     height: 20px;
     border-radius: 5px;
@@ -100,6 +207,10 @@
         background-repeat: no-repeat;
         padding: 2px;
     }
+}
+
+.input-silver[type="button"] {
+    cursor: pointer;
 }
 
 .input-silver {
@@ -188,6 +299,7 @@
 }
 
 .news,
+.registration,
 .profile {
     .content-wrapper {
         padding-top: 32px;
@@ -277,6 +389,10 @@
             }
         }
     }
+    font-size: 24px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
 }
 
 .authorization {
@@ -458,39 +574,6 @@ a {
         &:last-child {
             margin-left: 40px;
         }
-
-        .dropped {
-            position: absolute;
-            left: 0;
-            bottom: calc(100% + 10px);
-            width: 260px;
-            height: 0px;
-            background: rgba(114, 114, 114, 0.534);
-            backdrop-filter: blur(10px);
-            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25), inset 4px 4px 12px rgba(255, 255, 255, 0.21);
-            border-radius: 10px;
-            padding-left: 20px;
-            padding-right: 20px;
-            transition: 0.3s;
-            z-index: 999;
-            overflow: hidden;
-
-            li {
-                text-align: start;
-                font-size: 18px;
-                line-height: 20px;
-
-                &:not(:first-child) {
-                    margin-top: 10px;
-                }
-            }
-        }
-
-        .dropped-active {
-            padding-top: 20px;
-            padding-bottom: 20px;
-            height: var(--main-height-dropped);
-        }
     }
 }
 
@@ -504,30 +587,6 @@ a {
     position: relative;
     background-color: transparent;
     color: #fafafa !important;
-
-    .arrow {
-        position: absolute;
-        left: 20px;
-        top: 20px;
-
-        span {
-            display: block;
-            position: absolute;
-            width: 10px;
-            height: 2px;
-            background-color: #fafafa;
-            border-radius: 50%;
-
-            &:last-child {
-                top: 6px;
-                transform: rotate(-45deg);
-            }
-
-            &:first-child {
-                transform: rotate(45deg);
-            }
-        }
-    }
 }
 
 .transparent-wrapper-mobile {

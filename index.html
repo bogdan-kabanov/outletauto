@@ -131,7 +131,7 @@
                                         </div>
                                     </div>
                                     <div class="transparent-wrapper transparent-wrapper-pc">
-                                        <button class="transparent-btn">
+                                        <button class="transparent-btn dropped-wrapper">
                                             <div class="arrow">
                                                 <span></span>
                                                 <span></span>
@@ -150,7 +150,7 @@
                                                 <li><a href="#">Щетки, лампы, аксессуары</a></li>
                                             </ul>
                                         </button>
-                                        <button class="transparent-btn">
+                                        <button class="transparent-btn dropped-wrapper">
                                             <div class="arrow">
                                                 <span></span>
                                                 <span></span>
@@ -195,13 +195,13 @@
                                     </div>
                                 </div>
                                 <div class="transparent-wrapper transparent-wrapper-mobile">
-                                    <button class="transparent-btn">
+                                    <button class="transparent-btn dropped-wrapper">
                                         <div class="arrow">
                                             <span></span>
                                             <span></span>
                                         </div>
                                         Каталоги
-                                        <ul class="dropped" data-height="333">
+                                        <ul class="dropped">
                                             <span>Каталоги</span>
                                             <li><a href="#">Оригинальные запчасти</a></li>
                                             <li><a href="#">Оригинальные запчасти</a></li>
@@ -214,13 +214,13 @@
                                             <li><a href="#">Оригинальные запчасти</a></li>
                                         </ul>
                                     </button>
-                                    <button class="transparent-btn">
+                                    <button class="transparent-btn dropped-wrapper">
                                         <div class="arrow">
                                             <span></span>
                                             <span></span>
                                         </div>
                                         Популярные детали
-                                        <ul class="dropped" data-height="363">
+                                        <ul class="dropped">
                                             <span>Каталоги</span>
                                             <li><a href="#">Популярные детали</a></li>
                                             <li><a href="#">Свет и электрика</a></li>
@@ -444,8 +444,13 @@
 
         <div class="DEV_PANEL">
             <div class="DEV_PANEL-content">
-                <a id="authorization-toggle">Авторизация ВКЛ/ВЫКЛ</a>
-                <div class="life authorization-life"><span></span></div>
+                <div class="flex">
+                    <a style="color: black !important" id="authorization-toggle">Авторизация ВКЛ/ВЫКЛ</a>
+                    <div class="life authorization-life"><span></span></div>
+                </div>
+                <div>
+                    <a style="color: black !important" href="./pages/registration.html">Регистрация</a>
+                </div>
             </div>
         </div>
     </div>
@@ -475,13 +480,20 @@
             padding: 10px;
             display: flex;
             height: auto;
-            background-color: rgba(225, 225, 225, .5);
+            background-color: rgba(225, 225, 225, 0.87);
         }
 
         .DEV_PANEL-content {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: start;
+            flex-direction: column;
+
+            .flex {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
 
         .DEV_PANEL .life {

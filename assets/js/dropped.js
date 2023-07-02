@@ -1,4 +1,4 @@
-const btnList = document.querySelectorAll('.transparent-btn');
+const btnList = document.querySelectorAll('.dropped-wrapper');
 btnList.forEach((e, i) => {
     e.addEventListener('click', (e) => {
         btnList.forEach((e, i2) => {
@@ -9,10 +9,8 @@ btnList.forEach((e, i) => {
         const dropped = e.target.querySelector('.dropped');
         if (dropped.classList.contains('dropped-active') == false) {
             dropped.classList.add('dropped-active')
-            document.documentElement.style.setProperty("--main-height-dropped", dropped.getAttribute("data-height") + "px");
         } else {
             dropped.classList.remove('dropped-active')
-            document.documentElement.style.setProperty("--main-height-dropped", 0 + "px");
         }
     })
 })
