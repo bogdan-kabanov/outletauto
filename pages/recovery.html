@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="wrapper profile silver-bg">
+    <div class="wrapper recovery silver-bg">
         <header>
             <div class="container">
                 <div class="pc-header">
@@ -28,6 +28,26 @@
                             <li><a href="#">8 (800) 777-99-80</a></li>
                         </ul>
                     </div>
+                    <div class="header-row-2 auth-off">
+                        <!-- <div class="burger-btns"></div> -->
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="header-nav">
+                            <!-- Не видны при авторизованном аккаунте -->
+                            <li><a href="#">Оплатить заказ</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Новости</a></li>
+                        </ul>
+                        <ul class="header-account">
+                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                        </ul>
+
+                    </div>
                     <div class="header-row-2 auth-on">
                         <div class="burger-wrapper burger-btns">
                             <div class="burger-nav">
@@ -44,10 +64,10 @@
                             <li><a href="#">Избранное</a></li>
                             <li><a href="#">Каталог</a></li>
                             <li><a href="#">Запросы по VIN</a></li>
-                            <li><img src="./assets/imgs/icon/basket__shop.svg" alt=""><a href="#">Корзина</a></li>
+                            <li><img src="../assets/imgs/icon/basket__shop.svg" alt=""><a href="#">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
-                            <li><a href="#">RDN-12454</a></li>
+                            <li><a href="./profile.html">RDN-12454</a></li>
                             <li><input type="button" class="red-btn" value="Акция"></li>
                         </ul>
                     </div>
@@ -67,9 +87,18 @@
                             <button class="search-btn red-btn">Найти</button>
                         </form>
                     </div>
+                    <div class="header-row-2 auth-off">
+                        <ul class="header-account">
+                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                        </ul>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
                     <div class="header-row-2 auth-on">
                         <ul class="header-account">
-                            <li><a href="#">RDN-12454</a></li>
+                            <li><a href="./profile.html">RDN-12454</a></li>
                         </ul>
                         <ul class="header-contact">
                             <li><a href="#">Адреса магазинов</a></li>
@@ -82,147 +111,11 @@
         <div class="content-wrapper">
             <div class="container">
                 <div class="content">
-                    <h1 class="title">Личный кабинет</h1>
-                    <div class="tab-wrapper">
-                        <div class="profile-nav-wrapper">
-                            <ul class="profile-links tab-interface">
-                                <li><a href="#" class="profile-link btn-active tab-btn" data-tab=1>Персональные
-                                        данные</a></li>
-                                <li><a href="#" class="profile-link tab-btn" data-tab=2>Заказы</a></li>
-                                <li><a href="#" class="profile-link tab-btn" data-tab=3>Уведомления</a></li>
-                            </ul>
-                        </div>
-                        <div class="profile-workspace">
-                            <div class="workspace-list">
-                                <div class="workspace tab tab-active">
-                                    <form action="#">
-                                        <div class="contact-data form-row">
-                                            <label for="contact">Контактные данные</label>
-                                            <input class="input-silver" type="text" placeholder="Иван Иван Ивановыч"
-                                                name="user" id="contact">
-                                        </div>
-                                    </form>
-                                    <form action="#">
-                                        <div class="birth-wrapper form-row">
-                                            <label for="birth">Дата рождения</label>
-                                            <input class="input-silver" type="button" placeholder="" name="birth"
-                                                id="birth">
-                                            <input type="button" value="Сохранить" class="red-btn">
-                                        </div>
-                                    </form>
-                                    <form action="#">
-                                        <div class="email-wrapper form-row">
-                                            <label for="email">Email</label>
-                                            <input class="input-silver" type="text" placeholder="youremail@gmail.com"
-                                                name="email" id="email">
-                                            <input type="button" value="Изменить" class="red-btn">
-                                        </div>
-                                    </form>
-                                    <form action="#">
-                                        <div class="number-wrapper form-row">
-                                            <label for="number">Номер телефона</label>
-                                            <input class="input-silver" type="text" placeholder="+7 (900) 000 00 00"
-                                                name="number" id="number">
-                                            <input type="button" value="Изменить" class="red-btn">
-                                        </div>
-                                    </form>
-                                    <form action="#">
-                                        <div class="password-wrapper form-row">
-                                            <label for="password">Действующий пароль</label>
-                                            <input class="input-silver" type="password" placeholder="*********"
-                                                name="password" id="password">
-                                            <input type="button" value="Изменить" class="red-btn">
-                                        </div>
-                                    </form>
-                                    <form action="#">
-                                        <div class="password-wrapper form-row">
-                                            <label for="password">Действующий пароль</label>
-                                            <input class="input-silver" type="password" placeholder="*********"
-                                                name="password" id="password">
-                                            <input type="button" value="Изменить" class="red-btn">
-                                        </div>
-                                    </form>
-                                    <form action="#">
-                                        <div class="password-wrapper form-row">
-                                            <input type="button" value="Удалить аккаунт" class="transparent-btn">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="workspace tab ">
-                                    <form action="#">
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="notifications" />
-                                            <label class="label-for-check" for="notifications">Email уведомления по
-                                                выбранным состоянием:</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="moderation" />
-                                            <label class="label-for-check" for="moderation">На модерации</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="withdrawn" />
-                                            <label class="label-for-check" for="withdrawn">Заказ снят</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="processed" />
-                                            <label class="label-for-check" for="processed">Заказ обработан</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="placed" />
-                                            <label class="label-for-check" for="placed">Размещен у поставщика</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="remember" />
-                                            <label class="label-for-check" for="remember">Отказ</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="refusal" />
-                                            <label class="label-for-check" for="refusal">Закуплено</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="delivery" />
-                                            <label class="label-for-check" for="delivery">В доставке</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="received" />
-                                            <label class="label-for-check" for="received">Получено на ЦС</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="shop" />
-                                            <label class="label-for-check" for="shop">Доставка в магазин</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="ready" />
-                                            <label class="label-for-check" for="ready">Готово к выдаче</label>
-                                        </div>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="issued" />
-                                            <label class="label-for-check" for="issued">Выдано представителем</label>
-                                        </div>
-                                        <div class="password-wrapper form-row">
-                                            <input type="submit" value="Сохранить" class="red-btn">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="workspace tab">
-                                    <form action="#">
-                                        <h3 class="notifications">Информационные уведомления</h3>
-                                        <p class="notifications-desc">Электронные письма об открытии новых магазинов в Вашем городе, новых
-                                            возможностях
-                                            на сайте и т.п.</p>
-                                        <div class="check-with-label-wrapper">
-                                            <input type="checkbox" class="check-with-label" id="disable" />
-                                            <label class="label-for-check" for="disable">Отключить информационные
-                                                уведомления</label>
-                                        </div>
-                                        <div class="password-wrapper form-row">
-                                            <input type="submit" value="Сохранить" class="red-btn">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h1 class="title">Восстановление</h1>
+                    <form action="#">
+                        <input type="text" placeholder="Email*" class="input-silver">
+                        <input type="submit" value="Сохранить" class="red-btn">
+                    </form>
                 </div>
             </div>
         </div>
@@ -365,6 +258,7 @@
     </div>
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/dropped.js"></script>
     <script src="../assets/js/--authorization.js"></script>
 </body>
 
