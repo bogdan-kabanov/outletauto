@@ -1,4 +1,5 @@
 // all
+
 .auth-on {
     li {
         display: flex;
@@ -19,6 +20,47 @@
         width: 23% !important;
         .red-btn {
             padding: 5px 20px;
+        }
+    }
+}
+
+.mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    border-radius: 10px 10px 0px 0px;
+    background: #323030;
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .btn-active {
+            svg {
+                g {
+                    path {
+                        fill: #e92020 !important;
+                    }
+                }
+            }
+            span {
+                color: #e92020 !important;
+            }
+        }
+
+        .btn-wrapper {
+            padding: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            span {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -116,10 +158,10 @@
                     font-weight: bold;
                 }
 
-                .card-description  {
+                .card-description {
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    white-space: nowrap; 
+                    white-space: nowrap;
                     font-size: 18px;
                     margin-top: 10px;
                     width: 63%;
@@ -562,6 +604,7 @@ a {
     }
 
     .burger-btns {
+        cursor: pointer;
         width: 30px;
         height: 30px;
         display: block;
@@ -628,6 +671,7 @@ a {
 }
 
 .burger-nav {
+    cursor: pointer;
     width: 40px;
     height: 40px;
     position: relative;

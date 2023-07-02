@@ -360,6 +360,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .mobile-bottom-nav {
+        display: flex;
+    }
+
     .news {
         .content {
             .news-card {
