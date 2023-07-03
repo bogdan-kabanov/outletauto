@@ -1,5 +1,181 @@
 // all
 
+.basket {
+    .retention {
+        .not-empty {
+            margin-top: 20px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            column-gap: 40px;
+        }
+
+        .products-wrapper {
+            padding: 20px;
+            background-color: #323030;
+            border-radius: 10px;
+            .headlines {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                .check-with-label-wrapper {
+                    margin-right: 30px;
+                    .label-for-check {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .product-info {
+            .total {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .total-info {
+                    font-size: 16px;
+                }
+            }
+
+            .bonus {
+                display: block;
+                margin-top: 5px;
+                font-size: 16px;
+            }
+
+            .total-price-wrapper {
+                margin-top: 35px;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .total-text {
+                    font-size: 24px;
+                }
+
+                .total-price {
+                    font-size: 20px;
+                }
+            }
+
+            .banner {
+                width: 100%;
+                height: 140px;
+                background-color: #fafafa;
+                border-radius: 10px;
+                margin-top: 20px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .danger {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            .danger-text {
+                font-size: 15px;
+            }
+            .danger-icon {
+                margin-right: 10px;
+            }
+        }
+
+        .card-wrapper {
+            .card {
+                &:not(:first-child) {
+                    margin-top: 10px;
+                }
+                padding: 15px;
+                display: grid;
+                grid-template-columns:
+                    minmax(min-content, 25px) minmax(min-content, 115px) minmax(min-content, 453px) minmax(
+                        min-content,
+                        130px
+                    )
+                    minmax(min-content, 25px);
+                column-gap: 20px;
+                border-radius: 10px;
+                border: 1px solid #434343;
+                background: #1d1c1c;
+                box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+                .card-img {
+                    width: 100%;
+                    max-width: 115px;
+                    border-radius: 10px;
+                    height: 70px;
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                .card-info {
+                    height: 70px;
+                    .card-name {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    .card-type {
+                        margin-top: 10px;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                }
+                .card-price-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    flex-direction: column;
+                    .card-counter {
+                        display: flex;
+                        border-radius: 5px;
+                        background: #504f4f;
+                        padding: 3px 10px;
+                        .card-num {
+                            margin-left: 20px;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                .card-destroy {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .product-interface {
+            .input-silver,
+            .red-btn {
+                width: 100%;
+                height: 50px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.retention {
+    .not-empty,
+    .empty {
+        display: none;
+    }
+
+    .active {
+        display: grid !important;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
 .registration,
 .recovery {
     .title {
@@ -324,6 +500,8 @@
     }
 }
 
+.favorite,
+.basket,
 .recovery,
 .news,
 .registration,
