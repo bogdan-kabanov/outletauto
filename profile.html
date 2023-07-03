@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="profile-container">
+    <h2 class="profile-title">Профиль пользователя</h2>
+    <div class="profile-info">
+      <p>Логин: {{ user.username }}</p>
+      <p>Имя: {{ user.first_name }}</p>
+      <p>Фамилия: {{ user.last_name }}</p>
+      <p>Электронная почта: {{ user.email }}</p>
+      <!-- Добавьте другую информацию о профиле пользователя по вашему выбору -->
+      <p><a href="{% url 'index' %}" class="logout-link">Главная</a></p>
+      <p><a href="{% url 'account_logout' %}" class="logout-link">Выйти из аккаунта</a></p>
+
+    </div>
+  </div>
+{% endblock %}
