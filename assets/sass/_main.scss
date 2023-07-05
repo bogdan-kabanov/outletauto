@@ -3,6 +3,7 @@
 .basket {
     .retention {
         .not-empty {
+            transition: .6s;
             margin-top: 20px;
             width: 100%;
             display: grid;
