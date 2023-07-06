@@ -1,8 +1,19 @@
 header {
   padding-top: 15px;
-  .header-row-2,
   .header-row-1 {
     @include flex(flex, space-between, center);
+  }
+
+  .header-row-2 {
+    @include flex(flex, space-between, center);
+    .header-account {
+      .account-name {
+        display: flex;
+      }
+      .basket-wrapper {
+        display: none;
+      }
+    }
   }
 
   .header-logotype {

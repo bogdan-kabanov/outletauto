@@ -64,11 +64,18 @@
                             <li><a href="#">Избранное</a></li>
                             <li><a href="#">Каталог</a></li>
                             <li><a href="#">Запросы по VIN</a></li>
-                            <li><img src="../assets/imgs/icon/basket__shop.svg" alt=""><a href="#">Корзина</a></li>
+                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                    href="#">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
-                            <li><a href="./profile.html">RDN-12454</a></li>
-                            <li><input type="button" class="red-btn" value="Акция"></li>
+                            <ul class="account-name">
+                                <li><a href="./profile.html">RDN-12454</a></li>
+                                <li><input type="button" class="red-btn" value="Акция"></li>
+                            </ul>
+                            <ul class="basket-wrapper">
+                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                        href="#">Корзина</a></li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
@@ -114,7 +121,14 @@
                     <h1 class="title">Корзина</h1>
                     <div class="retention" data-retention="basket-entity">
                         <div class="empty active">
-                            <p>Пусто</p>
+                            <div>
+                                <img src="../assets/imgs/icon/ph_shopping-bag.svg" alt="bag">
+                            </div>
+                            <div>
+                                <h2>Позиции для оформления заказа отсутствуют</h2>
+                                <p>Сложите в корзину нужный товар</p>
+                                <button class="red-btn">В каталог</button>
+                            </div>
                         </div>
                         <div class="not-empty">
                             <div class="products-wrapper">
@@ -233,22 +247,23 @@
                                 </form>
                                 <div class="danger">
                                     <img class="danger-icon" src="../assets/imgs/icon/danger.svg" alt="danger"></img>
-                                    <p class="danger-text">Цены указаны при условии самостоятельного получения заказа в офисе. Срок доставки
+                                    <p class="danger-text">Цены указаны при условии самостоятельного получения заказа в
+                                        офисе. Срок доставки
                                         указан в рабочих днях и рассчитывается со дна отправки заказа поставщику до
                                         прихода детали в офис представительства</p>
                                 </div>
                             </div>
                             <div class="product-interface">
-                                <input type="button" value="Перейти к оформлению" class="red-btn">
                                 <div class="product-info">
+                                    <input type="button" value="Перейти к оформлению" class="red-btn">
                                     <div class="total">
-                                        <span class="tital-info"><span class="bold">Всего</span> : 3 товара</span>
+                                        <span class="title-info"><span class="bold">Всего</span> : 3 товара</span>
                                         <span class="total-price bold">8 115руб</span>
                                     </div>
                                     <span class="bonus">+ 3 бонусов за заказ</span>
                                     <div class="total-price-wrapper">
-                                        <span class="tital-text bold">Итого</span>
-                                        <span class="tital-price">8 115руб</span>
+                                        <span class="title-text bold">Итого</span>
+                                        <span class="title-price">8 115руб</span>
                                     </div>
                                     <input type="text" class="input-silver" placeholder="Промокод">
                                     <div class="banner">
@@ -282,7 +297,7 @@
             </div>
         </footer>
     </div>
-    
+
     <div class="burger-nav-wrapper">
         <div class="container">
             <div class="logotype">

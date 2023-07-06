@@ -1,48 +1,28 @@
 const retention = document.querySelectorAll(".retention");
 
-function isEmptyRetention(product) {
-  retention.forEach((e) => {
-    const retentionEntityName = e.getAttribute("data-retention");
-    if (product == undefined) {
-      localStorage.setItem(retentionEntityName, []);
-    } else {
-      localStorage.setItem(retentionEntityName, JSON.stringify(product));
-    }
-    const entity = localStorage.getItem(retentionEntityName);
-    const emptyResult = empty(entity);
+retention.forEach((e) => {
+  const storageName = e.getAttribute("data-retention");
+  const empty = localStorage.setItem(storageName, JSON.stringify([{
+    name: "123"
+  }]));
 
-    if (emptyResult) {
-      e.querySelector(".not-empty").classList.toggle("active");
-      e.querySelector(".empty").classList.toggle("active");
-    }
-  });
+  if (isEmptyStorage(storageName)) {
+    console.log(1);
+    e.querySelector(".not-empty").classList.add("active");
+    e.querySelector(".empty").classList.remove("active");
+  } else {
+    console.log(2);
+    e.querySelector(".not-empty").classList.remove("active");
+    e.querySelector(".empty").classList.add("active");
+  }
+});
+
+function isEmptyStorage(storageName) {
+  console.log(JSON.parse(localStorage.getItem(storageName)));
+  if (JSON.parse(localStorage.getItem(storageName)) == null) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
-function empty(array) {
-  return (result = JSON.parse(array).length > 0 ? true : false);
-}
-
-// Типа товары
-const basket = [
-  {
-    title: "MOBIL Mobil Super 3000 X1 5W-40",
-    type: "Масло",
-    price: "3 705руб",
-    img: "url..",
-  },
-  {
-    title: "MOBIL Mobil Super 3000 X1 5W-40",
-    type: "Масло",
-    price: "3 705руб",
-    img: "url..",
-  },
-  {
-    title: "MOBIL Mobil Super 3000 X1 5W-40",
-    type: "Масло",
-    price: "3 705руб",
-    img: "url..",
-  },
-];
-
-// Сюда передаётся массив с товарами
-isEmptyRetention(basket);
