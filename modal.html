@@ -1,0 +1,162 @@
+{% load static %}
+{% load socialaccount %}
+
+<!-- HTML-код модального окна -->
+<div id="myModal" class="modal">
+    <div class="wrapper registration silver-bg">
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title">Регистрация пользователя</h1>
+                    <p class="description">Регистрация необходима для отображения актуальных цен и реальных сроков
+                        поставки на интересующие
+                        вас товары.
+                        Выберите удобный для вас магазин, а также укажите реальные контактные данные – они потребуются
+                        для завершения процедуры регистрации.</p>
+                    <div class="tab-wrapper">
+                        <div class="row-2 tab-interface">
+                            <div>
+                                <input type="button" value="Физическое лицо" class="transparent-btn tab-btn btn-active" data-tab="1">
+                            </div>
+                            <div>
+                                <input type="button" value="Юридическое лицо" class="transparent-btn tab-btn" data-tab="2">
+                            </div>
+                        </div>
+                        <form method="post" action="{% url 'account_signup' %}" class="tab tab-active">
+                            <div class="row-2">
+                                <div>
+                                    {{ form.magazins }}
+                                    <button onclick="return false" class="input-silver dropped-wrapper">
+                                        Магазин*
+                                        <ul class="dropped">
+                                            <span>Магазины</span>
+                                            <li><a href="#">Магазин 1</a></li>
+                                        </ul>
+                                    </button>
+                                    {{ form.contact_person }}
+                                </div>
+                                <div>
+                                    {{ form.phone }}
+                                    {{ form.email }}
+                                    {{ form.promo_code }}
+                                </div>
+                            </div>
+                            <div class="check-center">
+                                <div class="check-with-label-wrapper">
+                                    <input type="checkbox" class="check-with-label" id="offer">
+                                    <label class="label-for-check" for="offer">Я ознакомился и принимаю условия
+                                        договора-оферты</label>
+                                </div>
+                                <input type="submit" value="Сохранить" class="red-btn">
+                            </div>
+                        </form>
+                        <form action="#" class="tab">
+                            <div class="row-2">
+                                <div>
+                                    <button onclick="return false" class="input-silver dropped-wrapper">
+                                        <div class="arrow">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        Город*
+                                        <ul class="dropped">
+                                            <span>Города</span>
+                                            <li><a href="#">Города 1</a></li>
+                                        </ul>
+                                    </button>
+                                    <button onclick="return false" class="input-silver dropped-wrapper">
+                                        <div class="arrow">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        Магазин*
+                                        <ul class="dropped">
+                                            <span>Магазины</span>
+                                            <li><a href="#">Магазин 1</a></li>
+                                        </ul>
+    ```html
+                                    </button>
+                                    {{ form.phone }}
+                                    {{ form.email }}
+                                    {{ form.contact_person }}
+                                    <div class="row-2">
+                                        <input type="password" placeholder="Пароль*" class="input-silver">
+                                        <input type="password" placeholder="Повтор пароля*" class="input-silver">
+                                    </div>
+                                    <p class="warning">Для обеспечения информационной безопасности не указывайте
+                                        пароли,
+                                        которые используете
+                                        на других сайтах</p>
+                                </div>
+                                <div>
+                                    <div class="row-2">
+                                        <button onclick="return false" class="input-silver dropped-wrapper">
+                                            <div class="arrow">
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            Форма*
+                                            <ul class="dropped">
+                                                <span>Формы</span>
+                                                <li>Форма 1</li>
+                                            </ul>
+                                        </button>
+                                        {{ form.shop }}
+                                    </div>
+                                    {{ form.legal_shop }}
+                                    <div class="row-2">
+                                        {{ form.inn }}
+                                        {{ form.kpp }}
+                                    </div>
+                                    {{ form.bank }}
+                                    {{ form.bik }}
+                                    {{ form.account_number }}
+                                    {{ form.correspondent_account }}
+                                </div>
+                            </div>
+                            <div class="check-center">
+                                <div class="check-with-label-wrapper">
+                                    <input type="checkbox" class="check-with-label" id="offer-2">
+                                    <label class="label-for-check" for="offer-2">Я ознакомился и принимаю условия
+                                        договора-оферты</label>
+                                </div>
+                                <input type="submit" value="Сохранить" class="red-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Регистрация / Авторизация</h2>
+        <div id="registration-form">
+            <h3>Регистрация</h3>
+            <form method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+                {{ signup_form.as_p }}
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+        <div id="login-form">
+            <h3>Авторизация</h3>
+            <form method="post" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ login_form.as_p }}
+                <button type="submit">Войти</button>
+                <form method="post" action="{% provider_login_url 'google' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary">Google</button>
+                    <form method="post" action="{% provider_login_url 'yandex' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Yandex</button>
+                    </form>
+                </form>
+
+            </form>
+        </div>
+    </div>
+</div>

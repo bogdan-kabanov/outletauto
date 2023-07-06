@@ -1,3 +1,19 @@
+@media screen and (max-width: 1500px) {
+    .registration {
+            .content {
+                .row-2 {
+                    grid-template-columns: 1fr;
+                    .row-2 {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+            }
+            .description {
+                font-size: 0px;
+            }
+        }
+}
+
 @media (min-width: 1400px) {
     .container {
         max-width: 1160px;
@@ -351,6 +367,12 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .transparent-btn {
+        padding: 0;
+    }
+}
+
 @media (max-width: 797px) {
     .offer {
         .offer-content {
@@ -365,6 +387,8 @@
         margin-bottom: 50px;
     }
 
+
+
     .registration {
         .content {
             .row-2 {
@@ -373,6 +397,9 @@
                     grid-template-columns: 1fr 1fr;
                 }
             }
+        }
+        .description {
+            font-size: 0px;
         }
     }
 
@@ -731,6 +758,9 @@
                     grid-template-columns: 1fr;
                 }
             }
+        }
+        .description {
+            font-size: 0px;
         }
     }
 }
