@@ -1106,9 +1106,16 @@ a {
   .registration .content .input-silver,
   .recovery .content .input-silver {
     text-align: start; }
-  .registration .content button,
+  .registration .content select,
+  .recovery .content select {
+    height: 50px;
+    border: none;
+    font-size: 14px;
+    margin-top: 20px; }
+  .registration .content button, .registration .content select,
   .registration .content input:not([type="checkbox"]),
   .recovery .content button,
+  .recovery .content select,
   .recovery .content input:not([type="checkbox"]) {
     height: 50px;
     border: none;

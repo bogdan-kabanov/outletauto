@@ -31,8 +31,13 @@
         .input-silver {
             text-align: start;
         }
-
-        button,
+        select {
+            height: 50px;
+            border: none;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        button, select,
         input:not([type="checkbox"]) {
             height: 50px;
             border: none;

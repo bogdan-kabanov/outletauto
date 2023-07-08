@@ -22,18 +22,12 @@
                                 <input type="button" value="Юридическое лицо" class="transparent-btn tab-btn" data-tab="2">
                             </div>
                         </div>
-                        <form method="post" action="{% url 'account_signup' %}" class="tab tab-active">
+                        {% csrf_token %}
+                        <form method="post" class="tab tab-active">
                             <div class="row-2">
                                 <div>
-                                    {{ form.magazins }}
-                                    <button onclick="return false" class="input-silver dropped-wrapper">
-                                        Магазин*
-                                        <ul class="dropped">
-                                            <span>Магазины</span>
-                                            <li><a href="#">Магазин 1</a></li>
-                                        </ul>
-                                    </button>
-                                    {{ form.contact_person }}
+                                    {{ form.shop }}
+                                    {{ form.full_name }}
                                 </div>
                                 <div>
                                     {{ form.phone }}
@@ -43,67 +37,35 @@
                             </div>
                             <div class="check-center">
                                 <div class="check-with-label-wrapper">
-                                    <input type="checkbox" class="check-with-label" id="offer">
-                                    <label class="label-for-check" for="offer">Я ознакомился и принимаю условия
-                                        договора-оферты</label>
+                                    {{ form.terms_of_service }}
+                                    {{ form.terms_of_service.label }}
                                 </div>
                                 <input type="submit" value="Сохранить" class="red-btn">
                             </div>
                         </form>
-                        <form action="#" class="tab">
+                        <form method="post" class="tab">
                             <div class="row-2">
                                 <div>
-                                    <button onclick="return false" class="input-silver dropped-wrapper">
-                                        <div class="arrow">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        Город*
-                                        <ul class="dropped">
-                                            <span>Города</span>
-                                            <li><a href="#">Города 1</a></li>
-                                        </ul>
-                                    </button>
-                                    <button onclick="return false" class="input-silver dropped-wrapper">
-                                        <div class="arrow">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        Магазин*
-                                        <ul class="dropped">
-                                            <span>Магазины</span>
-                                            <li><a href="#">Магазин 1</a></li>
-                                        </ul>
-    ```html
-                                    </button>
+                                    {{ form.city }}
+                                    {{ form.shop }}
                                     {{ form.phone }}
                                     {{ form.email }}
-                                    {{ form.contact_person }}
+                                    {{ form.full_name }}
                                     <div class="row-2">
-                                        <input type="password" placeholder="Пароль*" class="input-silver">
-                                        <input type="password" placeholder="Повтор пароля*" class="input-silver">
+                                        {{ form.password }}
+                                        {{ form.password2 }}
                                     </div>
-                                    <p class="warning">Для обеспечения информационной безопасности не указывайте
+                                    <p class="warning">Для обеспечения информационной безопаности не указывайте
                                         пароли,
                                         которые используете
                                         на других сайтах</p>
                                 </div>
                                 <div>
                                     <div class="row-2">
-                                        <button onclick="return false" class="input-silver dropped-wrapper">
-                                            <div class="arrow">
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            Форма*
-                                            <ul class="dropped">
-                                                <span>Формы</span>
-                                                <li>Форма 1</li>
-                                            </ul>
-                                        </button>
-                                        {{ form.shop }}
+                                        {{ form.forma }}
+                                        {{ form.company_name }}
                                     </div>
-                                    {{ form.legal_shop }}
+                                    {{ form.legal_address }}
                                     <div class="row-2">
                                         {{ form.inn }}
                                         {{ form.kpp }}
@@ -116,9 +78,8 @@
                             </div>
                             <div class="check-center">
                                 <div class="check-with-label-wrapper">
-                                    <input type="checkbox" class="check-with-label" id="offer-2">
-                                    <label class="label-for-check" for="offer-2">Я ознакомился и принимаю условия
-                                        договора-оферты</label>
+                                    {{ form.terms_of_service }}
+                                    {{ form.terms_of_service.label }}
                                 </div>
                                 <input type="submit" value="Сохранить" class="red-btn">
                             </div>
@@ -128,6 +89,7 @@
             </div>
         </div>
     </div>
+
 
 
     <div class="modal-content">
