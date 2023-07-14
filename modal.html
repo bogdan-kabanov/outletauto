@@ -26,34 +26,36 @@
                         <form method="post" class="tab tab-active">
                             <div class="row-2">
                                 <div>
-                                    {{ form.shop }}
-                                    {{ form.full_name }}
+                                    {{ fizform.shop_name }}
+                                    {{ fizform.full_name }}
                                 </div>
                                 <div>
-                                    {{ form.phone }}
-                                    {{ form.email }}
-                                    {{ form.promo_code }}
+                                    {{ fizform.phone }}
+                                    {{ fizform.email }}
+                                    {{ fizform.promo_code }}
                                 </div>
                             </div>
                             <div class="check-center">
                                 <div class="check-with-label-wrapper">
-                                    {{ form.terms_of_service }}
-                                    {{ form.terms_of_service.label }}
+                                    {{ fizform.terms_of_service }}
+                                    {{ fizform.terms_of_service.label }}
                                 </div>
+
                                 <input type="submit" value="Сохранить" class="red-btn">
                             </div>
                         </form>
+                        {% csrf_token %}
                         <form method="post" class="tab">
                             <div class="row-2">
                                 <div>
-                                    {{ form.city }}
-                                    {{ form.shop }}
-                                    {{ form.phone }}
-                                    {{ form.email }}
-                                    {{ form.full_name }}
+                                    {{ urform.city }}
+                                    {{ urform.shop }}
+                                    {{ urform.phone }}
+                                    {{ urform.email }}
+                                    {{ urform.full_name }}
                                     <div class="row-2">
-                                        {{ form.password }}
-                                        {{ form.password2 }}
+                                        {{ urform.password }}
+                                        {{ urform.password2 }}
                                     </div>
                                     <p class="warning">Для обеспечения информационной безопаности не указывайте
                                         пароли,
@@ -62,24 +64,24 @@
                                 </div>
                                 <div>
                                     <div class="row-2">
-                                        {{ form.forma }}
-                                        {{ form.company_name }}
+                                        {{ urform.forma }}
+                                        {{ urform.company_name }}
                                     </div>
-                                    {{ form.legal_address }}
+                                    {{ urform.legal_address }}
                                     <div class="row-2">
-                                        {{ form.inn }}
-                                        {{ form.kpp }}
+                                        {{ urform.inn }}
+                                        {{ urform.kpp }}
                                     </div>
-                                    {{ form.bank }}
-                                    {{ form.bik }}
-                                    {{ form.account_number }}
-                                    {{ form.correspondent_account }}
+                                    {{ urform.bank }}
+                                    {{ urform.bik }}
+                                    {{ urform.account_number }}
+                                    {{ urform.correspondent_account }}
                                 </div>
                             </div>
                             <div class="check-center">
                                 <div class="check-with-label-wrapper">
-                                    {{ form.terms_of_service }}
-                                    {{ form.terms_of_service.label }}
+                                    {{ urform.terms_of_service }}
+                                    {{ urform.terms_of_service.label }}
                                 </div>
                                 <input type="submit" value="Сохранить" class="red-btn">
                             </div>
@@ -87,38 +89,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-
-
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Регистрация / Авторизация</h2>
-        <div id="registration-form">
-            <h3>Регистрация</h3>
-            <form method="post" action="{% url 'account_signup' %}">
-                {% csrf_token %}
-                {{ signup_form.as_p }}
-                <button type="submit">Зарегистрироваться</button>
-            </form>
-        </div>
-        <div id="login-form">
-            <h3>Авторизация</h3>
-            <form method="post" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ login_form.as_p }}
-                <button type="submit">Войти</button>
-                <form method="post" action="{% provider_login_url 'google' %}">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-primary">Google</button>
-                    <form method="post" action="{% provider_login_url 'yandex' %}">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-primary">Yandex</button>
-                    </form>
-                </form>
-
-            </form>
         </div>
     </div>
 </div>

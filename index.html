@@ -7,15 +7,15 @@
 
 
 {% include 'catalog.html' %}
-
-{% include 'modal.html' %}
-
+{% if not user.is_authenticated %}
+    {% include 'modal.html' %}
+{% endif  %}
 {% include 'burger_nav.html' %}
 
 {% include 'mobile_nav.html' %}
 
 
-    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
+<!--    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>-->
     <script src="{% static 'outletauto/assets/js/elem-shiow.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
     <script src="{% static 'outletauto/assets/js/--authorization.js' %}"></script>

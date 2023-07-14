@@ -1,17 +1,20 @@
 @media screen and (max-width: 1500px) {
-    .registration {
-            .content {
-                .row-2 {
-                    grid-template-columns: 1fr;
-                    .row-2 {
-                        grid-template-columns: 1fr 1fr;
-                    }
-                }
-            }
-            .description {
-                font-size: 0px;
-            }
-        }
+    .transparent-btn {
+        padding: 0;
+    }
+//     .registration {
+//             .content {
+//                 .row-2 {
+//                     grid-template-columns: 1fr;
+//                     .row-2 {
+//                         grid-template-columns: 1fr 1fr;
+//                     }
+//                 }
+//             }
+//             .description {
+//                 font-size: 0px;
+//             }
+//         }
 }
 
 @media (min-width: 1400px) {
@@ -388,7 +391,10 @@
     }
 
 
-
+    .silver-bg {
+        margin: 40% auto;
+        width: 90%;
+    }
     .registration {
         .content {
             .row-2 {
@@ -743,7 +749,10 @@
             transform: scale(0.8);
         }
     }
-
+    .silver-bg {
+        margin: 40% auto;
+        width: 90%;
+    }
     .registration {
         .content {
             padding: 20px 10px 20px 10px;

@@ -1206,12 +1206,8 @@ a {
   background: #323030; }
 
 @media screen and (max-width: 1500px) {
-  .registration .content .row-2 {
-    grid-template-columns: 1fr; }
-    .registration .content .row-2 .row-2 {
-      grid-template-columns: 1fr 1fr; }
-  .registration .description {
-    font-size: 0px; } }
+  .transparent-btn {
+    padding: 0; } }
 
 @media (min-width: 1400px) {
   .container {
@@ -1399,6 +1395,9 @@ a {
 @media screen and (max-width: 768px) {
   footer {
     margin-bottom: 50px; }
+  .silver-bg {
+    margin: 40% auto;
+    width: 90%; }
   .registration .content .row-2 {
     grid-template-columns: 1fr; }
     .registration .content .row-2 .row-2 {
@@ -1578,6 +1577,9 @@ a {
     left: -35%;
     bottom: 2vh;
     transform: scale(0.8); }
+  .silver-bg {
+    margin: 40% auto;
+    width: 90%; }
   .registration .content {
     padding: 20px 10px 20px 10px; }
     .registration .content .row-2 {
