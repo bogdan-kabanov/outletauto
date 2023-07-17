@@ -28,6 +28,26 @@
                             <li><a href="#">8 (800) 777-99-80</a></li>
                         </ul>
                     </div>
+                    <div class="header-row-2 auth-off">
+                        <!-- <div class="burger-btns"></div> -->
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="header-nav">
+                            <!-- Не видны при авторизованном аккаунте -->
+                            <li><a href="#">Оплатить заказ</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Новости</a></li>
+                        </ul>
+                        <ul class="header-account">
+                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                        </ul>
+
+                    </div>
                     <div class="header-row-2 auth-on">
                         <div class="burger-wrapper burger-btns">
                             <div class="burger-nav">
@@ -44,11 +64,18 @@
                             <li><a href="#">Избранное</a></li>
                             <li><a href="#">Каталог</a></li>
                             <li><a href="#">Запросы по VIN</a></li>
-                            <li><img src="./assets/imgs/icon/basket__shop.svg" alt=""><a href="#">Корзина</a></li>
+                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                    href="./basket.html">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
-                            <li><a href="#">RDN-12454</a></li>
-                            <li><input type="button" class="red-btn" value="Акция"></li>
+                            <ul class="account-name">
+                                <li><a href="#">RDN-12454</a></li>
+                                <li><input type="button" class="red-btn" value="Акция"></li>
+                            </ul>
+                            <ul class="basket-wrapper">
+                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                        href="./basket.html">Корзина</a></li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
@@ -66,6 +93,15 @@
                                 placeholder="Поиск по артикулу или VIN коду">
                             <button class="search-btn red-btn">Найти</button>
                         </form>
+                    </div>
+                    <div class="header-row-2 auth-off">
+                        <ul class="header-account">
+                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                        </ul>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
                     </div>
                     <div class="header-row-2 auth-on">
                         <ul class="header-account">
@@ -207,7 +243,8 @@
                                 <div class="workspace tab">
                                     <form action="#">
                                         <h3 class="notifications">Информационные уведомления</h3>
-                                        <p class="notifications-desc">Электронные письма об открытии новых магазинов в Вашем городе, новых
+                                        <p class="notifications-desc">Электронные письма об открытии новых магазинов в
+                                            Вашем городе, новых
                                             возможностях
                                             на сайте и т.п.</p>
                                         <div class="check-with-label-wrapper">

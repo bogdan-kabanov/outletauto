@@ -1,5 +1,449 @@
 // all
 
+# Django
+=======
+.favorite  {
+    .retention {
+        .not-empty {
+            margin-top: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+        }
+    }
+}
+
+.card-product-wrapper {
+    position: relative;
+    max-width: 360px;
+    height: 420px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+    .card-love {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .card-image {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        height: 220px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 215px;
+        top: -15px;
+        border-radius: 10px;
+        border: 1px solid #3a3a3a;
+        background: #261c1c;
+        box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.25);
+        padding: 20px 10px 10px 10px;
+
+        a {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .red-btn {
+            font-size: 16px;
+        }
+
+        .card-title {
+            font-size: 18px;
+        }
+
+        .card-option {
+            font-size: 16px;
+            li {
+                margin-top: 5px;
+            }
+        }
+
+        .card-stats {
+            display: flex;
+            justify-content: space-between;
+            .card-price {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.basket,
+.favorite {
+    .retention {
+        .empty {
+            max-width: 800px;
+            margin: 0 auto;
+            column-gap: 40px;
+            grid-template-columns: 100px 1fr;
+            margin-top: 50px;
+            h2 {
+                font-size: 24px;
+            }
+            p {
+                margin-top: 5px;
+                font-size: 20px;
+            }
+            .red-btn {
+                margin-top: 15px;
+                font-size: 16px;
+                width: 100%;
+                max-width: 170px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+.basket {
+    .retention {
+        .not-empty {
+            transition: 0.6s;
+            margin-top: 20px;
+            width: 100%;
+            display: none;
+            grid-template-columns: 1fr 260px;
+            column-gap: 40px;
+        }
+
+        .products-wrapper {
+            padding: 20px;
+            background-color: #323030;
+            border-radius: 10px;
+            .headlines {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                .check-with-label-wrapper {
+                    margin-right: 30px;
+                    .label-for-check {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .product-info {
+            .total {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .total-info {
+                    font-size: 16px;
+                }
+            }
+
+            .bonus {
+                display: block;
+                margin-top: 5px;
+                font-size: 16px;
+            }
+
+            .total-price-wrapper {
+                margin-top: 35px;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .total-text {
+                    font-size: 24px;
+                }
+
+                .total-price {
+                    font-size: 20px;
+                }
+            }
+
+            .banner {
+                width: 100%;
+                height: 140px;
+                background-color: #fafafa;
+                border-radius: 10px;
+                margin-top: 20px;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .danger {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            .danger-text {
+                font-size: 15px;
+            }
+            .danger-icon {
+                margin-right: 10px;
+            }
+        }
+
+        .card-wrapper {
+            .card {
+                &:not(:first-child) {
+                    margin-top: 10px;
+                }
+                padding: 15px;
+                display: grid;
+                grid-template-columns:
+                    minmax(min-content, 25px) minmax(min-content, 115px) minmax(min-content, 453px) minmax(
+                        min-content,
+                        130px
+                    )
+                    minmax(min-content, 25px);
+                column-gap: 20px;
+                border-radius: 10px;
+                border: 1px solid #434343;
+                background: #1d1c1c;
+                box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+                .card-img {
+                    width: 100%;
+                    max-width: 115px;
+                    border-radius: 10px;
+                    height: 70px;
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                .card-info {
+                    height: 70px;
+                    .card-name {
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    .card-type {
+                        margin-top: 10px;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                }
+                .card-price-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    flex-direction: column;
+                    .card-counter {
+                        display: flex;
+                        border-radius: 5px;
+                        background: #504f4f;
+                        padding: 3px 10px;
+                        .card-num {
+                            margin-left: 20px;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+                .card-destroy {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .product-interface {
+            .input-silver,
+            .red-btn {
+                width: 100%;
+                height: 50px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.retention {
+    .not-empty,
+    .empty {
+        display: none;
+    }
+
+    .active {
+        display: grid !important;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.registration,
+.recovery {
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .content {
+        min-height: 578px;
+        border-radius: 10px;
+        border: 1px solid #504f4f;
+        background: #323030;
+        padding: 20px 60px 30px 60px;
+        max-width: 760px;
+        margin: 0 auto;
+
+        .red-btn {
+            width: 100%;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .red-btn,
+        .transparent-btn {
+            width: 100%;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .input-silver {
+            text-align: start;
+        }
+
+        button,
+        input:not([type="checkbox"]) {
+            height: 50px;
+            border: none;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.recovery {
+    .content {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        form {
+            max-width: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .red-btn {
+            margin-top: 30px;
+        }
+    }
+}
+
+.registration {
+    .dropped-wrapper {
+        .arrow {
+            left: auto;
+            right: 25px;
+        }
+    }
+
+    .check-center {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        .check-with-label-wrapper {
+            margin-bottom: 30px;
+        }
+    }
+
+    .warning {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .description {
+        margin-top: 20px;
+        line-height: normal;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .content {
+        .row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+            .row-2 {
+                column-gap: 10px;
+            }
+        }
+    }
+
+    .tab-wrapper {
+        .btn-active {
+            border: none !important;
+            background-color: #e92020;
+        }
+
+        .tab-btn {
+            &:not(.btn-active):hover {
+                background-color: #e920207a;
+            }
+        }
+    }
+}
+
+.tab-wrapper {
+    .tab {
+        display: none !important;
+    }
+
+    .tab-active {
+        display: grid !important;
+    }
+}
+
+.auth-on {
+    li {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 25px !important;
+        font-size: 14px;
+    }
+
+    .burger-wrapper {
+        width: 5% !important;
+    }
+
+    .header-nav {
+        width: 72% !important;
+    }
+    .header-account {
+        width: 23% !important;
+        .red-btn {
+            padding: 5px 20px;
+        }
+    }
+}
+
+# main
 .mobile-bottom-nav {
     display: none;
     position: fixed;
@@ -166,6 +610,8 @@
     }
 }
 
+.favorite,
+.basket,
 .recovery,
 .news,
 .registration,
