@@ -1,21 +1,29 @@
 // Скрипт для открытия и закрытия модального окна
 
-var modal = document.getElementById("myModal");
-var btn = document.querySelectorAll("#myBtn");
+var RegModal = document.getElementById("RegModal");
+var RegBtn = document.querySelectorAll("#RegBtn");
 var span = document.getElementsByClassName("close")[0];
-btn.forEach(item => {
+var AuthModal = document.getElementById("AuthModal");
+var LogBtn = document.querySelectorAll("#LogBtn");
+RegBtn.forEach(item => {
     item.onclick = function() {
-    modal.style.display = "block";
+    RegModal.style.display = "block";
     }
-//    span.onclick = function() {
-//    modal.style.display = "none";
-//    }
-    window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
+
+})
+LogBtn.forEach(item => {
+    item.onclick = function() {
+    AuthModal.style.display = "block";
     }
 })
+window.onclick = function(event) {
+    if (event.target == RegModal) {
+      RegModal.style.display = "none";
+    };
+    if (event.target == AuthModal) {
+      AuthModal.style.display = "none";
+    }
+}
 
 function registerUser(button) {
   var formNode = button.parentNode.parentNode
