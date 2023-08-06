@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации - OutletAuto</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper self-call silver-bg">
+        <header>
+            <div class="container">
+                <div class="pc-header">
+                    <div class="header-row-1">
+                        <div class="logotype-wrapper header-logotype">
+                            <a href="../index.html">
+                                <img src="../assets/imgs/logotype.svg" alt="logotype" class="logotype">
+                            </a>
+                        </div>
+                        <form class="header-search search" action="#">
+                            <input type="text" class="search-input" placeholder="Поиск по артикулу или VIN коду">
+                            <button class="search-btn red-btn">Найти</button>
+                        </form>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-row-2 auth-off">
+                        <!-- <div class="burger-btns"></div> -->
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="header-nav">
+                            <!-- Не видны при авторизованном аккаунте -->
+                            <li><a href="#">Оплатить заказ</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Новости</a></li>
+                        </ul>
+                        <ul class="header-account">
+                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="header-row-2 auth-on">
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="header-nav">
+                            <!-- Видны при авторизованном аккаунте-->
+                            <li><a href="#">Заказы</a></li>
+                            <li><a href="#">Гараж</a></li>
+                            <li><a href="#">Баланс</a></li>
+                            <li><a href="#">Избранное</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Запросы по VIN</a></li>
+                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                    href="./basket.html">Корзина</a></li>
+                        </ul>
+                        <ul class="header-account">
+                            <ul class="account-name">
+                                <li><a href="./profile.html">RDN-12454</a></li>
+                                <li><input type="button" class="red-btn" value="Акция"></li>
+                            </ul>
+                            <ul class="basket-wrapper">
+                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                        href="./basket.html">Корзина</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile-header">
+                    <div class="header-row-1">
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <form class="header-search search" action="#">
+                            <input id="header-search" type="text" class="search-input"
+                                placeholder="Поиск по артикулу или VIN коду">
+                            <button class="search-btn red-btn">Найти</button>
+                        </form>
+                    </div>
+                    <div class="header-row-2 auth-off">
+                        <ul class="header-account">
+                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                        </ul>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-row-2 auth-on">
+                        <ul class="header-account">
+                            <li><a href="./profile.html">RDN-12454</a></li>
+                        </ul>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content tab-wrapper">
+                    <div class="row-2 tab-interface">
+                        <a href="#" class="tab-btn btn-active" data-tab=1>Самовывоз</a>
+                        <a href="#" class="tab-btn" data-tab=2>Доставка</a>
+                        <a href="#" class="tab-btn" data-tab=3>Отслеживание</a>
+                    </div>
+                    <div class="tab tab-active tab-one">
+                        <p class="tab-title">Самостоятельное получение заказа в Вашем магазине.</p>
+                        <div class="tab-content">
+                            <div class="address-info">
+                                <span class="address-title">Адрес магазина</span>
+                                <ul class="address-content">
+                                    <li><img src="../assets/imgs/icon/map.svg" alt="map"><a href="#"
+                                            class="bold">OuletAvto –
+                                            Ленинградка</a></li>
+                                    <li><span>г. Москва, Ленинградское шоссе, д.58 с.53 (м. Водный стадион)</span></li>
+                                </ul>
+                                <ul class="address-time">
+                                    <p class="address-time-title">Режим работы:</p>
+                                    <li><span>Понедельник-пятница: 09:00 - 21:00</span></li>
+                                    <li><span>Суббота: 09:00 - 21:00</span></li>
+                                    <li><span>Воскресенье: 09:00 - 21:00</span></li>
+                                </ul>
+                            </div>
+                            <div class="map">
+                                <div style="position:relative;overflow:hidden;"><a
+                                        href="https://yandex.ru/maps/239/sochi/?utm_medium=mapframe&utm_source=maps"
+                                        style="color:#eee;font-size:12px;position:absolute;top:0px;"></a><a
+                                        href="https://yandex.ru/maps/239/sochi/?ll=39.723095%2C43.585475&utm_medium=mapframe&utm_source=maps&z=12"
+                                        style="color:#eee;font-size:12px;position:absolute;top:14px;"></a><iframe
+                                        src="https://yandex.ru/map-widget/v1/?ll=39.723095%2C43.585475&z=12" width="560"
+                                        style="height: 100%; min-height: 250px; border-radius: 10px; max-width: 400px; width: 100%;"
+                                        frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <p class="tab-title">Здесь будут отображаться Ваши заказы, готовые к выдаче</p>
+                    </div>
+                    <div class="tab">
+                        <p class="tab-title">Здесь будут отображаться Ваши доставки и самовывоз.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <ul class="nav">
+                    <li><a href="#">Компания</a></li>
+                    <li><a href="#">Клиентам</a></li>
+                    <li><a href="#">Поставщикам</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/vk.svg" alt="vk">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/вацап.svg" alt="whatsapp">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/telegram.svg" alt="telegram">
+                        </a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+    <script src="../assets/js/--authorization.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+</body>
+
+</html>

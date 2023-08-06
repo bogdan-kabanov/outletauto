@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации - OutletAuto</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper add-auto">
+        <header>
+            <div class="container">
+                <div class="logotype">
+                    <a href="../index.html">
+                        <img src="../assets/imgs/logotype.svg" alt="logotype">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title">Добавить авто</h1>
+                    <input type="text" class="input-silver" name="vin-or-frame" placeholder="VIN или Frame">
+                    <ol class="drop-down" id="drop-two">
+                        <input type="text" class="hidden-item" name="brand" value="none">
+
+                        <span class="input-silver drop-down-btn">
+                            Выберите бренд
+                        </span>
+                        <ul class="list list-hidden">
+                            <li class="list-item">
+                                <span>Первый</span>
+                            </li>
+                            <li class="list-item">
+                                <span>Второй</span>
+                            </li>
+                            <li class="list-item">
+                                <span>Третий</span>
+                            </li>
+                        </ul>
+                    </ol>
+                    <ol class="drop-down" id="drop-two">
+                        <input type="text" class="hidden-item" name="model" value="none">
+
+                        <span class="input-silver drop-down-btn">
+                            Выберите модель
+                        </span>
+                        <ul class="list list-hidden">
+                            <li class="list-item">
+                                <span>Первый</span>
+                            </li>
+                            <li class="list-item">
+                                <span>Второй</span>
+                            </li>
+                            <li class="list-item">
+                                <span>Третий</span>
+                            </li>
+                        </ul>
+                    </ol>
+                    <ol class="drop-down" id="drop-two">
+                        <input type="text" class="hidden-item" name="modification" value="none">
+
+                        <span class="input-silver drop-down-btn">
+                            Выберите модификацию
+                        </span>
+                        <ul class="list list-hidden">
+                            <li class="list-item">
+                                <span>Первый</span>
+                            </li>
+                            <li class="list-item">
+                                <span>Второй</span>
+                            </li>
+                            <li class="list-item">
+                                <span>Третий</span>
+                            </li>
+                        </ul>
+                    </ol>
+                    <textarea name="comment" id="comment" cols="30" rows="4" class="input-silver" placeholder="Комментарий"></textarea>
+                    <div class="add-auto-interface">
+                        <button class="red-btn">Отмена</button>
+                        <button class="red-btn" type="submit">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/dropped.js"></script>
+</body>
+
+</html>
