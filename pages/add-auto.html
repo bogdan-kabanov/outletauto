@@ -22,71 +22,72 @@
         <div class="content-wrapper">
             <div class="container">
                 <div class="content">
-                    <h1 class="title">Добавить авто</h1>
-                    <input type="text" class="input-silver" name="vin-or-frame" placeholder="VIN или Frame">
-                    <ol class="drop-down" id="drop-two">
-                        <input type="text" class="hidden-item" name="brand" value="none">
-
-                        <span class="input-silver drop-down-btn">
-                            Выберите бренд
-                        </span>
-                        <ul class="list list-hidden">
-                            <li class="list-item">
-                                <span>Первый</span>
-                            </li>
-                            <li class="list-item">
-                                <span>Второй</span>
-                            </li>
-                            <li class="list-item">
-                                <span>Третий</span>
-                            </li>
-                        </ul>
-                    </ol>
-                    <ol class="drop-down" id="drop-two">
-                        <input type="text" class="hidden-item" name="model" value="none">
-
-                        <span class="input-silver drop-down-btn">
-                            Выберите модель
-                        </span>
-                        <ul class="list list-hidden">
-                            <li class="list-item">
-                                <span>Первый</span>
-                            </li>
-                            <li class="list-item">
-                                <span>Второй</span>
-                            </li>
-                            <li class="list-item">
-                                <span>Третий</span>
-                            </li>
-                        </ul>
-                    </ol>
-                    <ol class="drop-down" id="drop-two">
-                        <input type="text" class="hidden-item" name="modification" value="none">
-
-                        <span class="input-silver drop-down-btn">
-                            Выберите модификацию
-                        </span>
-                        <ul class="list list-hidden">
-                            <li class="list-item">
-                                <span>Первый</span>
-                            </li>
-                            <li class="list-item">
-                                <span>Второй</span>
-                            </li>
-                            <li class="list-item">
-                                <span>Третий</span>
-                            </li>
-                        </ul>
-                    </ol>
-                    <textarea name="comment" id="comment" cols="30" rows="4" class="input-silver" placeholder="Комментарий"></textarea>
-                    <div class="add-auto-interface">
-                        <button class="red-btn">Отмена</button>
-                        <button class="red-btn" type="submit">Сохранить</button>
-                    </div>
+                    <h1 class="title">Выбрать бренд</h1>
+                    <form action="#" data-check-empty=true>
+                        <input type="text" class="input-silver" name="vin-or-frame" placeholder="VIN или Frame">
+                        <ol class="drop-down-wrapper" data-type-select="change">
+                            <input type="text" name="auto" class="drop-down-value">
+                            <span class="drop-down-title input-silver">
+                                Выбор авто
+                            </span>
+                            <ul class="drop-down-list">
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        популярные</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дешевле</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дороже</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                        рейтингу</a>
+                                </li>
+                            </ul>
+                        </ol>
+                        <ol class="drop-down-wrapper" data-type-select="change">
+                            <input type="text" name="model" class="drop-down-value">
+                            <span class="drop-down-title input-silver">
+                                Выберите модель
+                            </span>
+                            <ul class="drop-down-list">
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        популярные</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дешевле</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дороже</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                        рейтингу</a>
+                                </li>
+                            </ul>
+                        </ol>
+                        <ol class="drop-down-wrapper" data-type-select="change">
+                            <input type="text" name="modification" class="drop-down-value">
+                            <span class="drop-down-title input-silver">
+                                Выберите модификацию
+                            </span>
+                            <ul class="drop-down-list">
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        популярные</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дешевле</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дороже</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                        рейтингу</a>
+                                </li>
+                            </ul>
+                        </ol>
+                        <textarea name="comment" id="comment" cols="30" rows="4" class="input-silver"
+                            placeholder="Комментарий"></textarea>
+                        <div class="add-auto-interface">
+                            <button class="red-btn">Отмена</button>
+                            <button class="red-btn" type="submit" disabled>Сохранить</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../assets/js/validation.js"></script>
     <script src="../assets/js/dropped.js"></script>
 </body>
 

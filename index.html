@@ -138,9 +138,9 @@
                                         </div>
                                     </div>
                                     <div class="transparent-wrapper transparent-wrapper-pc">
-                                        <ol class="drop-down" id="drop-one">
-                                            <input type="text" class="hidden-item" name="list" value="none">
-                                            <span class="transparent-btn drop-down-btn">
+                                        <ol class="drop-down-wrapper">
+                                            <input type="text" class="drop-down-value">
+                                            <span class="drop-down-title transparent-btn">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none">
                                                     <path
@@ -149,44 +149,39 @@
                                                 </svg>
                                                 Каталоги
                                             </span>
-                                            <ul class="list list-hidden">
-                                                <li class="list-item-title">
-                                                    <span>Каталоги</span>
-                                                </li>
-                                                <li class="list-item">
-                                                    <span>Первый</span>
-                                                </li>
-                                                <li class="list-item">
-                                                    <span>Второй</span>
-                                                </li>
-                                                <li class="list-item">
-                                                    <span>Третий</span>
+                                            <ul class="drop-down-list">
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        популярные</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дешевле</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дороже</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                        рейтингу</a>
                                                 </li>
                                             </ul>
                                         </ol>
-                                        <ol class="drop-down" id="drop-two">
-                                            <input type="text" class="hidden-item" name="list" value="none">
-                                            <span class="transparent-btn drop-down-btn">
+
+                                        <ol class="drop-down-wrapper">
+                                            <input type="text" class="drop-down-value">
+                                            <span class="drop-down-title transparent-btn">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none">
                                                     <path
                                                         d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
                                                         fill="white" />
                                                 </svg>
-                                                Популярные детали
+                                                Сначала популярные
                                             </span>
-                                            <ul class="list list-hidden">
-                                                <li class="list-item-title">
-                                                    <span>Популярные детали</span>
-                                                </li>
-                                                <li class="list-item">
-                                                    <span>Первый</span>
-                                                </li>
-                                                <li class="list-item">
-                                                    <span>Второй</span>
-                                                </li>
-                                                <li class="list-item">
-                                                    <span>Третий</span>
+                                            <ul class="drop-down-list">
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        популярные</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дешевле</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дороже</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                        рейтингу</a>
                                                 </li>
                                             </ul>
                                         </ol>
@@ -215,7 +210,55 @@
                                     </div>
                                 </div>
                                 <div class="transparent-wrapper transparent-wrapper-mobile">
-                                    <ol class="drop-down" id="drop-two">
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title transparent-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Каталоги
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
+                                        </ul>
+                                    </ol>
+
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title transparent-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Сначала популярные
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
+                                        </ul>
+                                    </ol>
+
+                                    <!-- <ol class="drop-down" id="drop-two">
                                         <input type="text" class="hidden-item" name="list" value="none">
 
                                         <span class="transparent-btn drop-down-btn">
@@ -261,7 +304,7 @@
                                                 <span>Третий</span>
                                             </li>
                                         </ul>
-                                    </ol>
+                                    </ol> -->
                                 </div>
                             </div>
                             <div class="arrow-fixed-wrapper">

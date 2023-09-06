@@ -20,7 +20,7 @@ tabsWrapper.forEach((e) => {
             e.classList.remove('tab-active')
         }
       })
-      tabs[dataTarget-1].classList.add('tab-active')
+      tabs[dataTarget-1]?.classList.add('tab-active')
     });
   });
 });
