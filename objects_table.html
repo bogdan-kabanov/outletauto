@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects table</title>
+</head>
+<body>
+    <h1>{{ endpoint }}</h1>
+    <table>
+        <tr>
+            {% for name in objects.title %}
+                <th>{{ name }}</th>
+            {% endfor %}
+        </tr>
+        {% for values in objects.values %}
+            <tr>
+                {% for value in values %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

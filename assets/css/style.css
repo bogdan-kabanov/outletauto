@@ -1397,21 +1397,29 @@ a {
       .catalog .catalog-grid .catalog-card:hover {
         transform: scale(1.03); }
       .catalog .catalog-grid .catalog-card:nth-child(1) {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/1.png"); }
+        background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0.1))), url("../imgs/catalog-card/1.png");
+        background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/1.png"); }
       .catalog .catalog-grid .catalog-card:nth-child(2) {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/2.png"); }
+        background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0.1))), url("../imgs/catalog-card/2.png");
+        background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/2.png"); }
       .catalog .catalog-grid .catalog-card:nth-child(3) {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/8.png"); }
+        background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0.1))), url("../imgs/catalog-card/8.png");
+        background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/8.png"); }
       .catalog .catalog-grid .catalog-card:nth-child(4) {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/3.png"); }
+        background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0.1))), url("../imgs/catalog-card/3.png");
+        background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/3.png"); }
       .catalog .catalog-grid .catalog-card:nth-child(5) {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/7.png"); }
+        background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0.1))), url("../imgs/catalog-card/7.png");
+        background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/7.png"); }
       .catalog .catalog-grid .catalog-card:nth-child(6) {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/4.png"); }
+        background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0.1))), url("../imgs/catalog-card/4.png");
+        background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/4.png"); }
       .catalog .catalog-grid .catalog-card:nth-child(7) {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/6.png"); }
+        background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0.1))), url("../imgs/catalog-card/6.png");
+        background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/6.png"); }
       .catalog .catalog-grid .catalog-card:nth-child(8) {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/5.png"); }
+        background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(0, 0, 0, 0.1))), url("../imgs/catalog-card/5.png");
+        background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.1)), url("../imgs/catalog-card/5.png"); }
       .catalog .catalog-grid .catalog-card .catalog-greeting {
         font-size: 24px;
         font-weight: bold;
@@ -2107,3 +2115,40 @@ a {
 @media (max-aspect-ratio: 4 / 3) {
   .offer .offer-content .content-wrapper {
     justify-content: space-around; } }
+
+/* Style for the table */
+#myTable {
+    color: white;
+    text-align: center; /* Center-align text horizontally */
+}
+
+/* Style for the table cells */
+#myTable td {
+    vertical-align: middle; /* Center-align text vertically */
+}
+
+/* Style for the dropdown lists */
+.custom-select {
+    background-color: black;
+    color: white;
+    text-align: center; /* Center-align text horizontally */
+}
+
+/* Style for the dropdown options */
+.custom-select option {
+    text-align: center; /* Center-align text horizontally within options */
+}
+
+/* Style for hidden cell content */
+#myTable td:not(.expanded) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Style for expanded cell content */
+#myTable td.expanded {
+    overflow: visible;
+    white-space: normal;
+    text-overflow: initial;
+}

@@ -1,0 +1,99 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% block content %}
+<div class="container silver-bg">
+    <table class="table table-sm table-striped table-bordered display-6 small" id="myTable">
+        <thead>
+            <tr>
+                {% for k,v in html_table.0.items %}
+                    <th>{{ k }}</th>
+                {% endfor %}
+            </tr>
+        </tr>
+        </thead>
+        <tbody>
+            {% for data in html_table %}
+                <tr>
+                    {% for k,v in data.items %}
+                        <td>
+                            {% if k == 'images' %}
+                                <img src="{{ v }}" style="height: 4vh;">
+                            {% else %}
+                                {{ v }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% include 'burger_nav.html' %}
+
+{% include 'mobile_nav.html' %}
+
+<script type="text/javascript" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var table = $('#myTable').DataTable({
+            "paging": true,
+            "ordering": false,
+            "lengthMenu": [[10, 25, 50, 100, 1000, -1], [10, 25, 50, 100, 1000, "ALL"]],
+            "pageLength": 25,
+            "dom": "<'row'<'col'l><'col-md-auto'f><'col-md-auto'B>>" +
+                   "<'row'<'col'rt>>" +
+                   "<'row'<'col'i><'col-md-auto'p>>",
+            "buttons": ['excelHtml5', 'csvHtml5'],
+            initComplete: function () {
+                this.api().columns().every(function () {
+                    var column = this;
+                    var select = $('<br><select class="custom-select form-control form-control-sm"><option value=""></option></select>')
+                        .appendTo($(column.header()))
+                        .on('change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex(
+                                $(this).val()
+                            );
+                            column
+                                .search(val ? '^' + val + '$' : '', true, false)
+                                .draw();
+                        });
+                    column.data().unique().sort().each(function (d, j) {
+                        if (d.search('<a') === 0) {
+                            d = d.slice(d.search('>') + 1, d.length - 4);
+                        }
+                        select.append('<option value="' + d + '">' + d + '</option>');
+                    });
+                });
+            }
+        });
+        $('.dataTables_length').addClass('bs-select');
+        // Function to calculate column widths based on screen width and column count
+        function calculateColumnWidths() {
+            var screenWidth = $(window).width();
+            var columnCount = table.columns().visible().count();
+            var columnWidth = Math.floor(screenWidth / columnCount);
+            table.columns().every(function () {
+                this.width(columnWidth + 'px');
+            });
+        }
+
+        // Call the function on page load and when the window is resized
+        $(document).ready(function () {
+            calculateColumnWidths();
+        });
+
+        $(window).resize(function () {
+            calculateColumnWidths();
+        });
+        table.on('click', 'td', function () {
+            var cell = $(this);
+            var content = cell.html();
+            if (content.split('<br>').length > 3) {
+                cell.toggleClass('expanded');
+            }
+        });
+    });
+</script>
+{% endblock %}

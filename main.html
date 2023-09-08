@@ -1,0 +1,150 @@
+{% load static %}
+<div class="container">
+    <div class="offer-content">
+        <div class="content-wrapper">
+<!--            <h1 class="title">Запчасти в интернет-магазине <br> OutletAuto</h1>-->
+            <h1 class="title">{{ message }} <br> OutletAuto</h1>
+            <div class="w-100">
+                <div class="content-column">
+                    <div class="left-content">
+                        <div class="content-search-wrapper">
+                            <form class="content-search search" action="#">
+                                <input id="header-search" type="text" class="search-input"
+                                    placeholder="Поиск по артикулу или VIN коду">
+                                <button class="search-btn red-btn">Найти</button>
+                            </form>
+                            <div class="example">
+                                <span>Например: WUBH54B11N111054 </span>
+                                <span class="underline">Что такое VIN-код и FRAME?</span>
+                            </div>
+                        </div>
+                        <div class="transparent-wrapper transparent-wrapper-pc">
+                            <button class="transparent-btn dropped-wrapper">
+                                <div class="arrow">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                Каталоги
+                                <ul class="dropped" data-height="333">
+                                    <span>Каталоги</span>
+                                    <li><a href="#">Оригинальные запчасти</a></li>
+                                    <li><a href="#">Запчасти для ТО</a></li>
+                                    <li><a href="#">Каталоги TecDoc</a></li>
+                                    <li><a href="#">Шины и диски</a></li>
+                                    <li><a href="#">Масла и тех. жидкости</a></li>
+                                    <li><a href="#">Доб. оборудование</a></li>
+                                    <li><a href="#">Инструмент</a></li>
+                                    <li><a href="#">Автохимия и косметика</a></li>
+                                    <li><a href="#">Щетки, лампы, аксессуары</a></li>
+                                </ul>
+                            </button>
+                            <button class="transparent-btn dropped-wrapper">
+                                <div class="arrow">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                Популярные детали
+                                <ul class="dropped" data-height="363">
+                                    <span>Каталоги</span>
+                                    <li><a href="#">Популярные детали</a></li>
+                                    <li><a href="#">Свет и электрика</a></li>
+                                    <li><a href="#">Электроинструменты</a></li>
+                                    <li><a href="#">Садовая техника</a></li>
+                                    <li><a href="#">Ручные инструменты</a></li>
+                                    <li><a href="#">Бытовая химия</a></li>
+                                    <li><a href="#">Канцтовары</a></li>
+                                    <li><a href="#">Детские товары</a></li>
+                                    <li><a href="#">Велосипеды</a></li>
+                                    <li><a href="#">Туризм, рыбалка</a></li>
+                                </ul>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer-btn-wrapper">
+                        <div class="circle-btn-wrapper">
+                            <a href="#" class="circle-btn">
+                                <div class="circle">
+                                    <div class="cirle-content">
+                                        <img src="{% static 'outletauto/assets/imgs/icon/bi_people.svg' %}"
+                                            alt="present">
+                                    </div>
+                                </div>
+                                <span>Вступить в клуб</span>
+                            </a>
+                        </div>
+                        <div class="circle-btn-wrapper">
+                            <a href="#" class="circle-btn">
+                                <div class="circle">
+                                    <div class="cirle-content">
+                                        <img src="{% static 'outletauto/assets/imgs/icon/present.svg' %}"
+                                            alt="present">
+                                    </div>
+                                </div>
+                                <span>Получить подарок</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="transparent-wrapper transparent-wrapper-mobile">
+                        <button class="transparent-btn dropped-wrapper">
+                            <div class="arrow">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            Каталоги
+                            <ul class="dropped">
+                                <span>Каталоги</span>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                                <li><a href="#">Оригинальные запчасти</a></li>
+                            </ul>
+                        </button>
+                        <button class="transparent-btn dropped-wrapper">
+                            <div class="arrow">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            Популярные детали
+                            <ul class="dropped">
+                                <span>Каталоги</span>
+                                <li><a href="#">Популярные детали</a></li>
+                                <li><a href="#">Свет и электрика</a></li>
+                                <li><a href="#">Электроинструменты</a></li>
+                                <li><a href="#">Садовая техника</a></li>
+                                <li><a href="#">Ручные инструменты</a></li>
+                                <li><a href="#">Бытовая химия</a></li>
+                                <li><a href="#">Канцтовары</a></li>
+                                <li><a href="#">Детские товары</a></li>
+                                <li><a href="#">Велосипеды</a></li>
+                                <li><a href="#">Туризм, рыбалка</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                </div>
+                <div class="arrow-fixed-wrapper">
+                    <a href="#greeting">
+                        <div class="arrow-fixed">
+                            <div class="arrow arrow-animate">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="arrow arrow-animate">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="arrow arrow-animate">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
