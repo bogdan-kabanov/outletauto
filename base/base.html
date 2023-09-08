@@ -1,0 +1,65 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница - OutletAuto</title>
+    <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <meta name="google-site-verification" content="nH6uS_83NnR5CMs1X97Ww8U7stcOcu0MUQHIIpIHnIs" />
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<!-- oncontextmenu="return false;" -->
+
+<body>
+    <div class="wrapper">
+        <div class="offer">
+            {% include 'base/header.html' %}
+            {% block content %}{% endblock %}
+        </div>
+        {% if not user.is_authenticated %}
+            {% include 'base/reg_modal.html' %}
+            {% include 'base/auth_modal.html' %}
+        {% endif  %}
+
+        {% include 'catalog.html' %}
+
+        {% include 'burger_nav.html' %}
+
+        {% include 'mobile_nav.html' %}
+        {% include 'base/footer.html' %}
+
+    </div>
+</body>
+
+<!--<script src="{% static 'outletauto/assets/js/script_loader.js' %}">-->
+<!--    ScriptLoader(['index','dropped','elem-shiow','tabs','&#45;&#45;authorization','registration'])-->
+<!--</script>-->
+
+<!--    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>-->
+    <script src="{% static 'outletauto/assets/js/elem-shiow.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
+<!--    <script src="{% static 'outletauto/assets/js/&#45;&#45;authorization.js' %}"></script>-->
+    <script src="{% static 'outletauto/assets/js/registration.js' %}"></script>
+<!--        <script src="{% static 'outletauto/assets/js/page-main.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/show-arrow.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/news-slider.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/index.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/elem-shiow.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/&#45;&#45;authorization.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/registration.js' %}"></script>-->
+
+<!--        <script src="{% static 'outletauto/assets/js/page-main.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/show-arrow.js' %}"></script>-->
+<!--    <script src="{% static 'outletauto/assets/js/news-slider.js' %}"></script>-->
+
+</html>
