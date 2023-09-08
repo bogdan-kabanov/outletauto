@@ -1,21 +1,52 @@
-const selectAll = document.querySelector("#select-all");
-const select = document.querySelectorAll(".select-all");
+class SelectAll {
+  constructor(id, selectArrayName) {
+    this.selectAllBtn = document.querySelector(`#${id}`);
+    this.selectArray = selectArrayName.map(id => {
+      return document.querySelector(`#${id}`);
+    })
+    this.init();
+  }
 
-selectAll.addEventListener("click", () => {
-  select.forEach((e) => {
-    selectAll.checked ? (e.checked = true) : (e.checked = false);
-  });
-});
+  init() {
+    this.selectArray.forEach(item => {
+      item?.addEventListener('change', () => {
+        const chekedArray = this.selectArray.map(e => {
+          return e.checked
+        })
 
-let checkedValue = 0;
-select.forEach((e) => {
-  e.addEventListener("click", (e) => {
-    select.forEach((e) => {
-      !e.checked ? (checkedValue += 1) : (checkedValue += 0);
+        let checkerTrue = arr => arr.every(v => v === true);
+        let checkerFalse = arr => arr.every(v => v === false);
+
+        if (checkerTrue(chekedArray)) {
+          this.selectAllBtn.checked = true
+        }
+
+        if (checkerFalse(chekedArray)) {
+          this.selectAllBtn.checked = false
+        }
+      })
+    })
+
+    this.selectAllBtn.addEventListener('click', () => {
+      if (this.selectAllBtn.checked) {
+        this.selectAll(this.selectArray)
+      }
+
+      if (!this.selectAllBtn.checked) {
+        this.deSelectAll(this.selectArray)
+      }
     });
-    if(checkedValue == select.length){
-        selectAll.checked = false
-    }
-    checkedValue = 0
-  });
-});
+  }
+
+  selectAll(arrayCheck) {
+    arrayCheck.forEach(item => {
+      item.checked = true
+    });
+  }
+
+  deSelectAll(arrayCheck) {
+    arrayCheck.forEach(item => {
+      item.checked = false
+    });
+  }
+}

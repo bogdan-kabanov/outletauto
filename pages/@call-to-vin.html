@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="wrapper registration silver-bg">
+    <div class="wrapper call-to-vin silver-bg">
         <header>
             <div class="container">
                 <div class="pc-header">
@@ -63,9 +63,9 @@
                             <li><a href="#">Баланс</a></li>
                             <li><a href="#">Избранное</a></li>
                             <li><a href="#">Каталог</a></li>
-                            <li><a href="#">Запросы по VIN</a></li>
-                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt=""><a
-                                    href="#">Корзина</a></li>
+                            <li><a href="#" class="call-to-vin__popup-open">Запросы по VIN</a></li>
+                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                    href="./basket.html">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
                             <ul class="account-name">
@@ -73,8 +73,8 @@
                                 <li><input type="button" class="red-btn" value="Акция"></li>
                             </ul>
                             <ul class="basket-wrapper">
-                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt=""><a
-                                        href="#">Корзина</a></li>
+                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                        href="./basket.html">Корзина</a></li>
                             </ul>
                         </ul>
                     </div>
@@ -118,30 +118,15 @@
         <div class="content-wrapper">
             <div class="container">
                 <div class="content">
-                    <h1 class="title">Регистрация пользователя</h1>
-                    <p class="description">Регистрация необходима для отображения актуальных цен и реальных сроков
-                        поставки на интересующие
-                        вас товары.
-                        Выберите удобный для вас магазин, а также укажите реальные контактные данные – они потребуются
-                        для завершения процедуры регистрации.</p>
-                    <div class="tab-wrapper">
-                        <div class="row-2 tab-interface">
-                            <div>
-                                <input type="button" value="Физическое лицо" class="transparent-btn tab-btn btn-active"
-                                    data-tab=1>
-                            </div>
-                            <div>
-                                <input type="button" value="Юридическое лицо" class="transparent-btn tab-btn"
-                                    data-tab=2>
-                            </div>
-                        </div>
-                        <form action="#" class="tab tab-active">
-                            <div class="row-2">
-                                <div>
+                    <div class="main-content">
+                        <h2 class="title">Движение заказов</h2>
+                        <div class="main-wrapper">
+                            <form action="#" method="#" class="interface">
+                                <div class="auto">
                                     <ol class="drop-down-wrapper">
                                         <input type="text" class="drop-down-value">
-                                        <span class="drop-down-title input-silver">
-                                            Сначала популярные
+                                        <span class="drop-down-title transparent-btn">
+                                            Все автомобили
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
                                                 <path
@@ -161,95 +146,66 @@
                                             </li>
                                         </ul>
                                     </ol>
-                                    <input type="text" placeholder="Контактное лицо (ФИО)*" class="input-silver">
                                 </div>
-                                <div>
-                                    <input type="text" placeholder="Телефон*" class="input-silver">
-                                    <input type="text" placeholder="Email*" class="input-silver">
-                                    <input type="text" placeholder="Промокод" class="input-silver">
-                                </div>
-                            </div>
-                            <div class="check-center">
-                                <div class="check-with-label-wrapper">
-                                    <input type="checkbox" class="check-with-label" id="offer" />
-                                    <label class="label-for-check" for="offer">Я ознакомился и принимаю условия
-                                        договора-оферты</label>
-                                </div>
-                                <input type="submit" value="Сохранить" class="red-btn">
-                            </div>
-                        </form>
-                        <form action="#" class="tab">
-                            <div class="row-2">
-                                <div>
-                                    <button onclick="return false" class="input-silver dropped-wrapper">
-                                        <div class="arrow">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        Город*
-                                        <ul class="dropped">
-                                            <span>Города</span>
-                                            <li><a href="#">Города 1</a></li>
+                                <div class="status">
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title transparent-btn">
+                                            Выбор авто
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
                                         </ul>
-                                    </button>
-                                    <button onclick="return false" class="input-silver dropped-wrapper">
-                                        <div class="arrow">
-                                            <span></span>
-                                            <span></span>
+                                    </ol>
+                                </div>
+                                <div class="data">
+                                    <div class="data-start">
+                                        <span class="pre-text"><span>Дата с</span></span>
+                                        <div class="calendar">
+                                            <input type="hidden" name="" id="">
+                                            <span>17.09.2021</span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 14C11.7167 14 11.479 13.904 11.287 13.712C11.095 13.52 10.9993 13.2827 11 13C11 12.7167 11.096 12.479 11.288 12.287C11.48 12.095 11.7173 11.9993 12 12C12.2833 12 12.521 12.096 12.713 12.288C12.905 12.48 13.0007 12.7173 13 13C13 13.2833 12.904 13.521 12.712 13.713C12.52 13.905 12.2827 14.0007 12 14ZM8 14C7.71667 14 7.479 13.904 7.287 13.712C7.095 13.52 6.99934 13.2827 7 13C7 12.7167 7.096 12.479 7.288 12.287C7.48 12.095 7.71734 11.9993 8 12C8.28334 12 8.521 12.096 8.713 12.288C8.905 12.48 9.00067 12.7173 9 13C9 13.2833 8.904 13.521 8.712 13.713C8.52 13.905 8.28267 14.0007 8 14ZM16 14C15.7167 14 15.479 13.904 15.287 13.712C15.095 13.52 14.9993 13.2827 15 13C15 12.7167 15.096 12.479 15.288 12.287C15.48 12.095 15.7173 11.9993 16 12C16.2833 12 16.521 12.096 16.713 12.288C16.905 12.48 17.0007 12.7173 17 13C17 13.2833 16.904 13.521 16.712 13.713C16.52 13.905 16.2827 14.0007 16 14ZM12 18C11.7167 18 11.479 17.904 11.287 17.712C11.095 17.52 10.9993 17.2827 11 17C11 16.7167 11.096 16.479 11.288 16.287C11.48 16.095 11.7173 15.9993 12 16C12.2833 16 12.521 16.096 12.713 16.288C12.905 16.48 13.0007 16.7173 13 17C13 17.2833 12.904 17.521 12.712 17.713C12.52 17.905 12.2827 18.0007 12 18ZM8 18C7.71667 18 7.479 17.904 7.287 17.712C7.095 17.52 6.99934 17.2827 7 17C7 16.7167 7.096 16.479 7.288 16.287C7.48 16.095 7.71734 15.9993 8 16C8.28334 16 8.521 16.096 8.713 16.288C8.905 16.48 9.00067 16.7173 9 17C9 17.2833 8.904 17.521 8.712 17.713C8.52 17.905 8.28267 18.0007 8 18ZM16 18C15.7167 18 15.479 17.904 15.287 17.712C15.095 17.52 14.9993 17.2827 15 17C15 16.7167 15.096 16.479 15.288 16.287C15.48 16.095 15.7173 15.9993 16 16C16.2833 16 16.521 16.096 16.713 16.288C16.905 16.48 17.0007 16.7173 17 17C17 17.2833 16.904 17.521 16.712 17.713C16.52 17.905 16.2827 18.0007 16 18ZM5 22C4.45 22 3.979 21.804 3.587 21.412C3.195 21.02 2.99934 20.5493 3 20V6C3 5.45 3.196 4.979 3.588 4.587C3.98 4.195 4.45067 3.99933 5 4H6V2H8V4H16V2H18V4H19C19.55 4 20.021 4.196 20.413 4.588C20.805 4.98 21.0007 5.45067 21 6V20C21 20.55 20.804 21.021 20.412 21.413C20.02 21.805 19.5493 22.0007 19 22H5ZM5 20H19V10H5V20Z"
+                                                    fill="black" />
+                                            </svg>
                                         </div>
-                                        Магазин*
-                                        <ul class="dropped">
-                                            <span>Магазины</span>
-                                            <li><a href="#">Магазин 1</a></li>
-                                        </ul>
-                                    </button>
-                                    <input type="text" placeholder="Телефон*" class="input-silver">
-                                    <input type="text" placeholder="Email*" class="input-silver">
-                                    <input type="text" placeholder="Контактное лицо (ФИО)*" class="input-silver">
-                                    <div class="row-2">
-                                        <input type="password" placeholder="Пороль*" class="input-silver">
-                                        <input type="password" placeholder="Повтор пороля*" class="input-silver">
                                     </div>
-                                    <p class="warning">Для обеспечения информационной безопаности не указывайте
-                                        пароли,
-                                        которые используете
-                                        на других сайтах</p>
+                                    <div class="data-end">
+                                        <div class="next-text">по</div>
+                                        <div class="calendar">
+                                            <span>17.09.2022</span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 14C11.7167 14 11.479 13.904 11.287 13.712C11.095 13.52 10.9993 13.2827 11 13C11 12.7167 11.096 12.479 11.288 12.287C11.48 12.095 11.7173 11.9993 12 12C12.2833 12 12.521 12.096 12.713 12.288C12.905 12.48 13.0007 12.7173 13 13C13 13.2833 12.904 13.521 12.712 13.713C12.52 13.905 12.2827 14.0007 12 14ZM8 14C7.71667 14 7.479 13.904 7.287 13.712C7.095 13.52 6.99934 13.2827 7 13C7 12.7167 7.096 12.479 7.288 12.287C7.48 12.095 7.71734 11.9993 8 12C8.28334 12 8.521 12.096 8.713 12.288C8.905 12.48 9.00067 12.7173 9 13C9 13.2833 8.904 13.521 8.712 13.713C8.52 13.905 8.28267 14.0007 8 14ZM16 14C15.7167 14 15.479 13.904 15.287 13.712C15.095 13.52 14.9993 13.2827 15 13C15 12.7167 15.096 12.479 15.288 12.287C15.48 12.095 15.7173 11.9993 16 12C16.2833 12 16.521 12.096 16.713 12.288C16.905 12.48 17.0007 12.7173 17 13C17 13.2833 16.904 13.521 16.712 13.713C16.52 13.905 16.2827 14.0007 16 14ZM12 18C11.7167 18 11.479 17.904 11.287 17.712C11.095 17.52 10.9993 17.2827 11 17C11 16.7167 11.096 16.479 11.288 16.287C11.48 16.095 11.7173 15.9993 12 16C12.2833 16 12.521 16.096 12.713 16.288C12.905 16.48 13.0007 16.7173 13 17C13 17.2833 12.904 17.521 12.712 17.713C12.52 17.905 12.2827 18.0007 12 18ZM8 18C7.71667 18 7.479 17.904 7.287 17.712C7.095 17.52 6.99934 17.2827 7 17C7 16.7167 7.096 16.479 7.288 16.287C7.48 16.095 7.71734 15.9993 8 16C8.28334 16 8.521 16.096 8.713 16.288C8.905 16.48 9.00067 16.7173 9 17C9 17.2833 8.904 17.521 8.712 17.713C8.52 17.905 8.28267 18.0007 8 18ZM16 18C15.7167 18 15.479 17.904 15.287 17.712C15.095 17.52 14.9993 17.2827 15 17C15 16.7167 15.096 16.479 15.288 16.287C15.48 16.095 15.7173 15.9993 16 16C16.2833 16 16.521 16.096 16.713 16.288C16.905 16.48 17.0007 16.7173 17 17C17 17.2833 16.904 17.521 16.712 17.713C16.52 17.905 16.2827 18.0007 16 18ZM5 22C4.45 22 3.979 21.804 3.587 21.412C3.195 21.02 2.99934 20.5493 3 20V6C3 5.45 3.196 4.979 3.588 4.587C3.98 4.195 4.45067 3.99933 5 4H6V2H8V4H16V2H18V4H19C19.55 4 20.021 4.196 20.413 4.588C20.805 4.98 21.0007 5.45067 21 6V20C21 20.55 20.804 21.021 20.412 21.413C20.02 21.805 19.5493 22.0007 19 22H5ZM5 20H19V10H5V20Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div class="row-2">
-                                        <button onclick="return false" class="input-silver dropped-wrapper">
-                                            <div class="arrow">
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            Форма*
-                                            <ul class="dropped">
-                                                <span>Формы</span>
-                                                <li>Форма 1</li>
-                                            </ul>
-                                        </button>
-                                        <input type="text" placeholder="Название*" class="input-silver">
-                                    </div>
-                                    <input type="text" placeholder="Юридический адрес*" class="input-silver">
-                                    <div class="row-2">
-                                        <input type="text" placeholder="ИНН*" class="input-silver">
-                                        <input type="text" placeholder="КПП*" class="input-silver">
-                                    </div>
-                                    <input type="text" placeholder="Банк*" class="input-silver">
-                                    <input type="text" placeholder="БИК*" class="input-silver">
-                                    <input type="text" placeholder="Р/с*" class="input-silver">
-                                    <input type="text" placeholder="К/c*" class="input-silver">
-                                </div>
+                                <input type="submit" value="Найти" class="red-btn" onclick="search()">
+                            </form>
+                            <div class="empty">
+                                <button class="red-btn">Новый запрос по VIN</button>
+                                <p>Для выбранных фильтров история запросов по VIN отсутствует</p>
                             </div>
-                            <div class="check-center">
-                                <div class="check-with-label-wrapper">
-                                    <input type="checkbox" class="check-with-label" id="offer-2" />
-                                    <label class="label-for-check" for="offer-2">Я ознакомился и принимаю условия
-                                        договора-оферты</label>
-                                </div>
-                                <input type="submit" value="Сохранить" class="red-btn">
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -276,6 +232,74 @@
         </footer>
     </div>
 
+    <div class="call-to-vin__popup">
+        <div class="pop-header">
+            <div class="container">
+                <div class="top">
+                    <div class="logotype">
+                        <a href="../index.html">
+                            <img src="../assets/imgs/logotype.svg" alt="logotype">
+                        </a>
+                    </div>
+
+                    <div class="call-to-vin__popup-closed">
+                        <div class="closed-nav">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <h2>Запрос по VIN</h2>
+                    <form action="#" data-check-empty=true>
+                        <input type="text" class="input-silver" name="vin-or-frame" placeholder="VIN или Frame">
+                        <ol class="drop-down-wrapper" data-type-select="change">
+                            <input type="text" name="auto" class="drop-down-value">
+                            <span class="drop-down-title input-silver">
+                                AUDI A3 III седан (8VS, 8VM)
+                            </span>
+                            <ul class="drop-down-list">
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        популярные</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дешевле</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дороже</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                        рейтингу</a>
+                                </li>
+                            </ul>
+                        </ol>
+                        <input type="text" class="input-silver" name="vin-or-frame" placeholder="Наименования товара">
+                        <span class="request">Просьба в одной позиции указывать наименование только одного товара</span>
+                        <textarea name="comment" id="comment" cols="30" rows="4" class="input-silver"
+                            placeholder="Примечание"></textarea>
+                        <ol class="drop-down-wrapper" data-type-select="change">
+                            <input type="text" name="modification" class="drop-down-value">
+                            <span class="drop-down-title input-silver">
+                                Только оригинал
+                            </span>
+                            <ul class="drop-down-list">
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        популярные</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дешевле</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                        дороже</a></li>
+                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                        рейтингу</a>
+                                </li>
+                            </ul>
+                        </ol>
+                        <div class="add-auto-interface">
+                            <button class="red-btn">Отмена</button>
+                            <button class="red-btn" type="submit" disabled>Добавить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="burger-nav-wrapper">
         <div class="container">
             <div class="logotype">
@@ -296,7 +320,7 @@
                     <span class="col-greeting">Клиентам</span>
                     <li><a href="#">Акции</a></li>
                     <li><a href="#">Скидки</a></li>
-                    <li><a href="#">Спецпредложения</a< /li>
+                    <li><a href="#">Спецпредложения</a></li>
                     <li><a href="#">Мобильное приложение</a></li>
                     <li><a href="#">Подарочные сертификаты</a></li>
                     <li><a href="#">Видеоинструкции</a></li>
@@ -395,6 +419,9 @@
     <script src="../assets/js/tabs.js"></script>
     <script src="../assets/js/dropped.js"></script>
     <script src="../assets/js/--authorization.js"></script>
+    <script src="../assets/js/popup-callToVin.js"></script>
+    <script src="../assets/js/order.js"></script>
+    <script src="../assets/js/validation.js"></script>
 </body>
 
 </html>

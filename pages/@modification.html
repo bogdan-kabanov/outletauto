@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="wrapper registration silver-bg">
+    <div class="wrapper modification silver-bg">
         <header>
             <div class="container">
                 <div class="pc-header">
@@ -64,8 +64,8 @@
                             <li><a href="#">Избранное</a></li>
                             <li><a href="#">Каталог</a></li>
                             <li><a href="#">Запросы по VIN</a></li>
-                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt=""><a
-                                    href="#">Корзина</a></li>
+                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                    href="./basket.html">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
                             <ul class="account-name">
@@ -73,8 +73,8 @@
                                 <li><input type="button" class="red-btn" value="Акция"></li>
                             </ul>
                             <ul class="basket-wrapper">
-                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt=""><a
-                                        href="#">Корзина</a></li>
+                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                        href="./basket.html">Корзина</a></li>
                             </ul>
                         </ul>
                     </div>
@@ -118,138 +118,81 @@
         <div class="content-wrapper">
             <div class="container">
                 <div class="content">
-                    <h1 class="title">Регистрация пользователя</h1>
-                    <p class="description">Регистрация необходима для отображения актуальных цен и реальных сроков
-                        поставки на интересующие
-                        вас товары.
-                        Выберите удобный для вас магазин, а также укажите реальные контактные данные – они потребуются
-                        для завершения процедуры регистрации.</p>
-                    <div class="tab-wrapper">
-                        <div class="row-2 tab-interface">
+                    <div class="found-modifications">
+                        <span class="found-title">Найденные модификации</span>
+                        <div class="found-card found-modification-card">
                             <div>
-                                <input type="button" value="Физическое лицо" class="transparent-btn tab-btn btn-active"
-                                    data-tab=1>
+                                <ul>
+                                    <li><span><span class="bold">Бренд: </span></span><span>ABARTH</span></li>
+                                    <li><span><span class="bold">displacement </span> 1368 PT (CC1.4)</span></li>
+                                </ul>
                             </div>
                             <div>
-                                <input type="button" value="Юридическое лицо" class="transparent-btn tab-btn"
-                                    data-tab=2>
+                                <ul>
+                                    <li><span><span class="bold">Каталог: </span>CFIAT84</span></li>
+                                    <li><span><span class="bold">fuel: </span>БЕНЗИН (CMBBZ)</span></li>
+                                </ul>
                             </div>
                         </div>
-                        <form action="#" class="tab tab-active">
-                            <div class="row-2">
-                                <div>
-                                    <ol class="drop-down-wrapper">
-                                        <input type="text" class="drop-down-value">
-                                        <span class="drop-down-title input-silver">
-                                            Сначала популярные
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
-                                                    fill="white" />
-                                            </svg>
-                                        </span>
-                                        <ul class="drop-down-list">
-                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
-                                                    популярные</a></li>
-                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
-                                                    дешевле</a></li>
-                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
-                                                    дороже</a></li>
-                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
-                                                    рейтингу</a>
-                                            </li>
+                    </div>
+                    <div class="select-modification">
+                        <span class="found-title">Выберите модификацию</span>
+                        <div class="row">
+                            <div class="col">
+                                <div class="found-card">
+                                    <div class="row-card">
+                                        <ul>
+                                            <li><span><span class="bold">BodyworkType</span></span> <span>BN.W/ REAR END DOOR (TC2V)</span></li>
+                                            <li><span><span class="bold">Drive</span></span> <span>LEFT (GSX)</span></li>
+                                            <li><span><span class="bold">MVS</span></span> <span>150695001000</span></li>
+                                            <li><span><span class="bold">MVSDesc</span></span><span>1.4 16V L10 FERRARI GS.5M-I/CE</span></li>
+                                            <li><span><span class="bold">Power</span></span><span>1.4 180 HP (KW132)</span></li>
+                                            <li><span><span class="bold">Trimlevel</span></span><span>LEV.10 (FERRARI TRIBUTE) (LL10)</span></li>
+                                            <li><span><span class="bold">Модель</span></span><span>LEV.3R (FERRARI TRIBUTE) (LL10)</span></li>
+                                            <li><span><span class="bold">Наименование</span></span><span>CINQUECENTO ABARTH [NUOVA 500 ABARTH (2008-2012)]</span></li>
                                         </ul>
-                                    </ol>
-                                    <input type="text" placeholder="Контактное лицо (ФИО)*" class="input-silver">
-                                </div>
-                                <div>
-                                    <input type="text" placeholder="Телефон*" class="input-silver">
-                                    <input type="text" placeholder="Email*" class="input-silver">
-                                    <input type="text" placeholder="Промокод" class="input-silver">
+
+                                        <button class="red-btn">Выбрать</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="check-center">
-                                <div class="check-with-label-wrapper">
-                                    <input type="checkbox" class="check-with-label" id="offer" />
-                                    <label class="label-for-check" for="offer">Я ознакомился и принимаю условия
-                                        договора-оферты</label>
-                                </div>
-                                <input type="submit" value="Сохранить" class="red-btn">
-                            </div>
-                        </form>
-                        <form action="#" class="tab">
-                            <div class="row-2">
-                                <div>
-                                    <button onclick="return false" class="input-silver dropped-wrapper">
-                                        <div class="arrow">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        Город*
-                                        <ul class="dropped">
-                                            <span>Города</span>
-                                            <li><a href="#">Города 1</a></li>
+                            <div class="col">
+                                <div class="found-card">
+                                    <div class="row-card">
+                                        <ul>
+                                            <li><span><span class="bold">BodyworkType</span></span> <span>BN.W/ REAR END DOOR (TC2V)</span></li>
+                                            <li><span><span class="bold">Drive</span></span> <span>LEFT (GSX)</span></li>
+                                            <li><span><span class="bold">MVS</span></span> <span>150695001000</span></li>
+                                            <li><span><span class="bold">MVSDesc</span></span><span>1.4 16V L10 FERRARI GS.5M-I/CE</span></li>
+                                            <li><span><span class="bold">Power</span></span><span>1.4 180 HP (KW132)</span></li>
+                                            <li><span><span class="bold">Trimlevel</span></span><span>LEV.10 (FERRARI TRIBUTE) (LL10)</span></li>
+                                            <li><span><span class="bold">Модель</span></span><span>LEV.3R (FERRARI TRIBUTE) (LL10)</span></li>
+                                            <li><span><span class="bold">Наименование</span></span><span>CINQUECENTO ABARTH [NUOVA 500 ABARTH (2008-2012)]</span></li>
                                         </ul>
-                                    </button>
-                                    <button onclick="return false" class="input-silver dropped-wrapper">
-                                        <div class="arrow">
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        Магазин*
-                                        <ul class="dropped">
-                                            <span>Магазины</span>
-                                            <li><a href="#">Магазин 1</a></li>
+
+                                        <button class="red-btn">Выбрать</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="found-card">
+                                    <div class="row-card">
+                                        <ul>
+                                            <li><span><span class="bold">BodyworkType</span></span> <span>BN.W/ REAR END DOOR (TC2V)</span></li>
+                                            <li><span><span class="bold">Drive</span></span> <span>LEFT (GSX)</span></li>
+                                            <li><span><span class="bold">MVS</span></span> <span>150695001000</span></li>
+                                            <li><span><span class="bold">MVSDesc</span></span><span>1.4 16V L10 FERRARI GS.5M-I/CE</span></li>
+                                            <li><span><span class="bold">Power</span></span><span>1.4 180 HP (KW132)</span></li>
+                                            <li><span><span class="bold">Trimlevel</span></span><span>LEV.10 (FERRARI TRIBUTE) (LL10)</span></li>
+                                            <li><span><span class="bold">Модель</span></span><span>LEV.3R (FERRARI TRIBUTE) (LL10)</span></li>
+                                            <li><span><span class="bold">Наименование</span></span><span>CINQUECENTO ABARTH [NUOVA 500 ABARTH (2008-2012)]</span></li>
                                         </ul>
-                                    </button>
-                                    <input type="text" placeholder="Телефон*" class="input-silver">
-                                    <input type="text" placeholder="Email*" class="input-silver">
-                                    <input type="text" placeholder="Контактное лицо (ФИО)*" class="input-silver">
-                                    <div class="row-2">
-                                        <input type="password" placeholder="Пороль*" class="input-silver">
-                                        <input type="password" placeholder="Повтор пороля*" class="input-silver">
+
+                                        <button class="red-btn">Выбрать</button>
                                     </div>
-                                    <p class="warning">Для обеспечения информационной безопаности не указывайте
-                                        пароли,
-                                        которые используете
-                                        на других сайтах</p>
-                                </div>
-                                <div>
-                                    <div class="row-2">
-                                        <button onclick="return false" class="input-silver dropped-wrapper">
-                                            <div class="arrow">
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            Форма*
-                                            <ul class="dropped">
-                                                <span>Формы</span>
-                                                <li>Форма 1</li>
-                                            </ul>
-                                        </button>
-                                        <input type="text" placeholder="Название*" class="input-silver">
-                                    </div>
-                                    <input type="text" placeholder="Юридический адрес*" class="input-silver">
-                                    <div class="row-2">
-                                        <input type="text" placeholder="ИНН*" class="input-silver">
-                                        <input type="text" placeholder="КПП*" class="input-silver">
-                                    </div>
-                                    <input type="text" placeholder="Банк*" class="input-silver">
-                                    <input type="text" placeholder="БИК*" class="input-silver">
-                                    <input type="text" placeholder="Р/с*" class="input-silver">
-                                    <input type="text" placeholder="К/c*" class="input-silver">
                                 </div>
                             </div>
-                            <div class="check-center">
-                                <div class="check-with-label-wrapper">
-                                    <input type="checkbox" class="check-with-label" id="offer-2" />
-                                    <label class="label-for-check" for="offer-2">Я ознакомился и принимаю условия
-                                        договора-оферты</label>
-                                </div>
-                                <input type="submit" value="Сохранить" class="red-btn">
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -296,7 +239,7 @@
                     <span class="col-greeting">Клиентам</span>
                     <li><a href="#">Акции</a></li>
                     <li><a href="#">Скидки</a></li>
-                    <li><a href="#">Спецпредложения</a< /li>
+                    <li><a href="#">Спецпредложения</a> </li>
                     <li><a href="#">Мобильное приложение</a></li>
                     <li><a href="#">Подарочные сертификаты</a></li>
                     <li><a href="#">Видеоинструкции</a></li>
@@ -308,7 +251,7 @@
                 </ul>
                 <ul class="col">
                     <span class="col-greeting">Компания</span>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="./pages/news.html">Новости</a></li>
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Магазины</a></li>
                     <li><a href="#">Про нас</a></li>
@@ -327,7 +270,7 @@
 
     <div class="mobile-bottom-nav">
         <div class="container">
-            <a href="../index.html" class="btn-wrapper material">
+            <a href="#" class="btn-wrapper material">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="material-symbols:home-outline-rounded">
                         <path id="Vector"
@@ -381,7 +324,7 @@
                 </svg>
                 <span>Баланс</span>
             </a>
-            <a href="#" class="btn-wrapper">
+            <a href="./pages/basket.html" class="btn-wrapper">
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.25 7.18502C4.25 7.7373 4.69772 8.18502 5.25 8.18502H7.39814L12.7523 21.2731C12.9338 21.7165 13.4042 21.969 13.874 21.875L25.0595 19.6379C25.4266 19.5645 25.722 19.2921 25.8249 18.9321L27.8117 11.9783C27.9942 11.3394 27.5145 10.7035 26.8502 10.7035H11.8055L9.56342 6.21929C9.39403 5.88051 9.04777 5.6665 8.66899 5.6665H5.25C4.69772 5.6665 4.25 6.11422 4.25 6.6665V7.18502ZM13.0648 25.8147C13.0648 27.2056 11.9373 28.3332 10.5463 28.3332C9.1554 28.3332 8.02782 27.2056 8.02782 25.8147C8.02782 24.4237 9.1554 23.2962 10.5463 23.2962C11.9373 23.2962 13.0648 24.4237 13.0648 25.8147ZM25.6573 25.8147C25.6573 27.2056 24.5298 28.3332 23.1388 28.3332C21.7479 28.3332 20.6203 27.2056 20.6203 25.8147C20.6203 24.4237 21.7479 23.2962 23.1388 23.2962C24.5298 23.2962 25.6573 24.4237 25.6573 25.8147Z"
@@ -391,10 +334,11 @@
             </a>
         </div>
     </div>
-    <script src="../assets/js/index.js"></script>
+
     <script src="../assets/js/tabs.js"></script>
-    <script src="../assets/js/dropped.js"></script>
+    <script src="../assets/js/index.js"></script>
     <script src="../assets/js/--authorization.js"></script>
+    <script src="../assets/js/dropped.js"></script>
 </body>
 
 </html>
