@@ -1,43 +1,48 @@
-const dropDownList = document.querySelectorAll(".drop-down");
+const dropDownWrapperList = document.querySelectorAll('.drop-down-wrapper');
+const dropDownBtnList = document.querySelectorAll('.drop-down-title');
 
-const btn = document.querySelectorAll(".drop-down-btn");
-const lists = document.querySelectorAll(".list");
-btn.forEach((e) => {
-  e.addEventListener("click", (e) => {
-    const wrapper = e.target.parentNode;
-    const btn = wrapper.querySelector(".drop-down-btn");
-    const input = wrapper.querySelector('.hidden-item')
-    const list = wrapper.querySelector(".list");
+dropDownBtnList.forEach((btn, index) => {
+    btn.addEventListener('click', (btn) => {
+        const type = btn.target.closest('.drop-down-wrapper').getAttribute('data-type-select');
+        inputValue = Array.from(btn.target.closest('.drop-down-wrapper').children).filter(btn => btn.classList.contains('drop-down-value') == true)[0];
+        list = Array.from(btn.target.closest('.drop-down-wrapper').children).filter(btn => btn.classList.contains('drop-down-list') == true)[0];
 
-    closedAllList(lists, list);
-    toggleShowList(list);
+        if (list.classList.contains('drop-down-active')) {
+            closedThisDropDown(list);
+        } else {
+            openThisDropDown(list);
+            closedOtherDropDown(index);
+        }
+        list.querySelectorAll('.drop-down-item').forEach(e => {
+            e.addEventListener('click', item => {
+                inputValue.value = item.target.innerText
+                if (type == 'change') {
+                    btn.target.innerText = item.target.innerText
+                }
+                closedAllDropDown(type)
+            })
+        })
+    })
+})
 
-    const newValue = itemClosedList(list, {
-        btn,
-        input
-    });
-  });
-});
-
-function itemClosedList(list, valueItems) {
-  list.querySelectorAll(".list-item").forEach((e) => {
-    e.addEventListener("click", (e) => {
-      result = e.target.innerText;
-      valueItems.btn.innerText = result
-      valueItems.input.value = result
-      toggleShowList(list);
-    });
-  });
+function openThisDropDown(list) {
+    list.classList.add('drop-down-active')
 }
 
-function toggleShowList(list) {
-  list.classList.toggle("list-hidden");
+function closedThisDropDown(list) {
+    list.classList.remove('drop-down-active')
 }
 
-function closedAllList(lists, list) {
-  lists.forEach((e) => {
-    if (e != list) {
-      e.classList.add("list-hidden");
-    }
-  });
+function closedAllDropDown() {
+    dropDownWrapperList.forEach(e => {
+        e.querySelector('.drop-down-list').classList.remove('drop-down-active');
+    })
+}
+
+function closedOtherDropDown(thisIndex) {
+    dropDownWrapperList.forEach((e, i) => {
+        if (i != thisIndex) {
+            e.querySelector('.drop-down-list').classList.remove('drop-down-active');
+        }
+    })
 }

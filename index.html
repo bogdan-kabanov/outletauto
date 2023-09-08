@@ -6,7 +6,277 @@
 
     {% include 'main.html' %}
 
+                        <div class="w-100">
+                            <div class="content-column">
+                                <div class="left-content">
+                                    <div class="content-search-wrapper">
+                                        <form class="content-search search" action="#">
+                                            <input id="header-search" type="text" class="search-input"
+                                                placeholder="Поиск по артикулу или VIN коду">
+                                            <button class="search-btn red-btn">Найти</button>
+                                        </form>
+                                        <div class="example">
+                                            <span>Например: WUBH54B11N111054 </span>
+                                            <span class="underline">Что такое VIN-код и FRAME?</span>
+                                        </div>
+                                    </div>
+                                    <div class="transparent-wrapper transparent-wrapper-pc">
+                                        <ol class="drop-down-wrapper">
+                                            <input type="text" class="drop-down-value">
+                                            <span class="drop-down-title transparent-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                        fill="white" />
+                                                </svg>
+                                                Каталоги
+                                            </span>
+                                            <ul class="drop-down-list">
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        популярные</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дешевле</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дороже</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                        рейтингу</a>
+                                                </li>
+                                            </ul>
+                                        </ol>
 
+                                        <ol class="drop-down-wrapper">
+                                            <input type="text" class="drop-down-value">
+                                            <span class="drop-down-title transparent-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                        fill="white" />
+                                                </svg>
+                                                Сначала популярные
+                                            </span>
+                                            <ul class="drop-down-list">
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        популярные</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дешевле</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дороже</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                        рейтингу</a>
+                                                </li>
+                                            </ul>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="offer-btn-wrapper">
+                                    <div class="circle-btn-wrapper">
+                                        <a href="#" class="circle-btn">
+                                            <div class="circle">
+                                                <div class="cirle-content">
+                                                    <img src="./assets/imgs/icon/bi_people.svg" alt="present">
+                                                </div>
+                                            </div>
+                                            <span>Вступить в клуб</span>
+                                        </a>
+                                    </div>
+                                    <div class="circle-btn-wrapper">
+                                        <a href="#" class="circle-btn">
+                                            <div class="circle">
+                                                <div class="cirle-content">
+                                                    <img src="./assets/imgs/icon/present.svg" alt="present">
+                                                </div>
+                                            </div>
+                                            <span>Получить подарок</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="transparent-wrapper transparent-wrapper-mobile">
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title transparent-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Каталоги
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
+                                        </ul>
+                                    </ol>
+
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title transparent-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Сначала популярные
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
+                                        </ul>
+                                    </ol>
+
+                                    <!-- <ol class="drop-down" id="drop-two">
+                                        <input type="text" class="hidden-item" name="list" value="none">
+
+                                        <span class="transparent-btn drop-down-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Каталоги
+                                        </span>
+                                        <ul class="list list-hidden">
+                                            <li class="list-item">
+                                                <span>Первый</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span>Второй</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span>Третий</span>
+                                            </li>
+                                        </ul>
+                                    </ol>
+                                    <ol class="drop-down" id="drop-two">
+                                        <input type="text" class="hidden-item" name="list" value="none">
+                                        <span class="transparent-btn drop-down-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Популярные детали
+                                        </span>
+                                        <ul class="list list-hidden">
+                                            <li class="list-item">
+                                                <span>Первый</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span>Второй</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span>Третий</span>
+                                            </li>
+                                        </ul>
+                                    </ol> -->
+                                </div>
+                            </div>
+                            <div class="arrow-fixed-wrapper">
+                                <a href="#">
+                                    <div class="arrow-fixed">
+                                        <div class="arrow arrow-animate">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="arrow arrow-animate">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="arrow arrow-animate">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog">
+            <div class="container">
+                <h2 class="greeting show-animation">Универсальный каталог</h2>
+                <form class="catalog-search search show-animation" action="#">
+                    <span class="parameters">Подбор по параметрам</span>
+                    <input type="text" class="search-input" placeholder="Поиск по каталогу">
+                    <button class="search-btn red-btn">Найти</button>
+                </form>
+                <div class="catalog-grid">
+                    <div class="catalog-card show-animation">
+                        <span class="catalog-greeting">Масла и технические жидкости</span>
+                        <span class="catalog-desc">Поиск технических жидкостей по параметрам</span>
+                    </div>
+                    <div class="catalog-card show-animation">
+                        <span class="catalog-greeting">Шины и диски</span>
+                        <span class="catalog-desc">Поиск шин и дисков по параметрам</span>
+                    </div>
+                    <div class="catalog-card show-animation">
+                        <span class="catalog-greeting">Автохимия и косметика</span>
+                        <span class="catalog-desc">Поиск продукции за уходом автомобиля</span>
+                    </div>
+                    <div class="catalog-card show-animation">
+                        <span class="catalog-greeting">Автопринадлежности</span>
+                        <span class="catalog-desc">Поиск аксессуаров для автомобиля</span>
+                    </div>
+                    <div class="catalog-card show-animation">
+                        <span class="catalog-greeting">Товары для дома</span>
+                        <span class="catalog-desc">Поиск аксессуаров и бытовой техники</span>
+                    </div>
+                    <div class="catalog-card show-animation">
+                        <span class="catalog-greeting">Инструменты</span>
+                        <span class="catalog-desc">Поиск оборудования для автомобиля и дома</span>
+                    </div>
+                    <div class="catalog-card show-animation">
+                        <span class="catalog-greeting">Сувенирная продукция</span>
+                        <span class="catalog-desc">Поиск аксессуаров с фирменной символикой</span>
+                    </div>
+                    <div class="catalog-card show-animation">
+                        <span class="catalog-greeting">Автозапчасти</span>
+                        <span class="catalog-desc">Поиск автозапчастей</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <ul class="nav">
+                    <li><a href="#">Компания</a></li>
+                    <li><a href="#">Клиентам</a></li>
+                    <li><a href="#">Поставщикам</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">
+                            <img src="./assets/imgs/icon/vk.svg" alt="vk">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="./assets/imgs/icon/вацап.svg" alt="whatsapp">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="./assets/imgs/icon/telegram.svg" alt="telegram">
+                        </a></li>
+                </ul>
+            </div>
+        </footer>
 
 
 {% endblock %}
