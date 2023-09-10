@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница авторизации - OutletAuto</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
 </head>
 
 <body>
@@ -15,8 +16,8 @@
                 <div class="pc-header">
                     <div class="header-row-1">
                         <div class="logotype-wrapper header-logotype">
-                            <a href="../index.html">
-                                <img src="../assets/imgs/logotype.svg" alt="logotype" class="logotype">
+                            <a href="{% static 'outletauto/index.html' %}">
+                                <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype" class="logotype">
                             </a>
                         </div>
                         <form class="header-search search" action="#">
@@ -39,12 +40,12 @@
                         </div>
                         <ul class="header-nav">
                             <!-- Не видны при авторизованном аккаунте -->
-                            <li><a href="#">Оплатить заказ</a></li>
-                            <li><a href="#">Каталог</a></li>
-                            <li><a href="#">Новости</a></li>
+                            <li><a href="{% static 'outletauto/pages/payment.html' %}">Оплатить заказ</a></li>
+                            <li><a href="{% static 'outletauto/pages/cataloog' %}">Каталог</a></li>
+                            <li><a href="{% static 'outletauto/pages/news' %}">Новости</a></li>
                         </ul>
                         <ul class="header-account">
-                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                            <li><a href="{% static 'outletauto/pages/authorization.html' %}">Личный кабинет</a></li>
                         </ul>
 
                     </div>
@@ -62,19 +63,19 @@
                             <li><a href="#">Гараж</a></li>
                             <li><a href="#">Баланс</a></li>
                             <li><a href="#">Избранное</a></li>
-                            <li><a href="#">Каталог</a></li>
+                            <li><a href="{% static 'outletauto/pages/cataloog' %}">Каталог</a></li>
                             <li><a href="#">Запросы по VIN</a></li>
-                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
-                                    href="./basket.html">Корзина</a></li>
+                            <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt="basket"><a
+                                    href="{% static 'outletauto/pages/basket.html' %}">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
                             <ul class="account-name">
-                                <li><a href="./profile.html">RDN-12454</a></li>
+                                <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
                                 <li><input type="button" class="red-btn" value="Акция"></li>
                             </ul>
                             <ul class="basket-wrapper">
-                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
-                                        href="./basket.html">Корзина</a></li>
+                                <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt="basket"><a
+                                        href="{% static 'outletauto/pages/basket.html' %}">Корзина</a></li>
                             </ul>
                         </ul>
                     </div>
@@ -96,7 +97,7 @@
                     </div>
                     <div class="header-row-2 auth-off">
                         <ul class="header-account">
-                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                            <li><a href="{% static 'outletauto/pages/authorization.html' %}">Личный кабинет</a></li>
                         </ul>
                         <ul class="header-contact">
                             <li><a href="#">Адреса магазинов</a></li>
@@ -105,7 +106,7 @@
                     </div>
                     <div class="header-row-2 auth-on">
                         <ul class="header-account">
-                            <li><a href="./profile.html">RDN-12454</a></li>
+                            <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
                         </ul>
                         <ul class="header-contact">
                             <li><a href="#">Адреса магазинов</a></li>
@@ -119,7 +120,7 @@
             <div class="container">
                 <div class="content">
                     <div class="new-content">
-                        <img src="../assets/imgs/card-img.png" alt="card-img" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="card-img" class="image-r news-image">
                         <span class="date">19.04.2023</span>
                         <h2 class="title">BMW X1 и iX1 с удлинённой базой представили в Шанхае</h2>
                         <p>
@@ -153,14 +154,14 @@
                         </p>
                     </div>
                     <div class="new-images">
-                        <img src="../assets/imgs/card-img.png" alt="image" class="image-r news-image">
-                        <img src="../assets/imgs/card-img.png" alt="image" class="image-r news-image">
-                        <img src="../assets/imgs/card-img.png" alt="image" class="image-r news-image">
-                        <img src="../assets/imgs/card-img.png" alt="image" class="image-r news-image">
-                        <img src="../assets/imgs/card-img.png" alt="image" class="image-r news-image">
-                        <img src="../assets/imgs/card-img.png" alt="image" class="image-r news-image">
-                        <img src="../assets/imgs/card-img.png" alt="image" class="image-r news-image">
-                        <img src="../assets/imgs/card-img.png" alt="image" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="image" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="image" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="image" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="image" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="image" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="image" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="image" class="image-r news-image">
+                        <img src="{% static 'outletauto/assets/imgs/card-img.png" alt="image" class="image-r news-image">
                     </div>
                     <div class="all-news">
                         <span class="news-title">Посмотреть другие новости</span>
@@ -195,20 +196,20 @@
                 </ul>
                 <ul>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/vk.svg" alt="vk">
+                            <img src="{% static 'outletauto/assets/imgs/icon/vk.svg' %}" alt="vk">
                         </a></li>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/вацап.svg" alt="whatsapp">
+                            <img src="{% static 'outletauto/assets/imgs/icon/вацап.svg' %}" alt="whatsapp">
                         </a></li>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/telegram.svg" alt="telegram">
+                            <img src="{% static 'outletauto/assets/imgs/icon/telegram.svg' %}" alt="telegram">
                         </a></li>
                 </ul>
             </div>
         </footer>
 
     </div>
-    <script src="../assets/js/--authorization.js"></script>
+    <script src="{% static 'outletauto/assets/js/--authorization.js' %}"></script>
 </body>
 
 </html>

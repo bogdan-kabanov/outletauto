@@ -1,5 +1,12 @@
 {% load static %}
+<ul class="dropped" data-height="333" style="position: absolute;">
+        <span>Страницы сайта</span>
+        {% for file in files %}
+        <li><a href="{% url 'html' html=file %}">{{file}}</a></li>
+        {% endfor %}
+    </ul>
 <div class="container">
+
     <div class="offer-content">
         <div class="content-wrapper">
 <!--            <h1 class="title">Запчасти в интернет-магазине <br> OutletAuto</h1>-->

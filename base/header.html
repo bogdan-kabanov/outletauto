@@ -33,9 +33,9 @@
                     </div>
                     <ul class="header-nav">
                         <!-- Не видны при авторизованном аккаунте -->
-                        <li><a href="#">Оплатить заказ</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Новости</a></li>
+                        <li><a href="{% static 'outletauto/pages/payment.html' %}">Оплатить заказ</a></li>
+                        <li><a href="{% url 'catalog' %}">Каталог</a></li>
+                        <li><a href="{% static 'outletauto/pages/news' %}">Новости</a></li>
                     </ul>
                     <ul class="header-account">
                         <li>

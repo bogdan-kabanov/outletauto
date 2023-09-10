@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница авторизации - OutletAuto</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
 </head>
 
 <body>
@@ -15,8 +16,8 @@
                 <div class="pc-header">
                     <div class="header-row-1">
                         <div class="logotype-wrapper header-logotype">
-                            <a href="../index.html">
-                                <img src="../assets/imgs/logotype.svg" alt="logotype" class="logotype">
+                            <a href="{% static 'outletauto/index.html' %}">
+                                <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype" class="logotype">
                             </a>
                         </div>
                         <form class="header-search search" action="#">
@@ -39,12 +40,12 @@
                         </div>
                         <ul class="header-nav">
                             <!-- Не видны при авторизованном аккаунте -->
-                            <li><a href="#">Оплатить заказ</a></li>
-                            <li><a href="#">Каталог</a></li>
-                            <li><a href="#">Новости</a></li>
+                            <li><a href="{% static 'outletauto/pages/payment.html' %}">Оплатить заказ</a></li>
+                            <li><a href="{% static 'outletauto/pages/cataloog' %}">Каталог</a></li>
+                            <li><a href="{% static 'outletauto/pages/news' %}">Новости</a></li>
                         </ul>
                         <ul class="header-account">
-                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                            <li><a href="{% static 'outletauto/pages/authorization.html' %}">Личный кабинет</a></li>
                         </ul>
 
                     </div>
@@ -62,18 +63,18 @@
                             <li><a href="#">Гараж</a></li>
                             <li><a href="#">Баланс</a></li>
                             <li><a href="#">Избранное</a></li>
-                            <li><a href="#">Каталог</a></li>
+                            <li><a href="{% static 'outletauto/pages/cataloog' %}">Каталог</a></li>
                             <li><a href="#">Запросы по VIN</a></li>
-                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt=""><a
+                            <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt=""><a
                                     href="#">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
                             <ul class="account-name">
-                                <li><a href="./profile.html">RDN-12454</a></li>
+                                <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
                                 <li><input type="button" class="red-btn" value="Акция"></li>
                             </ul>
                             <ul class="basket-wrapper">
-                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt=""><a
+                                <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt=""><a
                                         href="#">Корзина</a></li>
                             </ul>
                         </ul>
@@ -96,7 +97,7 @@
                     </div>
                     <div class="header-row-2 auth-off">
                         <ul class="header-account">
-                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                            <li><a href="{% static 'outletauto/pages/authorization.html' %}">Личный кабинет</a></li>
                         </ul>
                         <ul class="header-contact">
                             <li><a href="#">Адреса магазинов</a></li>
@@ -105,7 +106,7 @@
                     </div>
                     <div class="header-row-2 auth-on">
                         <ul class="header-account">
-                            <li><a href="./profile.html">RDN-12454</a></li>
+                            <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
                         </ul>
                         <ul class="header-contact">
                             <li><a href="#">Адреса магазинов</a></li>
@@ -263,13 +264,13 @@
                 </ul>
                 <ul>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/vk.svg" alt="vk">
+                            <img src="{% static 'outletauto/assets/imgs/icon/vk.svg' %}" alt="vk">
                         </a></li>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/вацап.svg" alt="whatsapp">
+                            <img src="{% static 'outletauto/assets/imgs/icon/вацап.svg' %}" alt="whatsapp">
                         </a></li>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/telegram.svg" alt="telegram">
+                            <img src="{% static 'outletauto/assets/imgs/icon/telegram.svg' %}" alt="telegram">
                         </a></li>
                 </ul>
             </div>
@@ -279,7 +280,7 @@
     <div class="burger-nav-wrapper">
         <div class="container">
             <div class="logotype">
-                <img src="../assets/imgs/logotype.svg" alt="logotype">
+                <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype">
             </div>
             <div class="nav-content">
                 <ul class="col">
@@ -294,8 +295,8 @@
                 </ul>
                 <ul class="col">
                     <span class="col-greeting">Клиентам</span>
-                    <li><a href="#">Акции</a></li>
-                    <li><a href="#">Скидки</a></li>
+                    <li><a href="{% static 'outletauto/pages/promotion' %}">Акции</a></li>
+                    <li><a href="{% static 'outletauto/pages/promotion' %}">Скидки</a></li>
                     <li><a href="#">Спецпредложения</a< /li>
                     <li><a href="#">Мобильное приложение</a></li>
                     <li><a href="#">Подарочные сертификаты</a></li>
@@ -308,7 +309,7 @@
                 </ul>
                 <ul class="col">
                     <span class="col-greeting">Компания</span>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="{% static 'outletauto/pages/news' %}">Новости</a></li>
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Магазины</a></li>
                     <li><a href="#">Про нас</a></li>
@@ -327,7 +328,7 @@
 
     <div class="mobile-bottom-nav">
         <div class="container">
-            <a href="../index.html" class="btn-wrapper material">
+            <a href="{% static 'outletauto/index.html' %}" class="btn-wrapper material">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="material-symbols:home-outline-rounded">
                         <path id="Vector"
@@ -391,10 +392,10 @@
             </a>
         </div>
     </div>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/tabs.js"></script>
-    <script src="../assets/js/dropped.js"></script>
-    <script src="../assets/js/--authorization.js"></script>
+    <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/--authorization.js' %}"></script>
 </body>
 
 </html>
