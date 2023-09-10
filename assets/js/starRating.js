@@ -1,13 +1,17 @@
-const starsList = document.querySelectorAll('.card-stars');
+const starRatingList = document.querySelectorAll('.star-rating');
 
-starsList.forEach(e => {
-    const value = Number(e?.getAttribute('data-star-value'));
-    const stats = e?.querySelectorAll('.star');
-    stats.forEach((e, i) => {
-        if (value >= i + 1) {
-            e.classList.add('whole-star');
-        } else if (value >= i + 1 - 0.5) {
-            e.classList.add('half-star');
+starRatingList.forEach(rating => {
+    const num = Number(rating.getAttribute('data-rating'));
+    const starFront = rating.querySelectorAll('.star-front');
+
+    starFront.forEach((star, i) => {
+        let numberStar = i + 1
+        if (num >= numberStar) {
+            star.style.width = '100%'
+        } else if (Math.round(num) == numberStar){
+            star.style.width = '50%'
+        } else {
+            star.style.width = '0%'
         }
     })
 })

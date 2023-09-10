@@ -88,10 +88,17 @@
         .card-stats {
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             .card-price {
                 font-size: 20px;
                 font-weight: bold;
+            }
+
+            .stars-wrapper .star .star-back svg,
+            .stars-wrapper .star .star-front svg {
+                width: 30px;
+                height: 30px;
             }
         }
     }
@@ -445,9 +452,14 @@
         }
 
         .tab-btn {
+            justify-content: center;
             &:not(.btn-active):hover {
                 background-color: #e920207a;
             }
+        }
+
+        .red-btn {
+            max-width: 300px;
         }
     }
 }
@@ -1091,13 +1103,48 @@
                     height: 150px;
                     border-radius: 10px;
                     background: linear-gradient(to bottom, rgba(58, 58, 58, 1), rgba(29, 28, 28, 1));
+                    &::after {
+                        background-position-x: center;
+                    }
 
                     .card-title {
-                        font-size: 18px;
+                        font-size: 16px;
                         font-weight: 700;
                     }
                 }
             }
+        }
+
+        .card-1::after {
+            background-image: url("../imgs/catalog-page/масло моторное.png");
+        }
+
+        .card-2::after {
+            background-image: url("../imgs/catalog-page/масло\ трансмиссионное.png");
+        }
+
+        .card-3::after {
+            background-image: url("../imgs/catalog-page/антифриз.png");
+        }
+
+        .card-4::after {
+            background-image: url("../imgs/catalog-page/тормазная\ жидкость.png");
+        }
+
+        .card-5::after {
+            background-image: url("../imgs/catalog-page/жидкость\ омывателя.png");
+        }
+
+        .card-6::after {
+            background-image: url("../imgs/catalog-page/гидравлическая.png");
+        }
+
+        .card-7::after {
+            background-image: url("../imgs/catalog-page/промывочные\ жидкости.png");
+        }
+
+        .card-8::after {
+            background-image: url("../imgs/catalog-page/вода\ дистиллированная.png");
         }
 
         .card-9::after {
@@ -1326,6 +1373,17 @@
 .universal-catalog {
     background: #1B1919 !important;
 
+    .info-catalog {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .mobile-filter-wrapper {
+        display: none;
+    }
+
     .tab-card-wrapper {
         grid-template-columns: 1fr 1fr !important;
         gap: 40px;
@@ -1339,6 +1397,10 @@
     .sidebar {
         border: none !important;
         background: transparent !important;
+
+        .red-btn {
+            max-width: 300px;
+        }
     }
 
     .filter-headlines,
@@ -1350,7 +1412,6 @@
     }
 
     .drop-down-title-wrapper {
-        margin-bottom: 30px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -1859,10 +1920,23 @@
 }
 
 .orders {
+
+    .mobile-filter {
+        display: none;
+        .red-btn {
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+    }
     .content {
         display: grid;
         grid-template-columns: 1fr 260px;
         gap: 40px;
+    }
+
+    .nav-wrapper {
+        margin-top: 20px;
     }
 
     .main-wrapper {
@@ -1977,7 +2051,7 @@
             }
 
             .search-input {
-                padding-left: 24px;
+                padding-left: 10px;
                 height: 30px;
                 border-radius: 5px;
                 background: #FFF;
@@ -1985,10 +2059,6 @@
                 padding-right: 5px;
                 width: 100%;
                 transition: .2s;
-
-                &:focus {
-                    padding-left: 5px;
-                }
             }
 
             .transparent-btn {
