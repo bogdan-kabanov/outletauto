@@ -356,8 +356,7 @@
             font-weight: 400;
         }
 
-        .input-silver 
-        {
+        .input-silver {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -452,6 +451,7 @@
 
         .tab-btn {
             justify-content: center;
+
             &:not(.btn-active):hover {
                 background-color: #e920207a;
             }
@@ -1092,6 +1092,7 @@
                     height: 150px;
                     border-radius: 10px;
                     background: linear-gradient(to bottom, rgba(58, 58, 58, 1), rgba(29, 28, 28, 1));
+
                     &::after {
                         background-position-x: center;
                     }
@@ -1369,6 +1370,7 @@
         margin-top: 10px;
         margin-bottom: 30px;
     }
+
     .mobile-filter-wrapper {
         display: none;
     }
@@ -1912,12 +1914,14 @@
 
     .mobile-filter {
         display: none;
+
         .red-btn {
             text-align: center;
             display: block;
             width: 100%;
         }
     }
+
     .content {
         display: grid;
         grid-template-columns: 1fr 260px;
@@ -2141,7 +2145,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             -moz-column-gap: 30px;
-                 column-gap: 30px;
+            column-gap: 30px;
             grid-auto-flow: column;
 
             .row-card {
@@ -2211,10 +2215,40 @@
 }
 
 .catalog-personal-account {
+
+    .mobile-tab-interface {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+
+        .catalog-link:last-child {
+            margin-left: 10px;
+        }
+    }
+
     .content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
+
+        .col:first-child {
+            grid-template-columns: 1fr;
+        }
+
+        .tab {
+            padding: 0px;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            border: none !important;
+        }
+
+        .catalog-card-title {
+            font-size: 20px;
+        }
+
+        .catalog-card-desc {
+            font-size: 18px;
+        }
 
         .col {
             border-radius: 10px;
@@ -2226,7 +2260,7 @@
             grid-template-columns: 1fr 1fr;
             row-gap: 30px;
             -moz-column-gap: 20px;
-                 column-gap: 20px;
+            column-gap: 20px;
         }
 
         .interface-auto {
@@ -2723,7 +2757,7 @@
             background-color: #FAFAFA;
             border-radius: 10px;
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
         }
 
         .card-info {
@@ -2770,7 +2804,7 @@
         display: grid;
         grid-template-columns: 360px 1fr;
         -moz-column-gap: 40px;
-             column-gap: 40px;
+        column-gap: 40px;
 
         .header-sidebar {
             display: flex;
@@ -2862,6 +2896,7 @@
             }
         }
     }
+
     .row {
         .mobile-visable {
             display: none;
@@ -3186,7 +3221,7 @@
             display: grid;
             grid-template-columns: 1fr 362px;
             -moz-column-gap: 40px;
-                 column-gap: 40px;
+            column-gap: 40px;
 
             .bar-info {
                 display: flex;
@@ -3325,7 +3360,7 @@
                     height: 70px;
                     border-radius: 10px;
                     -o-object-fit: cover;
-                       object-fit: cover;
+                    object-fit: cover;
 
                     &:not(:last-child) {
                         margin-right: 10px;
@@ -4484,7 +4519,7 @@ a {
     background: #393838;
     box-shadow: 4px 4px 12px 0px rgba(255, 255, 255, 0.21) inset, 4px 4px 14px 0px rgba(0, 0, 0, 0.25);
     -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .calendar-container header {
@@ -4507,9 +4542,9 @@ header .calendar-navigation span {
     line-height: 38px;
     border-radius: 50%;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     color: #FAFAFA;
     font-size: 1.9rem;
 }
