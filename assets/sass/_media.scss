@@ -64,8 +64,59 @@
 
 @media (max-width: 1200px) {
 
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 520px 1fr;
+        }
+    }
 
+    .balance {
+        .content {
 
+            .calendar {
+                .calendar-num {
+                    display: none;
+                }
+            }
+
+            .balance-wrapper {
+                .balance-card-wrapper {
+                    .balance-title {
+                        font-size: 18px;
+                    }
+
+                    .balance-card {
+                        .red-btn {
+                            height: 40px;
+                            font-size: 15px;
+                            max-width: 270px;
+                        }
+                    }
+                }
+            }
+
+            .history-wrapper {
+                .history-header {
+                    .red-btn {
+                        max-width: 100px;
+                        margin-left: 10px;
+                    }
+                }
+
+                .history-header-title {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .call-to-vin {
+        .main-wrapper {
+            .interface {
+                grid-template-columns: 210px 210px 1fr 115px;
+            }
+        }
+    }
 
     .catalog-personal-account {
         .content {
@@ -298,6 +349,86 @@
 }
 
 @media screen and (max-width: 992px) {
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 320px 1fr;
+            .image-wrapper {
+                height: 300px;
+            }
+        }
+    }
+
+    .balance {
+        .mobile-filter {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .content {
+            justify-items: center;
+            grid-template-columns: 1fr;
+
+            .calendar {
+                .calendar-num {
+                    display: none;
+                }
+            }
+
+            .balance-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .balance-card-wrapper {
+                    width: 100%;
+                    max-width: 500px;
+                }
+            }
+
+            .history-wrapper {
+                width: 100%;
+                max-width: 500px;
+
+                .history-header {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .call-to-vin {
+        .main-wrapper {
+            .data {
+
+                .pre-text,
+                .next-text {
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    font-size: 12px;
+                }
+
+                .calendar {
+                    span {
+                        font-size: 12px;
+                    }
+
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+            }
+
+            .interface {
+                grid-template-columns: 130px 130px 1fr 95px;
+
+                .transparent-btn {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 
     .catalog-personal-account {
         .mobile-tab-interface {
@@ -1310,6 +1441,45 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 1fr;
+            .image-wrapper {
+                height: 300px;
+            }
+        }
+    }
+
+    .call-to-vin {
+        .mobile-filter {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+            .drop-down-wrapper {
+                width: 100%;
+                max-width: 270px;
+            }
+
+            .red-btn {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                max-width: 270px;
+            }
+        }
+
+        .main-wrapper {
+            .empty .red-btn {
+                margin-top: 20px;
+            }
+
+            .interface {
+                display: none;
+            }
+        }
+    }
 
     .modification {
         .select-modification {
@@ -2660,6 +2830,19 @@
 
 @media (max-width: 424px) {
 
+    .universal-catalog-tire-2 {
+        .content {
+            padding: 15px;
+            .card-info {
+                .product-title,
+                .product-data {
+                    padding: 15px 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
     .catalog-personal-account {
         .content {
 
@@ -2681,6 +2864,7 @@
                     width: 20px;
                     height: 20px;
                     padding: 15px;
+
                     &::after {
                         font-size: 16px;
                     }
@@ -2813,6 +2997,21 @@
 }
 
 @media (max-width: 348px) {
+
+    .universal-catalog-tire-2 {
+        .content {
+            .image-wrapper {
+                height: 250px;
+            }
+            .card-info {
+                .product-title,
+                .product-data {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
     .offer {
         .title {
             margin-bottom: 80px;

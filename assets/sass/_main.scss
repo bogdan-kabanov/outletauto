@@ -1771,6 +1771,11 @@
 }
 
 .call-to-vin {
+
+    .mobile-filter {
+        display: none;
+    }
+
     .content {
         display: grid;
         grid-template-columns: 1fr;
@@ -2489,6 +2494,27 @@
 }
 
 .balance {
+    .mobile-filter {
+        display: none;
+
+        .drop-down-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .red-btn {
+                text-align: center;
+                width: 100%;
+                height: 40px;
+                max-width: 270px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+            }
+        }
+    }
+
     .content {
         display: grid;
         grid-template-columns: 380px 1fr;
