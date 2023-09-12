@@ -40,6 +40,15 @@
 }
 
 @media screen and (max-width: 1400px) {
+
+    .catalog-personal-account {
+        .content {
+            .catalog-card-title {
+                font-size: 17px;
+            }
+        }
+    }
+
     .container {
         max-width: 1160px;
     }
@@ -73,6 +82,72 @@
 }
 
 @media (max-width: 1200px) {
+
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 520px 1fr;
+        }
+    }
+
+    .balance {
+        .content {
+
+            .calendar {
+                .calendar-num {
+                    display: none;
+                }
+            }
+
+            .balance-wrapper {
+                .balance-card-wrapper {
+                    .balance-title {
+                        font-size: 18px;
+                    }
+
+                    .balance-card {
+                        .red-btn {
+                            height: 40px;
+                            font-size: 15px;
+                            max-width: 270px;
+                        }
+                    }
+                }
+            }
+
+            .history-wrapper {
+                .history-header {
+                    .red-btn {
+                        max-width: 100px;
+                        margin-left: 10px;
+                    }
+                }
+
+                .history-header-title {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .call-to-vin {
+        .main-wrapper {
+            .interface {
+                grid-template-columns: 210px 210px 1fr 115px;
+            }
+        }
+    }
+
+    .catalog-personal-account {
+        .content {
+            .catalog-card-title {
+                font-size: 15px;
+            }
+
+            .catalog-card-desc {
+                font-size: 14px;
+            }
+        }
+    }
 
     .universal-catalog {
         .tab-wrapper {
@@ -293,15 +368,136 @@
 }
 
 @media screen and (max-width: 992px) {
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 320px 1fr;
+            .image-wrapper {
+                height: 300px;
+            }
+        }
+    }
 
-    .modification  {
+    .balance {
+        .mobile-filter {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .content {
+            justify-items: center;
+            grid-template-columns: 1fr;
+
+            .calendar {
+                .calendar-num {
+                    display: none;
+                }
+            }
+
+            .balance-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .balance-card-wrapper {
+                    width: 100%;
+                    max-width: 500px;
+                }
+            }
+
+            .history-wrapper {
+                width: 100%;
+                max-width: 500px;
+
+                .history-header {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .call-to-vin {
+        .main-wrapper {
+            .data {
+
+                .pre-text,
+                .next-text {
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    font-size: 12px;
+                }
+
+                .calendar {
+                    span {
+                        font-size: 12px;
+                    }
+
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+            }
+
+            .interface {
+                grid-template-columns: 130px 130px 1fr 95px;
+
+                .transparent-btn {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .catalog-personal-account {
+        .mobile-tab-interface {
+            display: flex;
+        }
+
+        .content {
+            grid-template-columns: 1fr;
+
+            .col {
+                // padding: 0;
+                padding: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .tab {
+                padding: 0px;
+                gap: 20px;
+                grid-template-columns: 1fr;
+                border: none;
+
+                div {
+                    grid-column: auto;
+                }
+            }
+
+            .catalog-card-title {
+                font-size: 20px;
+            }
+
+            .catalog-card-desc {
+                font-size: 18px;
+            }
+
+            .mobile-hidden {
+                display: none;
+            }
+        }
+    }
+
+    .modification {
         .select-modification {
             .row {
                 gap: 20px;
             }
         }
+
         .found-card {
             padding: 10px;
+
             .bold {
                 font-size: 14px;
             }
@@ -309,7 +505,8 @@
             span {
                 font-size: 10px;
             }
-            .row-card { 
+
+            .row-card {
                 .red-btn {
                     font-size: 14px;
                 }
@@ -323,6 +520,7 @@
             gap: 20px;
 
         }
+
         h1 {
             font-size: 20px;
         }
@@ -340,6 +538,7 @@
         .row {
             grid-template-columns: 260px 1fr;
             gap: 15px;
+
             h2 {
                 font-size: 18px;
             }
@@ -350,6 +549,7 @@
                 li:not(:first-child) {
                     margin-left: 13px;
                 }
+
                 .passenger-car-link {
                     font-size: 13px;
                 }
@@ -1267,7 +1467,46 @@
 
 @media screen and (max-width: 768px) {
 
-    .modification  {
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 1fr;
+            .image-wrapper {
+                height: 300px;
+            }
+        }
+    }
+
+    .call-to-vin {
+        .mobile-filter {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+            .drop-down-wrapper {
+                width: 100%;
+                max-width: 270px;
+            }
+
+            .red-btn {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                max-width: 270px;
+            }
+        }
+
+        .main-wrapper {
+            .empty .red-btn {
+                margin-top: 20px;
+            }
+
+            .interface {
+                display: none;
+            }
+        }
+    }
+
+    .modification {
         .select-modification {
             .row {
                 grid-template-columns: 1fr 1fr;
@@ -1281,6 +1520,7 @@
             gap: 20px;
 
         }
+
         h1 {
             font-size: 20px;
         }
@@ -1304,10 +1544,12 @@
             .workspace {
                 grid-template-columns: 1fr;
                 grid-auto-flow: row;
+
                 .row-card {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 10px;
+
                     .card-letter {
                         margin-top: 0px !important;
                     }
@@ -2171,20 +2413,22 @@
 
 @media (max-width: 576px) {
 
-    .modification  {
+    .modification {
         .select-modification {
             .row {
                 grid-template-columns: 1fr;
+
                 .col {
                     display: flex;
                     justify-content: center;
                 }
+
                 .found-card {
                     max-width: 300px;
                 }
             }
         }
-    } 
+    }
 
     .universal-catalog {
         .tab-interface {
@@ -2624,6 +2868,50 @@
 }
 
 @media (max-width: 424px) {
+
+    .universal-catalog-tire-2 {
+        .content {
+            padding: 15px;
+            .card-info {
+                .product-title,
+                .product-data {
+                    padding: 15px 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .catalog-personal-account {
+        .content {
+
+            .catalog-card-title {
+                font-size: 16px;
+            }
+
+            .catalog-card-desc {
+                font-size: 14px;
+            }
+
+            .slider-auto {
+                .auto-title {
+                    font-size: 18px;
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    width: 20px;
+                    height: 20px;
+                    padding: 15px;
+
+                    &::after {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
     .circle-btn-wrapper {
 
         // padding: 0px;
@@ -2748,6 +3036,21 @@
 }
 
 @media (max-width: 348px) {
+
+    .universal-catalog-tire-2 {
+        .content {
+            .image-wrapper {
+                height: 250px;
+            }
+            .card-info {
+                .product-title,
+                .product-data {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
     .offer {
         .title {
             margin-bottom: 80px;
