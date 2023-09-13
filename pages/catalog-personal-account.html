@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница авторизации - OutletAuto</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
                     <div class="header-row-1">
                         <div class="logotype-wrapper header-logotype">
                             <a href="../index.html">
-                                <img src="../assets/imgs/logotype.svg" alt="logotype" class="logotype">
+                                <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype" class="logotype">
                             </a>
                         </div>
                         <form class="header-search search" action="#">
@@ -65,7 +66,7 @@
                             <li><a href="#">Избранное</a></li>
                             <li><a href="#">Каталог</a></li>
                             <li><a href="#">Запросы по VIN</a></li>
-                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                            <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt="basket"><a
                                     href="./basket.html">Корзина</a></li>
                         </ul>
                         <ul class="header-account">
@@ -74,7 +75,7 @@
                                 <li><input type="button" class="red-btn" value="Акция"></li>
                             </ul>
                             <ul class="basket-wrapper">
-                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                <li class="basket"><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt="basket"><a
                                         href="./basket.html">Корзина</a></li>
                             </ul>
                         </ul>
@@ -302,13 +303,13 @@
                 </ul>
                 <ul>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/vk.svg" alt="vk">
+                            <img src="{% static 'outletauto/assets/imgs/icon/vk.svg' %}" alt="vk">
                         </a></li>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/вацап.svg" alt="whatsapp">
+                            <img src="{% static 'outletauto/assets/imgs/icon/вацап.svg' %}" alt="whatsapp">
                         </a></li>
                     <li><a href="#">
-                            <img src="../assets/imgs/icon/telegram.svg" alt="telegram">
+                            <img src="{% static 'outletauto/assets/imgs/icon/telegram.svg' %}" alt="telegram">
                         </a></li>
                 </ul>
             </div>
@@ -318,7 +319,7 @@
     <div class="burger-nav-wrapper">
         <div class="container">
             <div class="logotype">
-                <img src="../assets/imgs/logotype.svg" alt="logotype">
+                <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype">
             </div>
             <div class="nav-content">
                 <ul class="col">
@@ -430,7 +431,7 @@
             </a>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js' %}"></script>
     <script>
         const swiper = new Swiper('.slider-auto', {
             // Optional parameters
@@ -442,10 +443,10 @@
             },
         });
     </script>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/tabs.js"></script>
-    <script src="../assets/js/--authorization.js"></script>
-    <script src="../assets/js/dropped.js"></script>
+    <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/--authorization.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
 </body>
 
 </html>

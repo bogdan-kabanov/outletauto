@@ -1,7 +1,11 @@
 {% load static %}
 
 <div class="burger-nav-wrapper">
+
     <div class="container">
+
+
+
         <div class="logotype">
             <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype">
         </div>
@@ -40,6 +44,17 @@
                 <li><a href="#">Франшиза OutletAvto</a></li>
                 <li><a href="#">Реклама на сайте</a></li>
             </ul>
+
+        </div>
+        <div  class="nav-content" style="margin: 50px 0;">
+            {% for count, files in files_dict.items  %}
+                <ul class="col">
+                    <span class="col-greeting">Страницы сайта {{count}}</span>
+                    {% for file in files %}
+                        <li><a href="{% url 'html' html=file %}">{{file}}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
         </div>
         <div class="burger-btns">
             <div class="closed-nav">
