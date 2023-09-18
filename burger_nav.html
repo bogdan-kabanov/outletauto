@@ -1,0 +1,67 @@
+{% load static %}
+
+<div class="burger-nav-wrapper">
+
+    <div class="container">
+
+
+
+        <div class="logotype">
+            <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype">
+        </div>
+        <div class="nav-content">
+            <ul class="col">
+                <span class="col-greeting">Каталоги</span>
+                <li><a href="{% url 'universal_catalog_page' %}">Универсальный каталог</a></li>
+                <li><a href="{% url 'catalog_page' %}">Масла и технические жидкост</a></li>
+                <li><a href="{% url 'catalog_page' %}">Автохимия и косметика</a></li>
+                <li><a href="{% url 'catalog_page' %}">Автопринадлежности</a></li>
+                <li><a href="{% url 'catalog_page' %}">Инструменты: авто, дом и сад</a></li>
+                <li><a href="{% url 'catalog_page' %}">Шины и диски (параметры)</a></li>
+                <li><a href="{% url 'catalog_page' %}">Аксессуары</a></li>
+            </ul>
+            <ul class="col">
+                <span class="col-greeting">Клиентам</span>
+                <li><a href="{% url 'promotion_page' %}">Акции</a></li>
+                <li><a href="{% url 'promotion_page' %}">Скидки</a></li>
+                <li><a href="{% url 'promotion_page' %}">Спецпредложения</a></li>
+                <li><a href="#">Мобильное приложение</a></li>
+                <li><a href="{% url 'promotion_page' %}">Подарочные сертификаты</a></li>
+                <li><a href="{% url 'promotion_page' %}">Видеоинструкции</a></li>
+                <li><a href="#">Как сделать заказ</a></li>
+                <li><a href="{% url 'payment_page' %}">Способы оплаты</a></li>
+                <li><a href="{% url 'payment_page' %}">Способы возврата оплаты</a></li>
+                <li><a href="#">Условия доставки</a></li>
+                <li><a href="#">Условия работы для клиентов</a></li>
+            </ul>
+            <ul class="col">
+                <span class="col-greeting">Компания</span>
+                <li><a href="{% url 'news_page' %}">Новости</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Магазины</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Полезное</a></li>
+                <li><a href="#">Франшиза OutletAvto</a></li>
+                <li><a href="#">Реклама на сайте</a></li>
+            </ul>
+
+        </div>
+        <div  class="nav-content" style="margin: 50px 0;">
+            {% for count, files in files_dict.items  %}
+                <ul class="col">
+                    <span class="col-greeting">Страницы сайта {{count}}</span>
+                    {% for file in files %}
+                        <li><a href="{% url 'html' html=file %}">{{file}}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+        <div class="burger-btns">
+            <div class="closed-nav">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script src="{% static 'outletauto/assets/js/index.js' %}"></script>-->
