@@ -1,0 +1,35 @@
+.stars-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.stars-wrapper .star .star-back svg,
+.stars-wrapper .star .star-front svg {
+    width: 24px;
+    height: 24px;
+}
+
+.stars-wrapper .star .star-back svg path{
+    fill: none;
+    stroke-width: 2px;
+}
+
+.stars-wrapper .star {
+    position: relative;
+}
+
+.stars-wrapper .star .star-front {
+    overflow: hidden;
+    width: 0;
+    left: 0;
+    top: 0;
+    /* width: 100%;
+    height: 100%; */
+    position: absolute;
+}
+
+.stars-wrapper .star .star-front svg path {
+    fill: #E92020;
+    stroke-width: 2px;
+}

@@ -27,3 +27,13 @@ burgerBtns.forEach(e => {
     burgerNav.classList.toggle('burger-nav-wrapper_active');
   })
 })
+const bottomNavBtn =  document.querySelectorAll('.mobile-bottom-nav .btn-wrapper');
+
+function activeLinkBottomNav(link){
+  bottomNavBtn.forEach(e=>{
+    if(e.classList.contains('btn-active')){
+      e.classList.remove('btn-active')
+    }
+  })
+  link.classList.add('btn-active')
+}

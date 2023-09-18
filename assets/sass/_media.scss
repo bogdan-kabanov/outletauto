@@ -6,7 +6,6 @@
 
 @media (min-width: 1400px) and (max-height: 785px) {
     .offer {
-
         .title {
             margin-bottom: 190px;
         }
@@ -22,6 +21,15 @@
 }
 
 @media screen and (max-width: 1400px) {
+
+    .catalog-personal-account {
+        .content {
+            .catalog-card-title {
+                font-size: 17px;
+            }
+        }
+    }
+
     .container {
         max-width: 1160px;
     }
@@ -40,7 +48,6 @@
 
 @media (max-width: 1400px) and (max-height: 785px) {
     .offer {
-
         .title {
             margin-bottom: 190px;
         }
@@ -56,6 +63,179 @@
 }
 
 @media (max-width: 1200px) {
+
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 520px 1fr;
+        }
+    }
+
+    .balance {
+        .content {
+
+            .calendar {
+                .calendar-num {
+                    display: none;
+                }
+            }
+
+            .balance-wrapper {
+                .balance-card-wrapper {
+                    .balance-title {
+                        font-size: 18px;
+                    }
+
+                    .balance-card {
+                        .red-btn {
+                            height: 40px;
+                            font-size: 15px;
+                            max-width: 270px;
+                        }
+                    }
+                }
+            }
+
+            .history-wrapper {
+                .history-header {
+                    .red-btn {
+                        max-width: 100px;
+                        margin-left: 10px;
+                    }
+                }
+
+                .history-header-title {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .call-to-vin {
+        .main-wrapper {
+            .interface {
+                grid-template-columns: 210px 210px 1fr 115px;
+            }
+        }
+    }
+
+    .catalog-personal-account {
+        .content {
+            .catalog-card-title {
+                font-size: 15px;
+            }
+
+            .catalog-card-desc {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .universal-catalog {
+        .tab-wrapper {
+            .tab {
+                grid-template-columns: 250px 1fr;
+                gap: 40px;
+            }
+        }
+
+        .card-stars .star {
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+    .orders {
+        .content {
+            gap: 9px;
+
+            .interface {
+                grid-template-columns: minmax(0px, 220px) minmax(0px, 150px) 235px minmax(0, 115px);
+
+                .serach {
+                    .search-input {
+                        font-size: 12px;
+                    }
+                }
+
+                .status {
+                    .transparent-btn {
+                        font-size: 12px;
+                    }
+                }
+
+                .calendar {
+                    padding-left: 3px;
+                    padding-right: 3px;
+
+                    .calendar-text {
+                        display: none;
+                    }
+                }
+            }
+
+            .table {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .universal-catalog-tire-3 {
+        .content {
+            .table {
+                .table-header {
+                    div:last-child {
+                        min-width: auto;
+                    }
+                }
+
+                .table-body .table-list .hidden-list .list-content div:nth-child(5) {
+                    min-width: auto;
+                }
+            }
+        }
+    }
+
+    .universal-catalog-tire {
+        .card-product {
+            grid-template-columns: 275px 1fr;
+
+            .card-info {
+                .product-name {
+                    font-size: 16px;
+                }
+
+                .product-data,
+                .product-title {
+
+                    .num,
+                    .name {
+                        font-size: 14px;
+                    }
+                }
+
+                .red-btn {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .universal-catalog-card {
+        grid-template-columns: 440px 1fr;
+    }
+
+    .catalog {
+        .tab-wrapper {
+            .tab {
+                grid-template-columns: 250px 654px;
+
+                .tab-card-wrapper {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+
     .container {
         max-width: 960px;
     }
@@ -154,7 +334,6 @@
 
 @media (max-width: 1200px) and (max-height: 785px) {
     .offer {
-
         .title {
             margin-bottom: 190px;
         }
@@ -170,6 +349,906 @@
 }
 
 @media screen and (max-width: 992px) {
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 320px 1fr;
+            .image-wrapper {
+                height: 300px;
+            }
+        }
+    }
+
+    .balance {
+        .mobile-filter {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .content {
+            justify-items: center;
+            grid-template-columns: 1fr;
+
+            .calendar {
+                .calendar-num {
+                    display: none;
+                }
+            }
+
+            .balance-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .balance-card-wrapper {
+                    width: 100%;
+                    max-width: 500px;
+                }
+            }
+
+            .history-wrapper {
+                width: 100%;
+                max-width: 500px;
+
+                .history-header {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .call-to-vin {
+        .main-wrapper {
+            .data {
+
+                .pre-text,
+                .next-text {
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    font-size: 12px;
+                }
+
+                .calendar {
+                    span {
+                        font-size: 12px;
+                    }
+
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+            }
+
+            .interface {
+                grid-template-columns: 130px 130px 1fr 95px;
+
+                .transparent-btn {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .catalog-personal-account {
+        .mobile-tab-interface {
+            display: flex;
+        }
+
+        .content {
+            grid-template-columns: 1fr;
+
+            .col {
+                // padding: 0;
+                padding: 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .tab {
+                padding: 0px;
+                gap: 20px;
+                grid-template-columns: 1fr;
+                border: none;
+
+                div {
+                    grid-column: auto;
+                }
+            }
+
+            .catalog-card-title {
+                font-size: 20px;
+            }
+
+            .catalog-card-desc {
+                font-size: 18px;
+            }
+
+            .mobile-hidden {
+                display: none;
+            }
+        }
+    }
+
+    .modification {
+        .select-modification {
+            .row {
+                gap: 20px;
+            }
+        }
+
+        .found-card {
+            padding: 10px;
+
+            .bold {
+                font-size: 14px;
+            }
+
+            span {
+                font-size: 10px;
+            }
+
+            .row-card {
+                .red-btn {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .universal-catalog-info {
+        .row {
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .passenger-car {
+        .row {
+            grid-template-columns: 260px 1fr;
+            gap: 15px;
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        .passenger-car-nav-wrapper {
+            .passenger-car-links {
+                li:not(:first-child) {
+                    margin-left: 13px;
+                }
+
+                .passenger-car-link {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .passenger-car-workspace {
+            .workspace {
+                gap: 15px;
+
+                .card-letter {
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .universal-catalog {
+        .tab-interface {
+
+            .nav {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                gap: 10px;
+
+                .tab-btn {
+                    margin-left: 0px !important;
+                }
+            }
+        }
+
+        .tab-wrapper {
+            .tab {
+                .sidebar {
+                    padding: 0px;
+                }
+
+                grid-template-columns: 1fr;
+                gap: 0px;
+            }
+        }
+
+        .filter-sidebar {
+            display: none;
+        }
+
+        .info-catalog {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mobile-filter-wrapper {
+            display: flex;
+
+            .drop-down-title {
+                svg {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .catalog {
+
+        .card-1::after,
+        .card-2::after,
+        .card-3::after,
+        .card-4::after,
+        .card-5::after,
+        .card-6::after,
+        .card-7::after,
+        .card-8::after {
+            bottom: -13px !important;
+            right: -15px !important;
+        }
+
+        .card-1::after {
+            background-image: url("../imgs/catalog-page/масло моторное.png");
+        }
+
+        .card-2::after {
+            background-image: url("../imgs/catalog-page/масло\ трансмиссионное.png");
+        }
+
+        .card-3::after {
+            background-image: url("../imgs/catalog-page/антифриз.png");
+        }
+
+        .card-4::after {
+            background-image: url("../imgs/catalog-page/тормазная\ жидкость.png");
+        }
+
+        .card-5::after {
+            background-image: url("../imgs/catalog-page/жидкость\ омывателя.png");
+        }
+
+        .card-6::after {
+            background-image: url("../imgs/catalog-page/гидравлическая.png");
+        }
+
+        .card-7::after {
+            background-image: url("../imgs/catalog-page/промывочные\ жидкости.png");
+        }
+
+        .card-8::after {
+            background-image: url("../imgs/catalog-page/вода\ дистиллированная.png");
+        }
+
+        .card-9::after {
+            background-image: url("../imgs/catalog-page/шины.png");
+        }
+
+        .card-10::after {
+            background-image: url("../imgs/catalog-page/диски.png");
+        }
+
+        .card-11::after {
+            background-image: url("../imgs/catalog-page/пакрышки.png");
+        }
+
+        .card-12::after {
+            background-image: url("../imgs/catalog-page/принодлежности\ для\ шин.png");
+        }
+
+        .card-12::after {
+            background-image: url("../imgs/catalog-page/принодлежности\ для\ шин.png");
+        }
+
+        .card-13::after {
+            background-image: url("../imgs/catalog-page/химия.png");
+            max-width: 149px !important;
+        }
+
+        .card-14::after {
+            background-image: url("../imgs/catalog-page/ремонт.png");
+            bottom: -10px !important;
+        }
+
+        .card-15::after {
+            background-image: url("../imgs/catalog-page/для\ кузова.png");
+        }
+
+        .card-16::after {
+            background-image: url("../imgs/catalog-page/присадки.png");
+            bottom: -10px !important;
+        }
+
+        .card-17::after {
+            background-image: url("../imgs/catalog-page/для\ ремонта.png");
+            bottom: -10px !important;
+        }
+
+        .card-18::after {
+            background-image: url("../imgs/catalog-page/для\ мойки.png");
+        }
+
+        .card-19::after {
+            background-image: url("../imgs/catalog-page/для\ салона.png");
+        }
+
+        .card-20::after {
+            background-image: url("../imgs/catalog-page/автохимия\ для\ дисков.png");
+        }
+
+        .card-21::after {
+            background-image: url("../imgs/catalog-page/мотохимия.png");
+            bottom: -10px !important;
+        }
+
+        .card-22::after {
+            background-image: url("../imgs/catalog-page/акксесуары\ для\ полировки.png");
+            bottom: -13px !important;
+        }
+
+        .card-23::after {
+            background-image: url("../imgs/catalog-page/средства\ гигиены.png");
+        }
+
+        .card-24::after {
+            background-image: url("../imgs/catalog-page/наборы\ автохимии.png");
+        }
+
+        .card-25::after {
+            background-image: url("../imgs/catalog-page/бытовая\ химия.png");
+        }
+
+        // tab 3
+
+        .card-26::after {
+            background-image: url("../imgs/catalog-page/автолампы.png");
+        }
+
+        .card-27::after {
+            background-image: url("../imgs/catalog-page/аккумуляторы.png");
+            bottom: -10px !important;
+        }
+
+        .card-28::after {
+            background-image: url("../imgs/catalog-page/щётки.png");
+            bottom: -20px !important;
+        }
+
+        .card-29::after {
+            background-image: url("../imgs/catalog-page/транспандеры.png");
+        }
+
+        .card-30::after {
+            background-image: url("../imgs/catalog-page/чехлы.png");
+        }
+
+        .card-31::after {
+            background-image: url("../imgs/catalog-page/домкраты.png");
+        }
+
+        .card-32::after {
+            background-image: url("../imgs/catalog-page/доп\ оборудование.png");
+            bottom: -30px !important;
+        }
+
+        .card-33::after {
+            background-image: url("../imgs/catalog-page/перевозка\ багажа.png");
+        }
+
+        .card-34::after {
+            background-image: url("../imgs/catalog-page/электроустройства.png");
+        }
+
+        .card-35::after {
+            background-image: url("../imgs/catalog-page/автоаксессуары.png");
+        }
+
+        .card-36::after {
+            background-image: url("../imgs/catalog-page/уход.png");
+        }
+
+        .card-37::after {
+            background-image: url("../imgs/catalog-page/автосигнализация.png");
+            bottom: -12px !important;
+        }
+
+        .card-38::after {
+            background-image: url("../imgs/catalog-page/экстерьер.png");
+            bottom: -20px !important;
+        }
+
+        .card-39::after {
+            background-image: url("../imgs/catalog-page/зарядные\ устройства.png");
+            bottom: -21px !important;
+        }
+
+        .card-40::after {
+            background-image: url("../imgs/catalog-page/принадлежности.png");
+            bottom: -10px;
+        }
+
+        .card-41::after {
+            background-image: url("../imgs/catalog-page/подшипники.png");
+        }
+
+        .card-42::after {
+            background-image: url("../imgs/catalog-page/для\ детей.png");
+        }
+
+        .card-43::after {
+            background-image: url("../imgs/catalog-page/крипёж.png");
+        }
+
+        .card-44::after {
+            background-image: url("../imgs/catalog-page/шланги.png");
+        }
+
+        .card-45::after {
+            background-image: url("../imgs/catalog-page/коронавирус.png");
+        }
+
+        .card-46::after {
+            background-image: url("../imgs/catalog-page/принадлежности\ к\ автоприцепам.png");
+            bottom: -10px !important;
+        }
+
+        .card-47::after {
+            background-image: url("../imgs/catalog-page/мотоакксесуары.png");
+            bottom: -15px !important;
+        }
+
+        .card-48::after {
+            background-image: url("../imgs/catalog-page/средства\ гигиены.png");
+        }
+
+        .card-49::after {
+            background-image: url("../imgs/catalog-page/сувениры.png");
+            bottom: -15px !important;
+        }
+    }
+
+    .news-page {
+        .content {
+            .new-content {
+                .news-image {
+                    width: 100%;
+                }
+            }
+
+            .all-news {
+                .news-card {
+                    grid-template-columns: 1fr 1fr;
+                    justify-items: center;
+
+                    .card {
+                        .card-title {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .orders {
+        .mobile-filter {
+            display: block;
+        }
+
+        .main-wrapper {
+            .interface {
+                display: none;
+            }
+
+            .table {
+
+                .table-title th,
+                .table-body td {
+                    padding: 15px;
+                }
+
+                .nav-inf,
+                .status,
+                .direction,
+                .num {
+                    display: none;
+                }
+
+                .nav-inf-wrapper {
+                    padding: 0px !important;
+                }
+
+                .nav {
+                    padding: 20px 10px !important;
+                }
+            }
+        }
+
+        .banner {
+            height: 270px;
+
+        }
+
+        .content {
+            grid-template-columns: 1fr;
+
+            .right-sidebar {
+                order: 1;
+
+                .nav-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .qr-wrapper {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+
+                        .qr {
+                            max-width: auto;
+                            // height: 230px;
+                            height: 230px;
+                        }
+
+                        .qr-text {
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+
+                .circle-btn-wrapper {
+                    width: 100%;
+                    max-width: 300px;
+
+                    .circle-btn {
+                        justify-content: center;
+                    }
+
+                }
+            }
+
+            .main-content {
+                order: 2;
+            }
+        }
+    }
+
+    .universal-catalog-tire-3 {
+
+        .content {
+            .mobile-info {
+                display: inherit;
+            }
+
+            .table {
+                .table-header {
+                    display: none;
+                }
+
+                .table-body {
+                    .table-list .hidden-list .list-content {
+                        grid-template-columns: 1fr 1fr 1fr;
+
+                        div:nth-child(1) {
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                        }
+
+                        div:nth-child(2) {
+                            grid-row-start: 2;
+                            grid-row-end: 3;
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                        }
+
+                        div:nth-child(3) {
+                            grid-row-start: 1;
+                            grid-row-end: 3;
+                        }
+                    }
+                }
+            }
+
+            .arrow {
+                .mobile-nav {
+                    display: flex;
+                }
+            }
+        }
+
+        .content .table .table-body .table-list .show-list {
+            grid-template-columns: 1fr 1fr;
+
+            .col {
+                grid-column: auto !important;
+
+                &:last-child {
+                    min-width: auto;
+                    justify-content: flex-end;
+
+                    .delivery,
+                    .order-info {
+                        display: none;
+                    }
+
+                    .price {
+                        margin-right: 15px;
+                    }
+                }
+
+                grid-column: 1;
+            }
+        }
+
+    }
+
+    .universal-catalog-tire {
+
+        .tab-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        .row {
+            .mobile-visable {
+                display: flex;
+            }
+        }
+
+        .row {
+            .mobile-hidden {
+                display: none;
+            }
+        }
+
+        .transparent-btn {
+            height: 30px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+
+            min-width: 140px;
+            justify-content: center;
+        }
+    }
+
+    .universal-catalog-card {
+        .content {
+            .card-product {
+                grid-template-columns: 1fr;
+
+                .image-wrapper {
+                    height: 300px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                    }
+                }
+
+                .card-product__info {
+                    .row {
+                        grid-template-columns: 225px 1fr;
+                    }
+                }
+            }
+
+            .reviews {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+
+                .comment {
+                    .name {
+                        font-size: 14px;
+                    }
+
+                    .comment-info {
+                        display: flex;
+                        flex-direction: column;
+
+                        .inf {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .comment-text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .payment {
+        .circle-btn {
+            max-width: 100%;
+            font-size: 14px;
+        }
+    }
+
+    .catalog {
+        .tab-wrapper {
+            .tab {
+                grid-template-columns: 210px 454px;
+            }
+        }
+    }
+
+    .favorite {
+        .retention {
+            .not-empty {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+    }
+
+    .basket {
+        .retention {
+            .not-empty {
+                .product-interface {
+                    margin-top: 20px;
+
+                    .product-info {
+                        display: flex;
+                        flex-direction: column;
+
+                        .total {
+                            order: 1;
+
+                            .title-info {
+                                font-size: 16px;
+
+                                .bold {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+
+                        .bonus {
+                            order: 2;
+                            font-size: 16px;
+                        }
+
+                        .total-price-wrapper {
+                            order: 3;
+
+                            .title-text {
+                                font-size: 24px;
+                            }
+
+                            .title-price {
+                                font-size: 20px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .input-silver {
+                            order: 4;
+                            font-size: 16px;
+                        }
+
+                        .red-btn {
+                            font-size: 18px;
+                            margin-top: 20px;
+                            order: 5;
+                        }
+
+                        .banner {
+                            order: 6;
+                        }
+
+                        .red-btn,
+                        .input-silver {
+                            max-width: 360px;
+                        }
+                    }
+                }
+            }
+
+            .card-wrapper {
+                .card {
+                    grid-template-columns: minmax(0px, 108px) 1fr;
+                    gap: 10px;
+
+                    .check-with-label-wrapper {
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                        order: 1;
+                    }
+
+                    .card-destroy {
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                        order: 2;
+                        justify-content: end;
+                    }
+
+                    .card-wrapper {
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                        order: 3;
+                    }
+
+                    .card-info {
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                        order: 4;
+                    }
+
+                    .card-price-info {
+                        order: 5;
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+    }
+
+    .news {
+        .content {
+            .news-card {
+                .card-content {
+                    width: 60%;
+
+                    .card-description {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .auth-on {
+        li {
+            margin-left: 14px !important;
+            font-size: 14px;
+            align-items: start;
+        }
+
+        .header-nav {
+            width: 73% !important;
+        }
+
+        .header-account {
+            width: 25% !important;
+
+            .red-btn {
+                padding: 5px 15px;
+            }
+        }
+    }
+
     .container {
         max-width: 720px;
     }
@@ -182,10 +1261,40 @@
         }
 
         .header-row-2 {
+            margin-top: 10px;
+            align-items: start;
+
             .header-contact {
                 a {
                     &::after {
                         display: none;
+                    }
+                }
+            }
+
+            .header-nav {
+                margin-top: 10.5px;
+
+                .basket {
+                    display: none;
+                }
+            }
+
+            .header-account {
+                margin-top: 10.5px;
+                flex-direction: column;
+                align-items: end;
+
+                .account-name {
+                    display: flex;
+                }
+
+                .basket-wrapper {
+                    display: flex;
+
+                    .basket {
+                        margin-top: 5px;
+                        align-items: center;
                     }
                 }
             }
@@ -212,14 +1321,14 @@
     .offer {
         min-height: auto;
         height: auto;
-        background:
-            linear-gradient(#020202 0%,
+        background: linear-gradient(#020202 0%,
                 #020202 0%,
-                rgba(0, 0, 0, .0) 10%,
-                rgba(0, 0, 0, .0) 48%,
-                rgba(0, 0, 0, .0) 40%,
+                rgba(0, 0, 0, 0) 10%,
+                rgba(0, 0, 0, 0) 48%,
+                rgba(0, 0, 0, 0) 40%,
                 #020202 75%,
-                #020202 100%), url("../imgs/Главная.png");
+                #020202 100%),
+            url("../imgs/Главная.png");
         background-color: #020202;
         background-size: 1120px;
         background-position-y: 66px;
@@ -251,9 +1360,9 @@
         }
 
         .transparent-wrapper {
-            justify-content: space-between;
+            // justify-content: space-between;
 
-            .transparent-btn {
+            .drop-down-wrapper {
                 &:last-child {
                     margin-left: 10px;
                 }
@@ -333,8 +1442,502 @@
 
 @media screen and (max-width: 768px) {
 
+    .universal-catalog-tire-2 {
+        .content {
+            grid-template-columns: 1fr;
+            .image-wrapper {
+                height: 300px;
+            }
+        }
+    }
+
+    .call-to-vin {
+        .mobile-filter {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+            .drop-down-wrapper {
+                width: 100%;
+                max-width: 270px;
+            }
+
+            .red-btn {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                max-width: 270px;
+            }
+        }
+
+        .main-wrapper {
+            .empty .red-btn {
+                margin-top: 20px;
+            }
+
+            .interface {
+                display: none;
+            }
+        }
+    }
+
+    .modification {
+        .select-modification {
+            .row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+
+    .universal-catalog-info {
+        .row {
+            grid-template-columns: 1fr;
+            gap: 20px;
+
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .passenger-car {
+        .row {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .passenger-car-workspace {
+            .workspace {
+                grid-template-columns: 1fr;
+                grid-auto-flow: row;
+
+                .row-card {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+
+                    .card-letter {
+                        margin-top: 0px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-product-wrapper {
+        .card-content {
+            .card-title {
+                font-size: 14px;
+            }
+
+            .card-option {
+                font-size: 13px;
+            }
+
+            .card-stats {
+
+                .stars-wrapper .star .star-back svg,
+                .stars-wrapper .star .star-front svg {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .card-price {
+                    font-size: 15px;
+                }
+            }
+
+            .red-btn {
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .garage {
+        .auto-card-wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .news-page {
+        .content {
+            .new-content {
+                .news-image {
+                    width: 100%;
+                }
+            }
+
+            .all-news {
+                .news-card {
+                    grid-template-columns: 1fr 1fr;
+
+                    .card {
+                        .card-title {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .self-call {
+        .content {
+            .tab-interface {
+                .tab-btn {
+                    font-size: 14px;
+                }
+            }
+
+            .tab-one {
+                .tab-content {
+                    grid-template-columns: 1fr;
+
+                    .map {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+
+                        div,
+                        iframe {
+                            max-width: 100% !important;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .universal-catalog-tire {
+        .card-product {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .product-image {
+                height: 200px;
+                max-width: 390px;
+            }
+
+            grid-template-columns: 1fr;
+
+            .card-info {
+                .red-btn {
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    .universal-catalog-card {
+        .content {
+            .card-product {
+                grid-template-columns: 1fr;
+
+                .image-wrapper {
+                    height: 300px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                    }
+                }
+
+                .card-product__info {
+                    .row {
+                        grid-template-columns: 225px 1fr;
+                    }
+                }
+            }
+
+            .reviews {
+                grid-template-columns: 1fr;
+
+                .reviews-info {
+                    margin-top: 20px;
+                    order: 1;
+                }
+
+                .stars-review {
+                    order: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .stars-bar {
+                        max-width: 260px;
+                    }
+
+                    .red-btn {
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        max-width: 260px;
+                        height: 40px;
+                    }
+                }
+
+                .comment {
+                    order: 2;
+
+                    .comment-text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .payment {
+
+        .payment-wrapper {
+            grid-template-columns: 1fr;
+
+            .order-1-mob {
+                order: 1
+            }
+
+            .order-2-mob {
+                order: 2
+            }
+
+            .order-3-mob {
+                order: 3
+            }
+
+            .order-4-mob {
+                order: 4
+            }
+        }
+
+        .circle-btn {
+            justify-content: flex-start !important;
+            font-size: 16px;
+        }
+    }
+
+    .promotion {
+        .title {
+            font-size: 20px;
+        }
+
+        .title-info {
+            font-size: 14px;
+        }
+
+        .code {
+            .code-title {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .red-btn {
+                max-width: 300px;
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+
+        .brought-friends {
+            .brought-friends-title {
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .brought-wrapper {
+                .card {
+                    .card-price {
+                        font-size: 14px;
+                    }
+
+                    .card-user__name,
+                    .card-date,
+                    .card-title {
+                        font-size: 13px;
+                    }
+
+                    .card-date,
+                    .card-user__name {
+                        margin-top: 5px;
+                    }
+
+                    .card-left {
+                        align-items: flex-start;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+    .catalog {
+        .tab-wrapper {
+            .tab-interface {
+                .nav {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+
+                    .tab-btn {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .tab {
+                grid-template-columns: 1fr;
+
+                .sidebar {
+                    background-color: transparent;
+                    border: transparent;
+                    z-index: 2;
+
+                    .nav {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #323030;
+                        display: none;
+                        flex-direction: column;
+                        padding: 20px;
+
+                        .mobile-interface {
+                            display: block;
+                        }
+                    }
+
+                    .active {
+                        display: flex;
+                        overflow-y: scroll;
+                    }
+
+                    .closed-catalog-popup {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar-mobile {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .red-btn {
+            height: 40px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    .favorite {
+        .retention {
+            .not-empty {
+                justify-items: center;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    }
+
+    .basket {
+        .retention {
+            .not-empty {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    footer {
+        margin-bottom: 50px;
+    }
+
+    .registration {
+        .content {
+            .row-2 {
+                grid-template-columns: 1fr;
+
+                .row-2 {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+
+    .mobile-bottom-nav {
+        display: flex;
+    }
+
+    .news {
+        .content {
+            .news-card {
+                .card-img {
+                    display: none;
+                }
+
+                .card-content {
+                    width: 100%;
+
+                    .card-title {
+                        font-size: 16px;
+                    }
+
+                    .card-description {
+                        font-size: 14px;
+                    }
+
+                    .card-data {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .auth-on {
+        li {
+            margin-left: 0px !important;
+        }
+
+        .header-account {
+            width: 33% !important;
+        }
+
+        .header-contact {
+            width: 52%;
+            align-items: end;
+        }
+    }
+
     .burger-nav-wrapper {
-        padding-top: 150px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        justify-content: start;
 
         .logotype {
             margin-bottom: 20px;
@@ -374,8 +1977,7 @@
         }
     }
 
-
-    .footer {
+    footer {
         ul {
             li {
                 &:not(:last-child) {
@@ -403,16 +2005,17 @@
         .header-row-2 {
             margin-top: 20px;
             align-items: start;
+
+            .header-account {
+                margin-top: 0px;
+                align-items: start;
+                width: 50%;
+            }
         }
 
         .header-search {
             width: 85%;
             justify-content: end;
-        }
-
-        .header-account {
-            width: 50%;
-            justify-content: start;
         }
 
         .header-contact {
@@ -424,7 +2027,14 @@
     .offer {
         height: auto;
         min-height: auto;
-        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0) 69%, rgba(0, 0, 0, 0) 3%, #020202 84%, #020202 100%), url(../imgs/Главная.png);
+        background: linear-gradient(#020202 10%,
+                #020202 0%,
+                rgba(0, 0, 0, 0) 36%,
+                rgba(0, 0, 0, 0) 69%,
+                rgba(0, 0, 0, 0) 3%,
+                #020202 84%,
+                #020202 100%),
+            url(../imgs/Главная.png);
         background-color: #020202;
         background-size: 1120px;
         background-position-y: 24px;
@@ -477,9 +2087,10 @@
         .transparent-wrapper-mobile {
             display: flex;
 
-            .transparent-btn {
+            .drop-down-wrapper {
                 width: 50%;
-                max-height: 50px;
+                max-width: inherit;
+                // max-height: 50px;
 
                 &:first-child {
                     width: 49%;
@@ -489,6 +2100,8 @@
                 &:last-child {
                     min-width: 260px;
                     margin-left: 0px;
+
+                    padding-left: 6px;
                 }
             }
         }
@@ -580,14 +2193,36 @@
         .offer-content {
             padding-top: 3%;
         }
-
-        // .title {
-        //     margin-bottom: 90px;
-        // }
     }
 }
 
 @media (max-width: 665px) {
+
+    .favorite,
+    .basket {
+        .retention {
+            .empty {
+                margin-top: 20px;
+                grid-template-columns: 1fr;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    h2 {
+                        margin-top: 20px;
+                    }
+
+                    p {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
     .offer {
         background-size: 800px;
 
@@ -598,8 +2233,30 @@
 }
 
 @media (max-width: 492px) {
+
+    .payment {
+
+        .circle-btn-wrapper:last-child,
+        .circle-btn-wrapper {
+            margin-left: 10px !important;
+        }
+
+        .order-2-mob {
+            .circle-btn-wrapper:last-child {
+                margin-top: 20px !important;
+            }
+        }
+    }
+
     .offer {
-        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, .2) 16%, rgba(0, 0, 0, .2) 76%, rgba(0, 0, 0, .2) 34%, #020202 91%, #020202 100%), url(../imgs/Главная.png);
+        background: linear-gradient(#020202 10%,
+                #020202 0%,
+                rgba(0, 0, 0, 0.2) 16%,
+                rgba(0, 0, 0, 0.2) 76%,
+                rgba(0, 0, 0, 0.2) 34%,
+                #020202 91%,
+                #020202 100%),
+            url(../imgs/Главная.png);
         background-color: #020202;
         background-repeat: no-repeat;
         background-position-y: 35px;
@@ -609,6 +2266,20 @@
 }
 
 @media (max-width: 491px) {
+
+    .catalog {
+        .tab-wrapper .tab .tab-card-wrapper .tab-card .card-title {
+            font-size: 12px;
+        }
+    }
+
+    .recovery {
+        .content {
+            padding: 20px 10px;
+        }
+    }
+
+
     .offer {
         &::after {
             width: 200%;
@@ -617,16 +2288,79 @@
             transform: scale(0.8);
         }
     }
+
+    .registration {
+        .content {
+            padding: 20px 10px 20px 10px;
+
+            .row-2 {
+                grid-template-columns: 1fr;
+
+                .transparent-btn {
+                    padding: 10px 0px;
+                    font-size: 16px;
+                }
+
+                .row-2 {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 456px) {
+
     .offer {
-        background: linear-gradient(#020202 10%, #020202 0%, rgba(0, 0, 0, 0.2) 16%, rgba(0, 0, 0, 0.2) 76%, rgba(0, 0, 0, 0.2) 34%, #020202 91%, #020202 100%), url(../imgs/Главная.png);
+        background: linear-gradient(#020202 10%,
+                #020202 0%,
+                rgba(0, 0, 0, 0.2) 16%,
+                rgba(0, 0, 0, 0.2) 76%,
+                rgba(0, 0, 0, 0.2) 34%,
+                #020202 91%,
+                #020202 100%),
+            url(../imgs/Главная.png);
         background-color: #020202;
         background-repeat: no-repeat;
         background-position-y: 35px;
         background-position-x: center;
         background-size: 550px;
+    }
+
+    .universal-catalog-tire-3 {
+        .content {
+            .table {
+                .table-list {
+                    .show-list {
+                        padding: 10px !important;
+                        align-items: center;
+
+                        .col:last-child {
+                            align-items: center !important;
+                        }
+
+                        .price {
+                            font-size: 14px;
+                            margin-left: 0px;
+                        }
+                    }
+                }
+
+                .table-body {
+                    .table-list {
+                        .inf {
+                            .name {
+                                font-size: 16px;
+                            }
+
+                            .type {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -639,6 +2373,119 @@
 }
 
 @media (max-width: 576px) {
+
+    .modification {
+        .select-modification {
+            .row {
+                grid-template-columns: 1fr;
+
+                .col {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .found-card {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+
+    .universal-catalog {
+        .tab-interface {
+            padding: 20px 10px !important;
+
+            .nav {
+                justify-items: normal;
+
+                .tab-btn {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .tab-card-wrapper {
+            grid-template-columns: 1fr !important;
+
+            .card-product-wrapper {
+                max-width: 300px;
+            }
+
+        }
+    }
+
+    .club {
+        .title {
+            font-size: 24px;
+        }
+
+        .greeting {
+            font-size: 16px;
+        }
+
+        .paragraph {
+            font-size: 14px;
+        }
+    }
+
+    .news-page {
+        .content {
+            .new-images {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .all-news {
+                .news-card {
+                    grid-template-columns: 1fr 1fr;
+
+                    .card {
+                        .card-title {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .universal-catalog-card {
+        .content {
+            .card-product {
+                .card-product__info {
+                    .row {
+                        &:first-child {
+                            display: flex;
+                            flex-direction: column;
+
+                            .red-btn {
+                                margin-top: 15px;
+                                max-width: 260px;
+                                height: 40px;
+                            }
+                        }
+
+                        // grid-template-columns: 1fr 1fr;
+                    }
+                }
+            }
+        }
+    }
+
+    .profile .profile-nav-wrapper .profile-links .profile-link {
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+    .profile .profile-nav-wrapper .profile-links {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .profile .profile-nav-wrapper .profile-links li:not(:first-child) {
+        margin-top: 5px;
+        padding-left: 0px;
+    }
+
     .example {
         flex-direction: column;
 
@@ -651,7 +2498,7 @@
         }
     }
 
-    .footer {
+    footer {
         ul {
             li {
                 font-size: 15px;
@@ -682,32 +2529,40 @@
                 }
             }
         }
+
+        .transparent-btn {
+            font-size: 15px;
+            padding: 22px 10px 22px 10px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            svg {
+                margin-right: 5px;
+            }
+
+            .arrow {
+                left: 10%;
+                top: 15px;
+            }
+        }
+
+        .transparent-wrapper-mobile {
+            .drop-down-wrapper {
+                width: 50% !important;
+                font-size: 12px;
+
+                &:last-child {
+                    // width: 65% !important;
+                    min-width: 100px !important;
+                }
+            }
+        }
     }
 
     .content-column {
         display: flex !important;
         flex-direction: column;
-    }
-
-    .transparent-btn {
-        font-size: 12px;
-        padding: 12px 25px 12px 25px;
-
-        .arrow {
-            left: 10%;
-            top: 15px;
-        }
-    }
-
-    .transparent-wrapper-mobile {
-        .transparent-btn {
-            width: 50% !important;
-
-            &:last-child {
-                // width: 65% !important;
-                min-width: 100px !important;
-            }
-        }
     }
 
     .catalog {
@@ -724,16 +2579,104 @@
 }
 
 @media (max-width: 530px) {
-    // .example {
-    //     width: 100% !important;
-    //     padding-right: 0px !important;
-    //     span {
-    //         padding-right: 0px !important;
-    //     }
-    // }
+    .basket {
+        .retention {
+            .not-empty {
+                grid-template-columns: 1fr;
+
+                .danger {
+                    .danger-text {
+                        font-size: 11px;
+                    }
+                }
+
+                .card-wrapper {
+                    .card {
+                        grid-template-columns: minmax(0px, 95px) 1fr;
+
+                        .card-info {
+                            .card-name {
+                                font-size: 16px;
+                            }
+
+                            .card-type {
+                                display: block;
+                                margin-top: 10px;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .card-price-info {
+                            .card-price {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 504px) {
+    .garage {
+        .auto-card-wrapper {
+            .card-info-two {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                row-gap: 10px;
+                -moz-column-gap: 10px;
+                column-gap: 10px;
+
+                span {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 493px) {
+
+    .news-page {
+        .content {
+            .new-content {
+                .news-image {
+                    width: 100%;
+                }
+            }
+
+            .new-images {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .all-news {
+                .news-card {
+                    grid-template-columns: 1fr 1fr;
+                    justify-items: center;
+
+                    .card {
+                        .card-title {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .orders {
+        .nav-wrapper {
+            .circle-btn-wrapper {
+                margin-top: 20px;
+            }
+
+            .payment-method {
+                margin-top: 20px;
+            }
+        }
+    }
+
     .offer {
         .title {
             font-size: 24px;
@@ -755,6 +2698,16 @@
                         width: 100% !important;
                     }
                 }
+            }
+        }
+
+        .transparent-btn {
+            height: 58px;
+            padding: 5px;
+            text-align: center;
+
+            .arrow {
+                top: 20px;
             }
         }
     }
@@ -788,20 +2741,17 @@
             }
         }
     }
-
-    .transparent-btn {
-        height: 58px;
-        padding: 12px 12px 12px 30px;
-        text-align: center;
-
-        .arrow {
-            top: 20px;
-        }
-    }
 }
 
-@media (max-width: 470px) {
-    .footer {
+@media (max-width: 505px) {
+    .profile {
+        .content-wrapper {
+            margin-top: 32px;
+            min-height: calc(100vh - 406px);
+        }
+    }
+
+    footer {
         .container {
             flex-direction: column;
             text-align: center;
@@ -823,6 +2773,29 @@
 }
 
 @media (max-width: 461px) {
+
+    .payment {
+        .circle-btn-wrapper {
+            .circle-btn {
+                font-size: 12px;
+                padding: 20px 10px 20px 45px;
+            }
+        }
+    }
+
+    .offer {
+        .transparent-btn {
+            height: 58px;
+            padding: 5px;
+            text-align: center;
+            font-size: 12px;
+
+            .arrow {
+                top: 20px;
+            }
+        }
+    }
+
     .circle-btn-wrapper {
         padding: 0px 0px 0px 25px !important;
         // padding: 0 !important;
@@ -856,6 +2829,50 @@
 }
 
 @media (max-width: 424px) {
+
+    .universal-catalog-tire-2 {
+        .content {
+            padding: 15px;
+            .card-info {
+                .product-title,
+                .product-data {
+                    padding: 15px 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .catalog-personal-account {
+        .content {
+
+            .catalog-card-title {
+                font-size: 16px;
+            }
+
+            .catalog-card-desc {
+                font-size: 14px;
+            }
+
+            .slider-auto {
+                .auto-title {
+                    font-size: 18px;
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    width: 20px;
+                    height: 20px;
+                    padding: 15px;
+
+                    &::after {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
     .circle-btn-wrapper {
 
         // padding: 0px;
@@ -872,6 +2889,31 @@
 }
 
 @media (max-width: 412px) {
+
+    .garage {
+        .auto-card-wrapper {
+            .card {
+                .card-info {
+                    font-size: 16px;
+                }
+
+                .card-info-two {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .offer {
+        .transparent-btn {
+            font-size: 12px;
+
+            svg {
+                margin-right: 0px;
+            }
+        }
+    }
+
     .circle-btn-wrapper {
         .circle-btn {
             font-size: 10px;
@@ -880,6 +2922,24 @@
 }
 
 @media (max-width: 404px) {
+
+    .catalog {
+
+        .tab-wrapper .tab .tab-card-wrapper {
+            gap: 20px;
+
+            .tab-card {
+                padding: 10px 5px;
+            }
+        }
+    }
+
+    .offer {
+        .transparent-btn {
+            font-size: 10px;
+        }
+    }
+
     .example {
         width: 100% !important;
 
@@ -901,53 +2961,98 @@
     }
 }
 
-@media (max-width: 348px) {
-    .offer {
+@media (max-width: 360px) {
+    .universal-catalog-tire {
+        .row {
+            .tab-interface {
+                padding: 0;
+                margin-bottom: 20px;
+            }
 
+            .col {
+                width: 100%;
+            }
+        }
+
+        .drop-down-wrapper {
+            width: 100%;
+
+            &:last-child {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .transparent-btn {
+                margin: 0px;
+            }
+        }
+
+        .transparent-btn {
+            min-width: inherit;
+            display: flex;
+            width: 100%;
+            max-width: 120px;
+        }
+    }
+}
+
+@media (max-width: 348px) {
+
+    .universal-catalog-tire-2 {
+        .content {
+            .image-wrapper {
+                height: 250px;
+            }
+            .card-info {
+                .product-title,
+                .product-data {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .offer {
         .title {
             margin-bottom: 80px;
+        }
+
+        .transparent-wrapper {
+            .drop-down-wrapper {
+                &:first-child {
+                    width: 40% !important;
+                }
+
+                &:last-child {
+                    width: calc(100% - 40%) !important;
+
+                    svg {
+                        margin-right: 1em;
+                    }
+                }
+            }
         }
     }
 }
 
 @media (max-width: 385px) {
+
+    .payment {
+        .circle-btn-wrapper {
+            .circle-btn {
+                padding: 20px 10px 20px 35px !important;
+            }
+        }
+    }
+
     .circle-btn-wrapper {
         .circle-btn {
-            padding: 20px 10px 20px 30px !important;
+            padding: 20px 10px 20px 40px !important;
             font-size: 9px;
         }
     }
 }
 
-@media (max-width: 374px) {
-    .transparent-wrapper {
-        .transparent-btn {
-            padding: 7px !important;
-
-            .arrow {
-                display: none;
-            }
-        }
-    }
-}
-
-@media (max-width: 332px) {
-    .transparent-wrapper {
-        .transparent-btn {
-            &:first-child {
-                margin-right: 10px !important;
-            }
-
-            font-size: 12px;
-
-            &:last-child {
-                width: 50% !important;
-            }
-
-            width: 50% !important;
-        }
-    }
-}
 
 @media (max-aspect-ratio: 4/3) {
     .offer {
@@ -958,5 +3063,3 @@
         }
     }
 }
-
-@media (min-width: 1400px) and (max-height: 725px) {}

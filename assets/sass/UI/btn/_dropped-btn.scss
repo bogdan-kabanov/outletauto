@@ -1,0 +1,43 @@
+.drop-down-value {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.drop-down-title {
+    cursor: pointer;
+}
+
+.drop-down-list {
+    left: 0;
+    top: 100%;
+    position: absolute;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: .3s;
+    list-style-type: none;
+    z-index: 888;
+}
+
+.drop-down-item {
+    color: #FAFAFA;
+    text-decoration: none;
+}
+
+.drop-down-active {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-height: 100vh;
+}
+
+.drop-down-wrapper {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    transition: .6s;
+}

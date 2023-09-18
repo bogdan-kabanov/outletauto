@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница авторизации - OutletAuto</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper orders silver-bg">
+        <header>
+            <div class="container">
+                <div class="pc-header">
+                    <div class="header-row-1">
+                        <div class="logotype-wrapper header-logotype">
+                            <a href="../index.html">
+                                <img src="../assets/imgs/logotype.svg" alt="logotype" class="logotype">
+                            </a>
+                        </div>
+                        <form class="header-search search" action="#">
+                            <input type="text" class="search-input" placeholder="Поиск по артикулу или VIN коду">
+                            <button class="search-btn red-btn">Найти</button>
+                        </form>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-row-2 auth-off">
+                        <!-- <div class="burger-btns"></div> -->
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="header-nav">
+                            <!-- Не видны при авторизованном аккаунте -->
+                            <li><a href="#">Оплатить заказ</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Новости</a></li>
+                        </ul>
+                        <ul class="header-account">
+                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="header-row-2 auth-on">
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="header-nav">
+                            <!-- Видны при авторизованном аккаунте-->
+                            <li><a href="#">Заказы</a></li>
+                            <li><a href="#">Гараж</a></li>
+                            <li><a href="#">Баланс</a></li>
+                            <li><a href="#">Избранное</a></li>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Запросы по VIN</a></li>
+                            <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                    href="./basket.html">Корзина</a></li>
+                        </ul>
+                        <ul class="header-account">
+                            <ul class="account-name">
+                                <li><a href="./profile.html">RDN-12454</a></li>
+                                <li><input type="button" class="red-btn" value="Акция"></li>
+                            </ul>
+                            <ul class="basket-wrapper">
+                                <li class="basket"><img src="../assets/imgs/icon/basket__shop.svg" alt="basket"><a
+                                        href="./basket.html">Корзина</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile-header">
+                    <div class="header-row-1">
+                        <div class="burger-wrapper burger-btns">
+                            <div class="burger-nav">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <form class="header-search search" action="#">
+                            <input id="header-search" type="text" class="search-input"
+                                placeholder="Поиск по артикулу или VIN коду">
+                            <button class="search-btn red-btn">Найти</button>
+                        </form>
+                    </div>
+                    <div class="header-row-2 auth-off">
+                        <ul class="header-account">
+                            <li><a href="./authorization.html">Личный кабинет</a></li>
+                        </ul>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-row-2 auth-on">
+                        <ul class="header-account">
+                            <li><a href="./profile.html">RDN-12454</a></li>
+                        </ul>
+                        <ul class="header-contact">
+                            <li><a href="#">Адреса магазинов</a></li>
+                            <li><a href="#">8 (800) 777-99-80</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <div class="main-content">
+                        <h2 class="title">Движение заказов</h2>
+                        <div class="main-wrapper">
+                            <div class="mobile-filter">
+                                <ol class="drop-down-wrapper">
+                                    <input type="text" class="drop-down-value">
+                                    <span class="drop-down-title red-btn">
+                                        Фильтр
+                                    </span>
+                                    <ul class="drop-down-list">
+                                        <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                популярные</a></li>
+                                        <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                дешевле</a></li>
+                                        <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                дороже</a></li>
+                                        <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                рейтингу</a>
+                                        </li>
+                                    </ul>
+                                </ol>
+                            </div>
+                            <form action="#" method="#" class="interface">
+                                <div class="serach">
+                                    <input id="search-input" type="text" class="search-input"
+                                        placeholder="Поиск по заказам">
+                                </div>
+                                <div class="status">
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title transparent-btn">
+                                            Выбор авто
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
+                                        </ul>
+                                    </ol>
+                                </div>
+                                <div class="data">
+                                    <div class="data-start">
+                                        <span class="pre-text"><span>Дата с</span></span>
+                                        <div class="calendar">
+                                            <input type="hidden" name="" id="">
+                                            <span class="calendar-text">17.09.2021</span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 14C11.7167 14 11.479 13.904 11.287 13.712C11.095 13.52 10.9993 13.2827 11 13C11 12.7167 11.096 12.479 11.288 12.287C11.48 12.095 11.7173 11.9993 12 12C12.2833 12 12.521 12.096 12.713 12.288C12.905 12.48 13.0007 12.7173 13 13C13 13.2833 12.904 13.521 12.712 13.713C12.52 13.905 12.2827 14.0007 12 14ZM8 14C7.71667 14 7.479 13.904 7.287 13.712C7.095 13.52 6.99934 13.2827 7 13C7 12.7167 7.096 12.479 7.288 12.287C7.48 12.095 7.71734 11.9993 8 12C8.28334 12 8.521 12.096 8.713 12.288C8.905 12.48 9.00067 12.7173 9 13C9 13.2833 8.904 13.521 8.712 13.713C8.52 13.905 8.28267 14.0007 8 14ZM16 14C15.7167 14 15.479 13.904 15.287 13.712C15.095 13.52 14.9993 13.2827 15 13C15 12.7167 15.096 12.479 15.288 12.287C15.48 12.095 15.7173 11.9993 16 12C16.2833 12 16.521 12.096 16.713 12.288C16.905 12.48 17.0007 12.7173 17 13C17 13.2833 16.904 13.521 16.712 13.713C16.52 13.905 16.2827 14.0007 16 14ZM12 18C11.7167 18 11.479 17.904 11.287 17.712C11.095 17.52 10.9993 17.2827 11 17C11 16.7167 11.096 16.479 11.288 16.287C11.48 16.095 11.7173 15.9993 12 16C12.2833 16 12.521 16.096 12.713 16.288C12.905 16.48 13.0007 16.7173 13 17C13 17.2833 12.904 17.521 12.712 17.713C12.52 17.905 12.2827 18.0007 12 18ZM8 18C7.71667 18 7.479 17.904 7.287 17.712C7.095 17.52 6.99934 17.2827 7 17C7 16.7167 7.096 16.479 7.288 16.287C7.48 16.095 7.71734 15.9993 8 16C8.28334 16 8.521 16.096 8.713 16.288C8.905 16.48 9.00067 16.7173 9 17C9 17.2833 8.904 17.521 8.712 17.713C8.52 17.905 8.28267 18.0007 8 18ZM16 18C15.7167 18 15.479 17.904 15.287 17.712C15.095 17.52 14.9993 17.2827 15 17C15 16.7167 15.096 16.479 15.288 16.287C15.48 16.095 15.7173 15.9993 16 16C16.2833 16 16.521 16.096 16.713 16.288C16.905 16.48 17.0007 16.7173 17 17C17 17.2833 16.904 17.521 16.712 17.713C16.52 17.905 16.2827 18.0007 16 18ZM5 22C4.45 22 3.979 21.804 3.587 21.412C3.195 21.02 2.99934 20.5493 3 20V6C3 5.45 3.196 4.979 3.588 4.587C3.98 4.195 4.45067 3.99933 5 4H6V2H8V4H16V2H18V4H19C19.55 4 20.021 4.196 20.413 4.588C20.805 4.98 21.0007 5.45067 21 6V20C21 20.55 20.804 21.021 20.412 21.413C20.02 21.805 19.5493 22.0007 19 22H5ZM5 20H19V10H5V20Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="data-end">
+                                        <div class="next-text">по</div>
+                                        <div class="calendar">
+                                            <span class="calendar-text">17.09.2022</span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 14C11.7167 14 11.479 13.904 11.287 13.712C11.095 13.52 10.9993 13.2827 11 13C11 12.7167 11.096 12.479 11.288 12.287C11.48 12.095 11.7173 11.9993 12 12C12.2833 12 12.521 12.096 12.713 12.288C12.905 12.48 13.0007 12.7173 13 13C13 13.2833 12.904 13.521 12.712 13.713C12.52 13.905 12.2827 14.0007 12 14ZM8 14C7.71667 14 7.479 13.904 7.287 13.712C7.095 13.52 6.99934 13.2827 7 13C7 12.7167 7.096 12.479 7.288 12.287C7.48 12.095 7.71734 11.9993 8 12C8.28334 12 8.521 12.096 8.713 12.288C8.905 12.48 9.00067 12.7173 9 13C9 13.2833 8.904 13.521 8.712 13.713C8.52 13.905 8.28267 14.0007 8 14ZM16 14C15.7167 14 15.479 13.904 15.287 13.712C15.095 13.52 14.9993 13.2827 15 13C15 12.7167 15.096 12.479 15.288 12.287C15.48 12.095 15.7173 11.9993 16 12C16.2833 12 16.521 12.096 16.713 12.288C16.905 12.48 17.0007 12.7173 17 13C17 13.2833 16.904 13.521 16.712 13.713C16.52 13.905 16.2827 14.0007 16 14ZM12 18C11.7167 18 11.479 17.904 11.287 17.712C11.095 17.52 10.9993 17.2827 11 17C11 16.7167 11.096 16.479 11.288 16.287C11.48 16.095 11.7173 15.9993 12 16C12.2833 16 12.521 16.096 12.713 16.288C12.905 16.48 13.0007 16.7173 13 17C13 17.2833 12.904 17.521 12.712 17.713C12.52 17.905 12.2827 18.0007 12 18ZM8 18C7.71667 18 7.479 17.904 7.287 17.712C7.095 17.52 6.99934 17.2827 7 17C7 16.7167 7.096 16.479 7.288 16.287C7.48 16.095 7.71734 15.9993 8 16C8.28334 16 8.521 16.096 8.713 16.288C8.905 16.48 9.00067 16.7173 9 17C9 17.2833 8.904 17.521 8.712 17.713C8.52 17.905 8.28267 18.0007 8 18ZM16 18C15.7167 18 15.479 17.904 15.287 17.712C15.095 17.52 14.9993 17.2827 15 17C15 16.7167 15.096 16.479 15.288 16.287C15.48 16.095 15.7173 15.9993 16 16C16.2833 16 16.521 16.096 16.713 16.288C16.905 16.48 17.0007 16.7173 17 17C17 17.2833 16.904 17.521 16.712 17.713C16.52 17.905 16.2827 18.0007 16 18ZM5 22C4.45 22 3.979 21.804 3.587 21.412C3.195 21.02 2.99934 20.5493 3 20V6C3 5.45 3.196 4.979 3.588 4.587C3.98 4.195 4.45067 3.99933 5 4H6V2H8V4H16V2H18V4H19C19.55 4 20.021 4.196 20.413 4.588C20.805 4.98 21.0007 5.45067 21 6V20C21 20.55 20.804 21.021 20.412 21.413C20.02 21.805 19.5493 22.0007 19 22H5ZM5 20H19V10H5V20Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Найти" class="red-btn" onclick="search()">
+                            </form>
+                            <table class="table">
+                                <thead class="table-title">
+                                    <tr>
+                                        <th colspan="1" class="num"><span>№ <br>
+                                                заказа</span></th>
+                                        <th colspan="1" class="direction"><span>Направление <br>
+                                                (дата заказа)</span></th>
+                                        <th colspan="1" class="detal"><span>Деталь</span></th>
+                                        <th colspan="2" class="price"><span>Сумма</span></th>
+                                        <th colspan="1" class="status"><span>Состояние <br>
+                                                (дата)</span></th>
+                                        <th colspan="1" class="nav-inf-wrapper"><span class="nav-inf">Ожидаем <br>
+                                                в офисе</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-body" id="cards">
+                                    <tr class="active">
+                                        <td class="num"><span>1</span></td>
+                                        <td class="direction"><span>Дистрибьютер (13.11.21)</span></td>
+                                        <td class="detal">
+                                            <span>Test 1</span>
+                                        </td>
+                                        <td class="price" colspan="2">
+                                            <span>3 392руб
+                                                500 000 x 1шт</span>
+                                        </td>
+                                        <td class="status"><span>Выдано
+                                                представителем 17.11.21 13:49</span></td>
+                                        <td class="nav">
+                                            <svg width="5" height="19" viewBox="0 0 5 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2.5" cy="2.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="9.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="16.5" r="2.5" fill="white" />
+                                            </svg>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td class="num"><span>1</span></td>
+                                        <td class="direction"><span>Дистрибьютер (13.11.21)</span></td>
+                                        <td class="detal">
+                                            <span>Test 1</span>
+                                        </td>
+                                        <td class="price" colspan="2">
+                                            <span>3 392руб
+                                                500 000 x 1шт</span>
+                                        </td>
+                                        <td class="status"><span>Выдано
+                                                представителем 17.11.21 13:49</span></td>
+                                        <td class="nav">
+                                            <svg width="5" height="19" viewBox="0 0 5 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2.5" cy="2.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="9.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="16.5" r="2.5" fill="white" />
+                                            </svg>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td class="num"><span>1</span></td>
+                                        <td class="direction"><span>Дистрибьютер (13.11.21)</span></td>
+                                        <td class="detal">
+                                            <span>Test 1</span>
+                                        </td>
+                                        <td class="price" colspan="2">
+                                            <span>3 392руб
+                                                500 000 x 1шт</span>
+                                        </td>
+                                        <td class="status"><span>Выдано
+                                                представителем 17.11.21 13:49</span></td>
+                                        <td class="nav">
+                                            <svg width="5" height="19" viewBox="0 0 5 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2.5" cy="2.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="9.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="16.5" r="2.5" fill="white" />
+                                            </svg>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td class="num"><span>1</span></td>
+                                        <td class="direction"><span>Дистрибьютер (13.11.21)</span></td>
+                                        <td class="detal">
+                                            <span>
+                                                MOBIL 155558E
+                                                Масло
+                                                (Запрос проверки по VIN=WEWTETD)
+                                                (Заказ проверен)
+                                            </span>
+                                        </td>
+                                        <td class="price" colspan="2">
+                                            <span>3 392руб
+                                                500 000 x 1шт</span>
+                                        </td>
+                                        <td class="status"><span>Выдано
+                                                представителем 17.11.21 13:49</span></td>
+                                        <td class="nav">
+                                            <svg width="5" height="19" viewBox="0 0 5 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2.5" cy="2.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="9.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="16.5" r="2.5" fill="white" />
+                                            </svg>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="active">
+                                        <td class="num"><span>1</span></td>
+                                        <td class="direction"><span>Дистрибьютер (13.11.21)</span></td>
+                                        <td class="detal">
+                                            <span>Test 1</span>
+                                        </td>
+                                        <td class="price" colspan="2">
+                                            <span>500 000руб
+                                                500 000 x 1шт</span>
+                                        </td>
+                                        <td class="status"><span>Выдано
+                                                представителем 17.11.21 13:49</span></td>
+                                        <td class="nav">
+                                            <svg width="5" height="19" viewBox="0 0 5 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2.5" cy="2.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="9.5" r="2.5" fill="white" />
+                                                <circle cx="2.5" cy="16.5" r="2.5" fill="white" />
+                                            </svg>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="sum"><span>Сумма: 6 392руб</span></div>
+                        </div>
+                    </div>
+                    <div class="right-sidebar">
+                        <h2 class="title">Получить заказ</h2>
+                        <div class="nav-wrapper">
+                            <div class="qr-wrapper">
+                                <img src="https://mbaction.com/wp-content/uploads/2017/03/M3Proeditor.jpg" alt="qr"
+                                    class="qr">
+                                <p class="qr-text">Для получения заказа назовите менеджеру свой логин и ПИН код</p>
+                            </div>
+                            <div class="circle-btn-wrapper">
+                                <a href="#" class="circle-btn">
+                                    <div class="circle">
+                                        <div class="cirle-content">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                viewBox="0 0 25 25" fill="none">
+                                                <g clip-path="url(#clip0_103_8685)">
+                                                    <path
+                                                        d="M12.7906 1.6192C12.6041 1.54445 12.3959 1.54445 12.2094 1.6192L2.88437 5.34889L12.5 9.1942L22.1156 5.34889L12.7906 1.6192ZM23.4375 6.50358L13.2812 10.5661V22.9442L23.4375 18.8817V6.50358ZM11.7188 22.9458V10.5645L1.5625 6.50358V18.8833L11.7188 22.9458ZM11.6297 0.16764C12.1884 -0.0557986 12.8116 -0.0557986 13.3703 0.16764L24.5094 4.62389C24.6542 4.68193 24.7783 4.782 24.8658 4.91122C24.9532 5.04043 25 5.19287 25 5.34889V18.8833C24.9998 19.1955 24.9061 19.5005 24.7309 19.7589C24.5557 20.0174 24.3071 20.2174 24.0172 20.3333L12.7906 24.8239C12.6041 24.8986 12.3959 24.8986 12.2094 24.8239L0.984375 20.3333C0.694142 20.2177 0.445223 20.0177 0.269753 19.7593C0.0942839 19.5008 0.000322389 19.1957 0 18.8833L0 5.34889C3.63124e-05 5.19287 0.0467871 5.04043 0.13423 4.91122C0.221672 4.782 0.345801 4.68193 0.490625 4.62389L11.6297 0.16764Z"
+                                                        fill="white" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_103_8685">
+                                                        <rect width="25" height="25" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <span>Отслеживание статуса</span>
+                                </a>
+                            </div>
+                            <span class="payment-method">Способ получения</span>
+                            <div class="circle-btn-wrapper">
+                                <a href="#" class="circle-btn">
+                                    <div class="circle">
+                                        <div class="cirle-content">
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M21.0938 3.90625H3.90625C3.49185 3.90625 3.09442 4.07087 2.8014 4.3639C2.50837 4.65692 2.34375 5.05435 2.34375 5.46875V19.5312C2.34375 19.9457 2.50837 20.3431 2.8014 20.6361C3.09442 20.9291 3.49185 21.0938 3.90625 21.0938H21.0938C21.5082 21.0938 21.9056 20.9291 22.1986 20.6361C22.4916 20.3431 22.6562 19.9457 22.6562 19.5312V5.46875C22.6562 5.05435 22.4916 4.65692 22.1986 4.3639C21.9056 4.07087 21.5082 3.90625 21.0938 3.90625ZM21.0938 19.5312H3.90625V5.46875H21.0938V19.5312ZM17.1875 8.59375C17.1875 9.83695 16.6936 11.0292 15.8146 11.9083C14.9355 12.7874 13.7432 13.2812 12.5 13.2812C11.2568 13.2812 10.0645 12.7874 9.18544 11.9083C8.30636 11.0292 7.8125 9.83695 7.8125 8.59375C7.8125 8.38655 7.89481 8.18784 8.04132 8.04132C8.18784 7.89481 8.38655 7.8125 8.59375 7.8125C8.80095 7.8125 8.99966 7.89481 9.14618 8.04132C9.29269 8.18784 9.375 8.38655 9.375 8.59375C9.375 9.42255 9.70424 10.2174 10.2903 10.8035C10.8763 11.3895 11.6712 11.7188 12.5 11.7188C13.3288 11.7188 14.1237 11.3895 14.7097 10.8035C15.2958 10.2174 15.625 9.42255 15.625 8.59375C15.625 8.38655 15.7073 8.18784 15.8538 8.04132C16.0003 7.89481 16.199 7.8125 16.4062 7.8125C16.6135 7.8125 16.8122 7.89481 16.9587 8.04132C17.1052 8.18784 17.1875 8.38655 17.1875 8.59375Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <span>Забрать в магазине</span>
+                                </a>
+                            </div>
+                            <div class="circle-btn-wrapper">
+                                <a href="#" class="circle-btn">
+                                    <div class="circle">
+                                        <div class="cirle-content">
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M23.375 12.9766L21.0312 7.50781C20.9714 7.3666 20.8714 7.24612 20.7436 7.16137C20.6158 7.07663 20.4659 7.03137 20.3125 7.03125H17.9688V5.46875C17.9688 5.26155 17.8864 5.06284 17.7399 4.91632C17.5934 4.76981 17.3947 4.6875 17.1875 4.6875H2.34375C2.13655 4.6875 1.93784 4.76981 1.79132 4.91632C1.64481 5.06284 1.5625 5.26155 1.5625 5.46875V18.75C1.5625 18.9572 1.64481 19.1559 1.79132 19.3024C1.93784 19.4489 2.13655 19.5312 2.34375 19.5312H4.01562C4.19553 20.1933 4.58828 20.7777 5.13328 21.1943C5.67827 21.611 6.34523 21.8367 7.03125 21.8367C7.71727 21.8367 8.38423 21.611 8.92922 21.1943C9.47422 20.7777 9.86697 20.1933 10.0469 19.5312H14.9531C15.133 20.1933 15.5258 20.7777 16.0708 21.1943C16.6158 21.611 17.2827 21.8367 17.9688 21.8367C18.6548 21.8367 19.3217 21.611 19.8667 21.1943C20.4117 20.7777 20.8045 20.1933 20.9844 19.5312H22.6562C22.8635 19.5312 23.0622 19.4489 23.2087 19.3024C23.3552 19.1559 23.4375 18.9572 23.4375 18.75V13.2812C23.4373 13.1765 23.416 13.0729 23.375 12.9766ZM17.9688 8.59375H19.7969L21.4688 12.5H17.9688V8.59375ZM7.03125 20.3125C6.72222 20.3125 6.42012 20.2209 6.16317 20.0492C5.90622 19.8775 5.70595 19.6335 5.58769 19.3479C5.46943 19.0624 5.43848 18.7483 5.49877 18.4452C5.55906 18.1421 5.70788 17.8637 5.9264 17.6451C6.14492 17.4266 6.42333 17.2778 6.72642 17.2175C7.02952 17.1572 7.34368 17.1882 7.62919 17.3064C7.9147 17.4247 8.15873 17.625 8.33042 17.8819C8.50211 18.1389 8.59375 18.441 8.59375 18.75C8.59375 19.1644 8.42913 19.5618 8.1361 19.8549C7.84308 20.1479 7.44565 20.3125 7.03125 20.3125ZM14.9531 17.9688H10.0469C9.86697 17.3067 9.47422 16.7223 8.92922 16.3057C8.38423 15.889 7.71727 15.6633 7.03125 15.6633C6.34523 15.6633 5.67827 15.889 5.13328 16.3057C4.58828 16.7223 4.19553 17.3067 4.01562 17.9688H3.125V6.25H16.4062V16.0625C16.0505 16.269 15.739 16.5436 15.4897 16.8708C15.2403 17.1979 15.058 17.571 14.9531 17.9688ZM17.9688 20.3125C17.6597 20.3125 17.3576 20.2209 17.1007 20.0492C16.8437 19.8775 16.6434 19.6335 16.5252 19.3479C16.4069 19.0624 16.376 18.7483 16.4363 18.4452C16.4966 18.1421 16.6454 17.8637 16.8639 17.6451C17.0824 17.4266 17.3608 17.2778 17.6639 17.2175C17.967 17.1572 18.2812 17.1882 18.5667 17.3064C18.8522 17.4247 19.0962 17.625 19.2679 17.8819C19.4396 18.1389 19.5312 18.441 19.5312 18.75C19.5312 19.1644 19.3666 19.5618 19.0736 19.8549C18.7806 20.1479 18.3832 20.3125 17.9688 20.3125ZM21.875 17.9688H20.9844C20.8116 17.2996 20.4219 16.7066 19.8763 16.2826C19.3306 15.8585 18.6598 15.6272 17.9688 15.625V14.0625H21.875V17.9688Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <span>Оформить доставку</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="banner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <ul class="nav">
+                    <li><a href="#">Компания</a></li>
+                    <li><a href="#">Клиентам</a></li>
+                    <li><a href="#">Поставщикам</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/vk.svg" alt="vk">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/вацап.svg" alt="whatsapp">
+                        </a></li>
+                    <li><a href="#">
+                            <img src="../assets/imgs/icon/telegram.svg" alt="telegram">
+                        </a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <div class="burger-nav-wrapper">
+        <div class="container">
+            <div class="logotype">
+                <img src="../assets/imgs/logotype.svg" alt="logotype">
+            </div>
+            <div class="nav-content">
+                <ul class="col">
+                    <span class="col-greeting">Каталоги</span>
+                    <li><a href="#">Универсальный каталог</a></li>
+                    <li><a href="#">Масла и технические жидкост</a></li>
+                    <li><a href="#">Автохимия и косметика</a></li>
+                    <li><a href="#">Автопринадлежности</a></li>
+                    <li><a href="#">Инструменты: авто, дом и сад</a></li>
+                    <li><a href="#">Шины и диски (параметры)</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                </ul>
+                <ul class="col">
+                    <span class="col-greeting">Клиентам</span>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Скидки</a></li>
+                    <li><a href="#">Спецпредложения</a></li>
+                    <li><a href="#">Мобильное приложение</a></li>
+                    <li><a href="#">Подарочные сертификаты</a></li>
+                    <li><a href="#">Видеоинструкции</a></li>
+                    <li><a href="#">Как сделать заказ</a></li>
+                    <li><a href="#">Способы оплаты</a></li>
+                    <li><a href="#">Способы возврата оплаты</a></li>
+                    <li><a href="#">Условия доставки</a></li>
+                    <li><a href="#">Условия работы для клиентов</a></li>
+                </ul>
+                <ul class="col">
+                    <span class="col-greeting">Компания</span>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Магазины</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Полезное</a></li>
+                    <li><a href="#">Франшиза OutletAvto</a></li>
+                    <li><a href="#">Реклама на сайте</a></li>
+                </ul>
+            </div>
+            <div class="burger-btns">
+                <div class="closed-nav">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-bottom-nav">
+        <div class="container">
+            <a href="../index.html" class="btn-wrapper material">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="material-symbols:home-outline-rounded">
+                        <path id="Vector"
+                            d="M6 19H9V13H15V19H18V10L12 5.5L6 10V19ZM6 21C5.45 21 4.979 20.804 4.587 20.412C4.195 20.02 3.99934 19.5493 4 19V10C4 9.68333 4.071 9.38333 4.213 9.1C4.355 8.81667 4.55067 8.58333 4.8 8.4L10.8 3.9C10.9833 3.76667 11.175 3.66667 11.375 3.6C11.575 3.53333 11.7833 3.5 12 3.5C12.2167 3.5 12.425 3.53333 12.625 3.6C12.825 3.66667 13.0167 3.76667 13.2 3.9L19.2 8.4C19.45 8.58333 19.646 8.81667 19.788 9.1C19.93 9.38333 20.0007 9.68333 20 10V19C20 19.55 19.804 20.021 19.412 20.413C19.02 20.805 18.5493 21.0007 18 21H13V15H11V21H6Z"
+                            fill="white" />
+                    </g>
+                </svg>
+
+                <span>Главная</span>
+            </a>
+            <a href="#" class="btn-wrapper box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="mdi:box-variant-closed">
+                        <path id="Vector"
+                            d="M21 16.5C21 16.88 20.79 17.21 20.47 17.38L12.57 21.82C12.41 21.94 12.21 22 12 22C11.79 22 11.59 21.94 11.43 21.82L3.53 17.38C3.36968 17.2958 3.23552 17.1692 3.14208 17.014C3.04864 16.8589 2.9995 16.6811 3 16.5V7.5C3 7.12 3.21 6.79 3.53 6.62L11.43 2.18C11.59 2.06 11.79 2 12 2C12.21 2 12.41 2.06 12.57 2.18L20.47 6.62C20.79 6.79 21 7.12 21 7.5V16.5ZM12 4.15L10.11 5.22L16 8.61L17.96 7.5L12 4.15ZM6.04 7.5L12 10.85L13.96 9.75L8.08 6.35L6.04 7.5ZM5 15.91L11 19.29V12.58L5 9.21V15.91ZM19 15.91V9.21L13 12.58V19.29L19 15.91Z"
+                            fill="white" />
+                    </g>
+                </svg>
+                <span>Заказы</span>
+            </a>
+            <a href="#" class="btn-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="ic:outline-directions-car-filled">
+                        <path id="Vector"
+                            d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5H6.5C5.84 5 5.29 5.42 5.08 6.01L3 12V20C3 20.55 3.45 21 4 21H5C5.55 21 6 20.55 6 20V19H18V20C18 20.55 18.45 21 19 21H20C20.55 21 21 20.55 21 20V12L18.92 6.01ZM6.85 7H17.14L18.18 10H5.81L6.85 7ZM19 17H5V12H19V17Z"
+                            fill="white" />
+                        <path id="Vector_2"
+                            d="M7.5 16C8.32843 16 9 15.3284 9 14.5C9 13.6716 8.32843 13 7.5 13C6.67157 13 6 13.6716 6 14.5C6 15.3284 6.67157 16 7.5 16Z"
+                            fill="white" />
+                        <path id="Vector_3"
+                            d="M16.5 16C17.3284 16 18 15.3284 18 14.5C18 13.6716 17.3284 13 16.5 13C15.6716 13 15 13.6716 15 14.5C15 15.3284 15.6716 16 16.5 16Z"
+                            fill="white" />
+                    </g>
+                </svg>
+                <span>Гараж</span>
+            </a>
+            <a href="#" class="btn-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="mingcute:wallet-line" clip-path="url(#clip0_197_7709)">
+                        <g id="Group">
+                            <path id="Vector"
+                                d="M19 4C19.5304 4 20.0391 4.21071 20.4142 4.58579C20.7893 4.96086 21 5.46957 21 6V8.268C21.304 8.44353 21.5565 8.696 21.732 9.00003C21.9076 9.30406 22 9.64894 22 10V14C22 14.3511 21.9076 14.6959 21.732 15C21.5565 15.304 21.304 15.5565 21 15.732V18C21 18.5304 20.7893 19.0391 20.4142 19.4142C20.0391 19.7893 19.5304 20 19 20H5C4.46957 20 3.96086 19.7893 3.58579 19.4142C3.21071 19.0391 3 18.5304 3 18V6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4H19ZM19 6H5V18H19V16H15C13.9564 16 12.9542 15.5922 12.2071 14.8636C11.46 14.135 11.0273 13.1433 11.0012 12.1C10.9751 11.0568 11.3577 10.0447 12.0674 9.27963C12.7772 8.51457 13.7578 8.05716 14.8 8.005L15 8H19V6ZM20 10H15C14.4696 10 13.9609 10.2107 13.5858 10.5858C13.2107 10.9609 13 11.4696 13 12C13 12.5304 13.2107 13.0391 13.5858 13.4142C13.9609 13.7893 14.4696 14 15 14H20V10ZM16 11C16.2652 11 16.5196 11.1054 16.7071 11.2929C16.8946 11.4804 17 11.7348 17 12C17 12.2652 16.8946 12.5196 16.7071 12.7071C16.5196 12.8946 16.2652 13 16 13C15.7348 13 15.4804 12.8946 15.2929 12.7071C15.1054 12.5196 15 12.2652 15 12C15 11.7348 15.1054 11.4804 15.2929 11.2929C15.4804 11.1054 15.7348 11 16 11Z"
+                                fill="white" />
+                        </g>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_197_7709">
+                            <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span>Баланс</span>
+            </a>
+            <a href="#" class="btn-wrapper">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.25 7.18502C4.25 7.7373 4.69772 8.18502 5.25 8.18502H7.39814L12.7523 21.2731C12.9338 21.7165 13.4042 21.969 13.874 21.875L25.0595 19.6379C25.4266 19.5645 25.722 19.2921 25.8249 18.9321L27.8117 11.9783C27.9942 11.3394 27.5145 10.7035 26.8502 10.7035H11.8055L9.56342 6.21929C9.39403 5.88051 9.04777 5.6665 8.66899 5.6665H5.25C4.69772 5.6665 4.25 6.11422 4.25 6.6665V7.18502ZM13.0648 25.8147C13.0648 27.2056 11.9373 28.3332 10.5463 28.3332C9.1554 28.3332 8.02782 27.2056 8.02782 25.8147C8.02782 24.4237 9.1554 23.2962 10.5463 23.2962C11.9373 23.2962 13.0648 24.4237 13.0648 25.8147ZM25.6573 25.8147C25.6573 27.2056 24.5298 28.3332 23.1388 28.3332C21.7479 28.3332 20.6203 27.2056 20.6203 25.8147C20.6203 24.4237 21.7479 23.2962 23.1388 23.2962C24.5298 23.2962 25.6573 24.4237 25.6573 25.8147Z"
+                        fill="white" />
+                </svg>
+                <span>Корзина</span>
+            </a>
+        </div>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/dropped.js"></script>
+    <script src="../assets/js/--authorization.js"></script>
+    <script src="../assets/js/order.js"></script>
+</body>
+
+</html>

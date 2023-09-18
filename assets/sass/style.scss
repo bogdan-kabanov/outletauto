@@ -1,8 +1,11 @@
 @import "./reset";
 @import "./mixin";
+@import "./popUpImage";
 @import "./vars";
 @import"./UI/btn/transparent-btn";
-@import"./UI/btn/red-btn";
+@import"./UI/stars";
+@import"./UI/btn/dropped-btn";
+@import "./UI/filter/filter.scss";
 @import"./UI/header";
 @import"./UI/footer";
 @import "./fonts";
