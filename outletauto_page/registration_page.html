@@ -1,0 +1,209 @@
+{% extends 'base/base2.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block content %}
+
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title">Регистрация пользователя</h1>
+                    <p class="description">Регистрация необходима для отображения актуальных цен и реальных сроков
+                        поставки на интересующие
+                        вас товары.
+                        Выберите удобный для вас магазин, а также укажите реальные контактные данные – они потребуются
+                        для завершения процедуры регистрации.</p>
+                    <div class="tab-wrapper">
+                        <div class="row-2 tab-interface">
+                            <div>
+                                <input type="button" value="Физическое лицо" class="transparent-btn tab-btn btn-active"
+                                    data-tab=1>
+                            </div>
+                            <div>
+                                <input type="button" value="Юридическое лицо" class="transparent-btn tab-btn"
+                                    data-tab=2>
+                            </div>
+                        </div>
+                        <form action="#" class="tab tab-active">
+                            <div class="row-2">
+                                <div>
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title input-silver">
+                                            Сначала популярные
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
+                                        </ul>
+                                    </ol>
+                                    <input type="text" placeholder="Контактное лицо (ФИО)*" class="input-silver">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Телефон*" class="input-silver">
+                                    <input type="text" placeholder="Email*" class="input-silver">
+                                    <input type="text" placeholder="Промокод" class="input-silver">
+                                </div>
+                            </div>
+                            <div class="check-center">
+                                <div class="check-with-label-wrapper">
+                                    <input type="checkbox" class="check-with-label" id="offer" />
+                                    <label class="label-for-check" for="offer">Я ознакомился и принимаю условия
+                                        договора-оферты</label>
+                                </div>
+                                <input type="submit" value="Сохранить" class="red-btn">
+                            </div>
+                        </form>
+                        <form action="#" class="tab">
+                            <div class="row-2">
+                                <div>
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title input-silver">
+                                            Город*
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
+                                        </ul>
+                                    </ol>
+                                    <ol class="drop-down-wrapper">
+                                        <input type="text" class="drop-down-value">
+                                        <span class="drop-down-title input-silver">
+                                            Магазин*
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                        <ul class="drop-down-list">
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    популярные</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дешевле</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                    дороже</a></li>
+                                            <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                    рейтингу</a>
+                                            </li>
+                                        </ul>
+                                    </ol>
+                                    <!-- <button onclick="return false" class="input-silver dropped-wrapper">
+                                        <div class="arrow">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        Город*
+                                        <ul class="dropped">
+                                            <span>Города</span>
+                                            <li><a href="#">Города 1</a></li>
+                                        </ul>
+                                    </button>
+                                    <button onclick="return false" class="input-silver dropped-wrapper">
+                                        <div class="arrow">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        Магазин*
+                                        <ul class="dropped">
+                                            <span>Магазины</span>
+                                            <li><a href="#">Магазин 1</a></li>
+                                        </ul>
+                                    </button> -->
+                                    <input type="text" placeholder="Телефон*" class="input-silver">
+                                    <input type="text" placeholder="Email*" class="input-silver">
+                                    <input type="text" placeholder="Контактное лицо (ФИО)*" class="input-silver">
+                                    <div class="row-2">
+                                        <input type="password" placeholder="Пороль*" class="input-silver">
+                                        <input type="password" placeholder="Повтор пороля*" class="input-silver">
+                                    </div>
+                                    <p class="warning">Для обеспечения информационной безопаности не указывайте
+                                        пароли,
+                                        которые используете
+                                        на других сайтах</p>
+                                </div>
+                                <div>
+                                    <div class="row-2">
+                                        <ol class="drop-down-wrapper">
+                                            <input type="text" class="drop-down-value">
+                                            <span class="drop-down-title input-silver">
+                                                Форма*
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M10.7 17.2997L15.3 12.6997C15.4 12.5997 15.4707 12.4914 15.512 12.3747C15.5533 12.2581 15.5743 12.1331 15.575 11.9997C15.575 11.8664 15.554 11.7414 15.512 11.6247C15.47 11.5081 15.3993 11.3997 15.3 11.2997L10.7 6.69974C10.5167 6.51641 10.2833 6.42474 10 6.42474C9.71667 6.42474 9.48333 6.51641 9.3 6.69974C9.11667 6.88308 9.025 7.11641 9.025 7.39974C9.025 7.68308 9.11667 7.91641 9.3 8.09974L13.2 11.9997L9.3 15.8997C9.11667 16.0831 9.025 16.3164 9.025 16.5997C9.025 16.8831 9.11667 17.1164 9.3 17.2997C9.48333 17.4831 9.71667 17.5747 10 17.5747C10.2833 17.5747 10.5167 17.4831 10.7 17.2997Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </span>
+                                            <ul class="drop-down-list">
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        популярные</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дешевле</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">Сначала
+                                                        дороже</a></li>
+                                                <li class="drop-down-li"><a class="drop-down-item" href="#">По
+                                                        рейтингу</a>
+                                                </li>
+                                            </ul>
+                                        </ol>
+                                        <input type="text" placeholder="Название*" class="input-silver">
+                                    </div>
+                                    <input type="text" placeholder="Юридический адрес*" class="input-silver">
+                                    <div class="row-2">
+                                        <input type="text" placeholder="ИНН*" class="input-silver">
+                                        <input type="text" placeholder="КПП*" class="input-silver">
+                                    </div>
+                                    <input type="text" placeholder="Банк*" class="input-silver">
+                                    <input type="text" placeholder="БИК*" class="input-silver">
+                                    <input type="text" placeholder="Р/с*" class="input-silver">
+                                    <input type="text" placeholder="К/c*" class="input-silver">
+                                </div>
+                            </div>
+                            <div class="check-center">
+                                <div class="check-with-label-wrapper">
+                                    <input type="checkbox" class="check-with-label" id="offer-2" />
+                                    <label class="label-for-check" for="offer-2">Я ознакомился и принимаю условия
+                                        договора-оферты</label>
+                                </div>
+                                <input type="submit" value="Сохранить" class="red-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="{% static 'outletauto/assets/js/index.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/tabs.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/dropped.js' %}"></script>
+    <script src="{% static 'outletauto/assets/js/--authorization.js' %}"></script>
+
+{% endblock %}

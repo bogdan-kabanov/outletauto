@@ -12,31 +12,31 @@
         <div class="nav-content">
             <ul class="col">
                 <span class="col-greeting">Каталоги</span>
-                <li><a href="#">Универсальный каталог</a></li>
-                <li><a href="#">Масла и технические жидкост</a></li>
-                <li><a href="#">Автохимия и косметика</a></li>
-                <li><a href="#">Автопринадлежности</a></li>
-                <li><a href="#">Инструменты: авто, дом и сад</a></li>
-                <li><a href="#">Шины и диски (параметры)</a></li>
-                <li><a href="#">Аксессуары</a></li>
+                <li><a href="{% url 'universal_catalog_page' %}">Универсальный каталог</a></li>
+                <li><a href="{% url 'catalog_page' %}">Масла и технические жидкост</a></li>
+                <li><a href="{% url 'catalog_page' %}">Автохимия и косметика</a></li>
+                <li><a href="{% url 'catalog_page' %}">Автопринадлежности</a></li>
+                <li><a href="{% url 'catalog_page' %}">Инструменты: авто, дом и сад</a></li>
+                <li><a href="{% url 'catalog_page' %}">Шины и диски (параметры)</a></li>
+                <li><a href="{% url 'catalog_page' %}">Аксессуары</a></li>
             </ul>
             <ul class="col">
                 <span class="col-greeting">Клиентам</span>
-                <li><a href="{% static 'outletauto/pages/promotion' %}">Акции</a></li>
-                <li><a href="{% static 'outletauto/pages/promotion' %}">Скидки</a></li>
-                <li><a href="#">Спецпредложения</a< /li>
+                <li><a href="{% url 'promotion_page' %}">Акции</a></li>
+                <li><a href="{% url 'promotion_page' %}">Скидки</a></li>
+                <li><a href="{% url 'promotion_page' %}">Спецпредложения</a></li>
                 <li><a href="#">Мобильное приложение</a></li>
-                <li><a href="#">Подарочные сертификаты</a></li>
-                <li><a href="#">Видеоинструкции</a></li>
+                <li><a href="{% url 'promotion_page' %}">Подарочные сертификаты</a></li>
+                <li><a href="{% url 'promotion_page' %}">Видеоинструкции</a></li>
                 <li><a href="#">Как сделать заказ</a></li>
-                <li><a href="#">Способы оплаты</a></li>
-                <li><a href="#">Способы возврата оплаты</a></li>
+                <li><a href="{% url 'payment_page' %}">Способы оплаты</a></li>
+                <li><a href="{% url 'payment_page' %}">Способы возврата оплаты</a></li>
                 <li><a href="#">Условия доставки</a></li>
                 <li><a href="#">Условия работы для клиентов</a></li>
             </ul>
             <ul class="col">
                 <span class="col-greeting">Компания</span>
-                <li><a href="{% url 'html' html='news' %}">Новости</a></li>
+                <li><a href="{% url 'news_page' %}">Новости</a></li>
                 <li><a href="#">Вакансии</a></li>
                 <li><a href="#">Магазины</a></li>
                 <li><a href="#">Про нас</a></li>

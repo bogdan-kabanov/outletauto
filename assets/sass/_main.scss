@@ -4010,11 +4010,49 @@ a {
     background-position: center center;
     background-size: cover;
 
-    .title-news {
+    .drop-down-wrapper {
+
+        &:first-child {
+            max-width: 160px;
+        }
+
+        &:last-child {
+            max-width: 300px;
+            margin-left: 40px;
+        }
+
         width: 100%;
-        text-align: center;
-        font-weight: bold;
-        margin-bottom: 10px
+
+        .drop-down-list {
+            border-radius: 10px;
+            background: rgba(212, 212, 212, 0.15);
+            box-shadow:
+                4px 4px 12px 0px rgba(255, 255, 255, 0.21) inset,
+                4px 4px 14px 0px rgba(0, 0, 0, 0.25);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            // padding: 20px;
+            top: calc(100% + 5px);
+            min-width: 260px;
+            z-index: 888;
+
+            .drop-down-item {
+                font-size: 16px;
+                font-weight: 400;
+                margin-top: 8px;
+            }
+
+            .list-item-title {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+
+        .list-hidden {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+            max-height: 0px;
+        }
     }
 
     .arrow-fixed-wrapper {
@@ -4358,58 +4396,42 @@ a {
             }
 
             &:nth-child(1) {
-                background-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)),
-                    to(rgba(0, 0, 0, 0.1))),url("../imgs/catalog-card/1.png");
-                background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)),
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
                     url("../imgs/catalog-card/1.png");
             }
 
             &:nth-child(2) {
-                background-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)),
-                    to(rgba(0, 0, 0, 0.1))),url("../imgs/catalog-card/2.png");
-                background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)),
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
                     url("../imgs/catalog-card/2.png");
             }
 
             &:nth-child(3) {
-                background-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)),
-                    to(rgba(0, 0, 0, 0.1))),url("../imgs/catalog-card/8.png");
-                background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)),
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
                     url("../imgs/catalog-card/8.png");
             }
 
             &:nth-child(4) {
-                background-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)),
-                    to(rgba(0, 0, 0, 0.1))),url("../imgs/catalog-card/3.png");
-                background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)),
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
                     url("../imgs/catalog-card/3.png");
             }
 
             &:nth-child(5) {
-                background-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)),
-                    to(rgba(0, 0, 0, 0.1))),url("../imgs/catalog-card/7.png");
-                background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)),
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
                     url("../imgs/catalog-card/7.png");
             }
 
             &:nth-child(6) {
-                background-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)),
-                    to(rgba(0, 0, 0, 0.1))),url("../imgs/catalog-card/4.png");
-                background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)),
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
                     url("../imgs/catalog-card/4.png");
             }
 
             &:nth-child(7) {
-                background-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)),
-                    to(rgba(0, 0, 0, 0.1))),url("../imgs/catalog-card/6.png");
-                background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)),
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
                     url("../imgs/catalog-card/6.png");
             }
 
             &:nth-child(8) {
-                background-image: -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)),
-                    to(rgba(0, 0, 0, 0.1))),url("../imgs/catalog-card/5.png");
-                background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.1)),
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
                     url("../imgs/catalog-card/5.png");
             }
 
