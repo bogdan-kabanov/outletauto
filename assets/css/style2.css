@@ -586,7 +586,7 @@ footer {
   .auth-on .header-account .red-btn {
     padding: 5px 20px; }
 
-.silver-bg {
+.silver-bg, .silver-bg2 {
   border: 1px solid #504f4f;
   margin: 15% auto;
   width: 40%;

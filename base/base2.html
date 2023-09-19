@@ -19,22 +19,22 @@
 </head>
 
 <body>
-    <div class="wrapper {{page_class}}">
+    <div class="wrapper {{page_class}} silver-bg">
         {% include 'base/header.html' %}
         {% block content %}{% endblock %}
         {% include 'base/footer.html' %}
 
 
 
-        {% include 'burger_nav.html' %}
 
-        {% include 'mobile_nav.html' %}
     </div>
     {% if not user.is_authenticated %}
             {% include 'base/reg_modal.html' %}
             {% include 'base/auth_modal.html' %}
         {% endif  %}
+    {% include 'burger_nav.html' %}
 
+        {% include 'mobile_nav.html' %}
 
 </body>
 
