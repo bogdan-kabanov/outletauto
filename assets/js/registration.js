@@ -7,13 +7,15 @@ var AuthModal = document.getElementById("AuthModal");
 var LogBtn = document.querySelectorAll("#LogBtn");
 RegBtn.forEach(item => {
     item.onclick = function() {
-    RegModal.style.display = "block";
+        AuthModal.style.display = "none";
+        RegModal.style.display = "block";
     }
 
 })
 LogBtn.forEach(item => {
     item.onclick = function() {
-    AuthModal.style.display = "block";
+        RegModal.style.display = "none";
+        AuthModal.style.display = "block";
     }
 })
 window.onclick = function(event) {

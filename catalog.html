@@ -6,7 +6,7 @@
         <form class="catalog-search search show-animation" action="#">
             <span class="parameters">Подбор по параметрам</span>
             <input type="text" class="search-input" placeholder="Поиск по каталогу">
-            <button class="search-btn red-btn">Найти</button>
+            <a href="{% url 'universal_catalog_page' %}" class="search-btn red-btn">Найти</a>
         </form>
         <div class="catalog-grid">
             <div class="catalog-card show-animation">
@@ -26,16 +26,8 @@
                 <span class="catalog-desc">Поиск аксессуаров для автомобиля</span>
             </div>
             <div class="catalog-card show-animation">
-                <span class="catalog-greeting">Товары для дома</span>
-                <span class="catalog-desc">Поиск аксессуаров и бытовой техники</span>
-            </div>
-            <div class="catalog-card show-animation">
                 <span class="catalog-greeting">Инструменты</span>
                 <span class="catalog-desc">Поиск оборудования для автомобиля и дома</span>
-            </div>
-            <div class="catalog-card show-animation">
-                <span class="catalog-greeting">Сувенирная продукция</span>
-                <span class="catalog-desc">Поиск аксессуаров с фирменной символикой</span>
             </div>
             <div class="catalog-card show-animation">
                 <span class="catalog-greeting">Автозапчасти</span>

@@ -14,11 +14,11 @@
                 </div>
                 <form class="header-search search" action="#">
                     <input type="text" class="search-input" placeholder="Поиск по артикулу или VIN коду">
-                    <button class="search-btn red-btn">Найти</button>
+                    <a class="search-btn red-btn" href="{% url 'catalog_page' %}">Найти</a>
                 </form>
                 <ul class="header-contact">
-                    <li><a href="#">Адреса магазинов</a></li>
-                    <li><a href="#">8 (800) 777-99-80</a></li>
+                    <li><p href="#">Адреса магазинов</p></li>
+                    <li><p href="#">8 (800) 777-99-80</p></li>
                 </ul>
             </div>
             {% if not user.is_authenticated %}
@@ -39,7 +39,7 @@
                     </ul>
                     <ul class="header-account">
                         <li>
-                            <a id="RegBtn">ЛК</a>/
+
                             <a id="LogBtn">Войти</a>
 
                         </li>
@@ -61,18 +61,17 @@
                         <li><a href="#">Гараж</a></li>
                         <li><a href="#">Баланс</a></li>
                         <li><a href="#">Избранное</a></li>
-                        <li><a href="{% url 'html' html='catalog' %}">Каталог</a></li>
+                        <li><a href="{% url 'catalog_page' %}">Каталог</a></li>
                         <li><a href="#">Запросы по VIN</a></li>
                         <li><img src="{% static 'outletauto/assets/imgs/icon/basket__shop.svg' %}" alt=""><a
                                 href="#">Корзина</a></li>
                     </ul>
                     <ul class="header-account">
-                        <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
+                        <li><a href="{% url 'profile_page' %}">{{ user.email }}</a></li>
                         <li>
 
                             {% csrf_token %}
 
-                            <a href="{% url 'account_profile' %}">ЛК</a>/
                             <a href="{% url 'logout' %}" class="logout-link">Выйти</a>
 
                         </li>
@@ -100,7 +99,6 @@
                 <div class="header-row-2 auth-off">
                     <ul class="header-account">
                         <li>
-                            <a id="RegBtn">Личный кабинет</a>/
                             <a id="LogBtn">Войти</a>
 
                         </li>
@@ -113,10 +111,9 @@
             {% else %}
                 <div class="header-row-2 auth-on">
                     <ul class="header-account">
-                        <li><a href="{% static 'outletauto/pages/profile.html' %}">RDN-12454</a></li>
+                        <li><a href="{% url 'profile_page' %}">RDN-12454</a></li>
                         <li>
 
-                            <a href="{% url 'account_dashboard' %}">Личный кабинет</a>/
                             <a href="{% url 'account_logout' %}" class="logout-link">Выйти</a>
 
                         </li>

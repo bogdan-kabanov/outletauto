@@ -1050,7 +1050,9 @@ a {
   .search .search-btn {
     margin-left: 5px;
     height: 40px;
-    font-size: 16px; }
+    font-size: 16px;
+    text-align: center;
+}
 
 .red-btn {
   background-color: #E92020;
@@ -1371,7 +1373,9 @@ a {
       margin-left: 20px; }
     .catalog .catalog-search .search-btn {
       margin-left: 0px;
-      padding: 10px 70px; }
+      padding: 10px 70px;
+      text-align: center;
+    }
     .catalog .catalog-search .search-btn,
     .catalog .catalog-search .search-input {
       height: 60px; }
