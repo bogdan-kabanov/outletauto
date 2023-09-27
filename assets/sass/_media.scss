@@ -352,6 +352,7 @@
     .universal-catalog-tire-2 {
         .content {
             grid-template-columns: 320px 1fr;
+
             .image-wrapper {
                 height: 300px;
             }
@@ -1445,6 +1446,7 @@
     .universal-catalog-tire-2 {
         .content {
             grid-template-columns: 1fr;
+
             .image-wrapper {
                 height: 300px;
             }
@@ -2744,6 +2746,17 @@
 }
 
 @media (max-width: 505px) {
+
+    .breadcrumb li {
+        display: inline;
+        font-size: 14px;
+    }
+
+    .breadcrumb li+li:before {
+        color: #fff;
+        content: "/ ";
+    }
+
     .profile {
         .content-wrapper {
             margin-top: 32px;
@@ -2833,7 +2846,9 @@
     .universal-catalog-tire-2 {
         .content {
             padding: 15px;
+
             .card-info {
+
                 .product-title,
                 .product-data {
                     padding: 15px 10px;
@@ -3003,7 +3018,9 @@
             .image-wrapper {
                 height: 250px;
             }
+
             .card-info {
+
                 .product-title,
                 .product-data {
                     font-size: 12px;
