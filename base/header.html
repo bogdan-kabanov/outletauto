@@ -99,7 +99,7 @@
                 <div class="header-row-2 auth-off">
                     <ul class="header-account">
                         <li>
-                            <a id="LogBtn">Войти</a>
+                            <a href="{% url 'authorization_page' %}">Войти</a>
 
                         </li>
                     </ul>
@@ -111,10 +111,10 @@
             {% else %}
                 <div class="header-row-2 auth-on">
                     <ul class="header-account">
-                        <li><a href="{% url 'profile_page' %}">RDN-12454</a></li>
+                        <li><a href="{% url 'profile_page' %}">{{ user.email }}</a></li>
                         <li>
 
-                            <a href="{% url 'account_logout' %}" class="logout-link">Выйти</a>
+                            <a href="{% url 'logout' %}" class="logout-link">Выйти</a>
 
                         </li>
                     </ul>

@@ -1,20 +1,13 @@
+{% extends 'base/base2.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% load socialaccount %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница авторизации - OutletAuto</title>
-    <link rel="stylesheet" href="{% static 'outletauto/assets/css/style.css' %}">
-</head>
-
-<body>
+{% block content %}
     <div class="wrapper authorization">
         <header>
             <div class="container">
                 <div class="logotype">
-                    <a href="{% static 'outletauto/index.html' %}">
+                    <a href="{% url_for(index)">
                         <img src="{% static 'outletauto/assets/imgs/logotype.svg' %}" alt="logotype">
                     </a>
                 </div>
@@ -24,38 +17,25 @@
             <div class="container">
                 <div class="content">
                     <h1 class="title">Авторизация</h1>
-                    <input type="text" class="input-silver" placeholder="Логин или Telagram">
-                    <div class="password-wrapper">
-                        <input type="password" class="input-silver passwordInput" placeholder="Пароль">
-                        <div class="seePasswordToggle"></div>
-                    </div>
-                    <button class="red-btn">Найти</button>
-                    <div class="check-with-label-wrapper">
-                        <input type="checkbox" class="check-with-label" id="remember" />
-                        <label class="label-for-check" for="remember">Запомнить</label>
-                    </div>
-                    <div class="auth-links">
-                        <a href="#">Регистрация</a>
-                        <a href="#">Восстановить пароль</a>
-                    </div>
+                    {% csrf_token %}
+                    <form method="post" class="tab tab-active">
+                        {{ logform.email }}
+                        <div class="password-wrapper">
+                            {{ logform.password }}
+                            <div class="seePasswordToggle"></div>
+                        </div>
+                        <button class="red-btn">Войти</button>
+                        <div class="check-with-label-wrapper">
+                            <input type="checkbox" class="check-with-label" id="remember" />
+                            <label class="label-for-check" for="remember">Запомнить</label>
+                        </div>
+                        <div class="auth-links">
+                            <a href="{% url 'registration_page' %}">Регистрация</a>
+                            <p href="#">Восстановить пароль</p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        const seePasswordToggle = document.querySelector('.seePasswordToggle');
-        const passwordInput = document.querySelector('.passwordInput');
-        let passwordTrigger = 1
-        seePasswordToggle.addEventListener('click', () => {
-            if (passwordTrigger) {
-                passwordTrigger = !passwordTrigger
-                passwordInput.setAttribute("type", "text")
-            } else {
-                passwordTrigger = !passwordTrigger
-                passwordInput.setAttribute("type", "password")
-            }
-        }) 
-    </script>
-</body>
-
-</html>
+{% endblock %}

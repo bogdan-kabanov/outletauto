@@ -10,11 +10,16 @@
                     {% for new in news %}
                     <div class="news-card">
                         <div class="card-img">
-                            <img src="{{new.image}}" alt="cars">
+                            <a href="{% url 'news_page_page' index=forloop.counter %}">
+                                <img src="{{new.image}}" alt="cars">
+                            </a>
                         </div>
                         <div class="card-content">
-                            <span class="card-title">{{new.title}}</span>
+                            <a href="{% url 'news_page_page' index=forloop.counter %}">
+                                <span class="card-title">{{new.title}}</span>
                             <p class="card-description">{{new.description}}</p>
+                            </a>
+
                         </div>
                     </div>
                     {% endfor %}
