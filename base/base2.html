@@ -28,13 +28,14 @@
 
 
     </div>
-    {% if not user.is_authenticated %}
+        {% if not user.is_authenticated %}
             {% include 'base/reg_modal.html' %}
             {% include 'base/auth_modal.html' %}
+            {% endif  %}
+        {% include 'base/burger_nav.html' %}
+        {% if user.is_authenticated %}
+            {% include 'base/mobile_nav.html' %}
         {% endif  %}
-    {% include 'burger_nav.html' %}
-
-        {% include 'mobile_nav.html' %}
 
 </body>
 

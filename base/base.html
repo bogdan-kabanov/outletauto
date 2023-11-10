@@ -32,9 +32,10 @@
 
         {% include 'catalog.html' %}
 
-        {% include 'burger_nav.html' %}
-
-        {% include 'mobile_nav.html' %}
+        {% include 'base/burger_nav.html' %}
+        {% if user.is_authenticated %}
+            {% include 'base/mobile_nav.html' %}
+        {% endif  %}
         {% include 'base/footer.html' %}
 
     </div>
